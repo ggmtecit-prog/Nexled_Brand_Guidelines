@@ -77,11 +77,11 @@
             <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-32 h-full">
 
-                <!-- Components Dropdown -->
+                <!-- Guides & Rules Dropdown -->
                 <div class="relative group h-full flex items-center">
                     <button
                         class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Components</span>
+                        <span>Guides & Rules</span>
                         <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
                     </button>
                     <!-- Dropdown Bridge -->
@@ -90,17 +90,37 @@
                         <!-- Visual Dropdown -->
                         <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
                             <div class="p-8 flex flex-col gap-4">
-                                <a href="atoms.html"
+                                <a href="brand.html"
                                     class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-box-1-line"></i> Atoms
+                                    <i class="ri-focus-3-line"></i> Brand
                                 </a>
-                                <a href="molecules.html"
+                                <a href="logo.html"
                                     class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-hexagon-line"></i> Molecules
+                                    <i class="ri-id-card-line"></i> Logo
                                 </a>
-                                <a href="organisms.html"
+                                <a href="color_palette.html"
                                     class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-layout-3-line"></i> Organisms
+                                    <i class="ri-palette-line"></i> Color Palette
+                                </a>
+                                <a href="typography.html"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-font-size"></i> Typography
+                                </a>
+                                <a href="visual_elements.html"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-shape-line"></i> Visual Elements
+                                </a>
+                                <a href="icons.html"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-hand-coin-line"></i> Icons
+                                </a>
+                                <a href="imagery.html"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-image-line"></i> Imagery
+                                </a>
+                                <a href="persona.html"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-user-smile-line"></i> Persona
                                 </a>
                             </div>
                         </div>
@@ -118,11 +138,10 @@
                         class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
                         <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
                             <div class="p-8 flex flex-col gap-4">
-                                <a href="tokens.html"
+                                <a href="assets.html"
                                     class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-palette-line"></i> Design Tokens
+                                    <i class="ri-download-cloud-line"></i> Assets
                                 </a>
-
                             </div>
                         </div>
                     </div>
@@ -158,7 +177,8 @@
                 <div class="flex-1 pt-4">
                     <h4 class="text-body-sm font-bold text-black uppercase tracking-wider mb-4">Under Construction</h4>
                     <p class="text-body-sm text-grey-primary leading-relaxed">
-                        The NexLed UI System is currently under active development. We are constantly refining our
+                        The NexLed Brand Guidelines is currently under active development. We are constantly refining
+                        our
                         components, documentation, and token architecture to ensure a premium experience. Things may
                         change as we improve!
                     </p>
@@ -184,7 +204,7 @@
                     target="_blank"
                     class="group flex items-center gap-8 px-24 py-12 bg-black text-white rounded-btn shadow-btn-default hover:shadow-btn-hover transition-all duration-default ease-premium">
                     <i class="ri-figma-fill text-icon-md"></i>
-                    <span class="font-medium">Open in Figma</span>
+                    <span class="font-medium">Open the PDF</span>
                 </a>
                 <a href="#"
                     class="group flex items-center gap-8 px-24 py-12 bg-white border border-grey-secondary text-grey-primary rounded-btn hover:border-black hover:text-black transition-all duration-default ease-premium">
@@ -196,112 +216,131 @@
 
         <!-- NAVIGATION CARDS -->
         <section class="mb-64">
-            <h2 class="text-h2 font-semibold mb-32 text-center">Structure</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
+            <h2 class="text-h2 font-semibold mb-32 text-center">Guidelines & Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
 
-                <a href="atoms.html" class="glass-card p-24 group block">
+                <!-- Brand -->
+                <a href="brand.html" class="glass-card p-24 group block">
                     <div
                         class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-box-1-line text-h3"></i>
+                        <i class="ri-focus-3-line text-h3"></i>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Atoms</h3>
-                    <p class="text-body-sm text-grey-primary">Fundamental elements: buttons, inputs, labels, and badges.
-                    </p>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Brand</h3>
+                    <p class="text-body-sm text-grey-primary">Core values, identity principles, and brand mission.</p>
                 </a>
 
-                <a href="molecules.html" class="glass-card p-24 group block">
+                <!-- Logo -->
+                <a href="logo.html" class="glass-card p-24 group block">
                     <div
-                        class="w-48 h-48 rounded-full bg-blue-primary/10 flex items-center justify-center text-blue-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-hexagon-line text-h3"></i>
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-id-card-line text-h3"></i>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-blue-primary transition-colors">Molecules
-                    </h3>
-                    <p class="text-body-sm text-grey-primary">Aura combinations: search bars, alerts, and form groups.
-                    </p>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Logo</h3>
+                    <p class="text-body-sm text-grey-primary">Usage rules, clear space, and monochromatic variants.</p>
                 </a>
 
-                <a href="organisms.html" class="glass-card p-24 group block">
+                <!-- Color Palette -->
+                <a href="color_palette.html" class="glass-card p-24 group block">
                     <div
-                        class="w-48 h-48 rounded-full bg-red-primary/10 flex items-center justify-center text-red-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-layout-3-line text-h3"></i>
-                    </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-red-primary transition-colors">Organisms</h3>
-                    <p class="text-body-sm text-grey-primary">Composite structures: navbars, accordions, and modals.</p>
-                </a>
-
-                <a href="tokens.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-grey-primary/10 flex items-center justify-center text-grey-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
                         <i class="ri-palette-line text-h3"></i>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-black transition-colors">Tokens</h3>
-                    <p class="text-body-sm text-grey-primary">The engine: colors, spacing, radius, and motion values.
-                    </p>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Color
+                        Palette</h3>
+                    <p class="text-body-sm text-grey-primary">Primary brand colors and functional semantic tokens.</p>
+                </a>
+
+                <!-- Typography -->
+                <a href="typography.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-font-size text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Typography
+                    </h3>
+                    <p class="text-body-sm text-grey-primary">Type scale, font weights, and hierarchy settings.</p>
+                </a>
+
+                <!-- Visual Elements -->
+                <a href="visual_elements.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-shape-line text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Visual
+                        Elements</h3>
+                    <p class="text-body-sm text-grey-primary">Shapes, patterns, and background glassmorphism styles.</p>
+                </a>
+
+                <!-- Icons -->
+                <a href="icons.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-hand-coin-line text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Icons</h3>
+                    <p class="text-body-sm text-grey-primary">Custom icon set and application rules for interfaces.</p>
+                </a>
+
+                <!-- Imagery -->
+                <a href="imagery.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-image-line text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Imagery</h3>
+                    <p class="text-body-sm text-grey-primary">Photography style and visual treatment guidelines.</p>
+                </a>
+
+                <!-- Persona -->
+                <a href="persona.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-user-smile-line text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Persona</h3>
+                    <p class="text-body-sm text-grey-primary">Target audience, communication tone, and brand voice.</p>
+                </a>
+
+                <!-- Assets -->
+                <a href="assets.html" class="glass-card p-24 group block">
+                    <div
+                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
+                        <i class="ri-download-cloud-line text-h3"></i>
+                    </div>
+                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Assets</h3>
+                    <p class="text-body-sm text-grey-primary">Downloadable source files and templates.</p>
                 </a>
 
             </div>
         </section>
 
-        <!-- FIGMA SHOWCASE -->
+        <!-- BRAND BOOK SHOWCASE -->
         <section class="mb-64">
             <div class="glass-panel overflow-hidden border border-grey-tertiary">
                 <div class="p-32 border-b border-grey-tertiary bg-white/50 flex items-center justify-between">
                     <div class="flex items-center gap-16">
                         <div
-                            class="w-40 h-40 rounded-full bg-[#F24E1E]/10 text-[#F24E1E] flex items-center justify-center">
-                            <i class="ri-figma-line text-h3"></i>
+                            class="w-40 h-40 rounded-full bg-red-primary/10 text-red-primary flex items-center justify-center">
+                            <i class="ri-file-pdf-line text-h3"></i>
                         </div>
                         <div>
-                            <h2 class="text-body-lg font-semibold text-black">Master Design File</h2>
-                            <p class="text-body-xs text-grey-primary uppercase tracking-wider">Live Figma Preview</p>
+                            <h2 class="text-body-lg font-semibold text-black">Official Brand Book</h2>
+                            <p class="text-body-xs text-grey-primary uppercase tracking-wider">PDF Version v2.0</p>
                         </div>
                     </div>
-                    <a href="https://www.figma.com/design/BSSIlslSgNwV1J1dYspXpJ/NexLed_UI_System?m=auto&t=6d5XpsBQMEoPibU5-1"
-                        target="_blank"
+                    <a href="Brand_Book_V2.pdf" download
                         class="text-body-sm font-medium text-green-primary hover:underline flex items-center gap-4">
-                        View Full Browser <i class="ri-external-link-line"></i>
+                        Download PDF <i class="ri-download-line"></i>
                     </a>
                 </div>
                 <div class="aspect-video w-full bg-grey-tertiary/20">
-                    <iframe style="border: none;" width="100%" height="100%"
-                        src="https://embed.figma.com/design/BSSIlslSgNwV1J1dYspXpJ/NexLed_UI_System?embed-host=share"
-                        allowfullscreen>
+                    <iframe src="Brand_Book_V2.pdf" width="100%" height="800px" style="border: none;" allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
 
-        <!-- GETTING STARTED -->
-        <section class="max-w-standard mx-auto">
-            <div class="glass-panel p-40">
-                <div class="flex items-center gap-16 mb-24">
-                    <div class="w-40 h-40 rounded-full bg-black text-white flex items-center justify-center">
-                        <i class="ri-terminal-box-line text-h3"></i>
-                    </div>
-                    <h2 class="text-h2 font-semibold">Integration</h2>
-                </div>
-
-                <div class="space-y-24 text-body text-grey-primary">
-                    <p>
-                        Import the NexLed configuration to your global Tailwind environment to unlock the premium token
-                        sets.
-                    </p>
-
-                    <div class="bg-black/95 rounded-lg p-24 overflow-x-auto border border-white/10">
-                        <pre
-                            class="text-body-xs font-mono text-grey-secondary leading-relaxed"><span class="text-grey-primary">// index.html</span>
-<span class="text-blue-400">&lt;script</span> <span class="text-sky-300">src</span>=<span class="text-orange-300">"https://cdn.tailwindcss.com"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
-<span class="text-blue-400">&lt;script</span> <span class="text-sky-300">src</span>=<span class="text-orange-300">"src/config-cdn.js"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span></pre>
-                    </div>
-
-                    <p class="leading-relaxed">
-                        Follow the <strong class="text-black">Atomic Methodology</strong>. Use Atoms for basic tasks,
-                        and never hardcode shadow or radius values. Always reference tokens like <code
-                            class="bg-grey-tertiary px-4 py-2 rounded text-black text-body-xs">shadow-btn-default</code>.
-                    </p>
-                </div>
-            </div>
-        </section>
 
     </main>
 
