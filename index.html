@@ -20,38 +20,6 @@
     <!-- 3. Configure Tailwind -->
     <script src="src/config-cdn.js"></script>
 
-    <style>
-        body {
-            font-family: 'Urbanist', sans-serif;
-            background-color: var(--colors-white, #FCFCFC);
-            scroll-behavior: smooth;
-        }
-
-        /* Glassmorphism using verification mapping */
-        .glass-panel {
-            background: rgba(252, 252, 252, 0.7);
-            /* white + 70% opacity */
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(252, 252, 252, 0.4);
-            box-shadow: var(--shadows-default);
-            border-radius: var(--radius-md);
-        }
-
-        .glass-card {
-            background: rgba(252, 252, 252, 0.7);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(252, 252, 252, 0.4);
-            transition: all var(--motion-duration-default) var(--motion-ease-premium);
-            border-radius: var(--radius-lg);
-        }
-
-        .glass-card:hover {
-            transform: translateY(var(--interactive-lift-standard));
-            background: var(--colors-white);
-            box-shadow: var(--shadows-hover);
-            border-color: var(--colors-green-primary);
-        }
-    </style>
 </head>
 
 <body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
