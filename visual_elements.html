@@ -24,7 +24,7 @@
     <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
-<body class="bg-grey-tertiary text-black selection:bg-green-primary/10 flex h-screen overflow-hidden">
+<body class="bg-grey-tertiary text-black selection:bg-green-hover-text flex h-screen overflow-hidden">
 
 <aside class="shrink-0 sticky top-0 self-center">
         <div class="sidebar w-sidebar h-sidebar">
@@ -32,10 +32,10 @@
             <!-- Logo section -->
             <div class="flex flex-col h-full gap-16 p-48">
                 <a href="index.html" class="flex items-center justify-center gap-12 group">
-                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <img src="favicon.svg" alt="NexLed" class="w-btn-icon-md h-btn-icon-md">
                     <div class="flex flex-col">
                         <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
-                        <span class="font-regular text-body-sm text-black tracking-wider">Brand Guidelines</span>
+                        <span class="font-regular text-body-sm text-black">Brand Guidelines</span>
                     </div>
                 </a>
 
@@ -150,54 +150,54 @@
                         
                                             <!-- Example 1: Continuous Line -->
                                             <div
-                                                class="aspect-square bg-grey-tertiary/30 border border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
+                                                class="w-thumb-md h-thumb-md bg-grey-tertiary border-thin border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
                                                 <!-- Content Placeholder -->
                                                 <div class="text-grey-tertiary">
                                                     <i class="ri-image-2-line text-display"></i>
                                                 </div>
                                                 <!-- Continuous Line Visual -->
                                                 <div
-                                                    class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-4 border-b-4 border-green-primary rounded-bl-3xl pointer-events-none">
+                                                    class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-thick border-b-thick border-green-primary rounded-bl-3xl pointer-events-none">
                                                 </div>
                                             </div>
                         
                                             <!-- Example 2: Solid Blocks -->
                                             <div
-                                                class="aspect-square border border-grey-tertiary rounded-xl p-32 flex flex-col justify-between">
+                                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-32 flex flex-col justify-between">
                                                 <div class="flex gap-16">
                                                     <div
-                                                        class="w-64 h-64 bg-grey-tertiary/30 rounded-2xl flex items-center justify-center text-grey-primary">
+                                                        class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
                                                         <i class="ri-image-line text-h2"></i>
                                                     </div>
                                                     <div
-                                                        class="w-64 h-64 bg-grey-tertiary/30 rounded-2xl flex items-center justify-center text-grey-primary">
+                                                        class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
                                                         <i class="ri-image-line text-h2"></i>
                                                     </div>
                                                 </div>
                                                 <div
-                                                    class="h-96 w-full bg-grey-tertiary/30 rounded-2xl flex items-center justify-center text-grey-primary">
+                                                    class="h-carousel-h w-full bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
                                                     <i class="ri-image-line text-h1"></i>
                                                 </div>
                                             </div>
                         
                                             <!-- Example 3: Callout/Connector -->
                                             <div
-                                                class="aspect-square border border-grey-tertiary rounded-xl p-48 relative flex items-center justify-center">
+                                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-48 relative flex items-center justify-center">
                                                 <div class="relative z-10">
-                                                    <div class="bg-green-primary text-white px-24 py-16 rounded-2xl shadow-btn-default">
-                                                        <span class="block w-64 h-16 bg-white/20 rounded-full"></span>
+                                                    <div class="bg-green-primary text-white px-24 py-16 rounded-xl shadow-btn-default">
+                                                        <span class="block w-btn-icon-md h-icon-sm bg-white rounded-full"></span>
                                                     </div>
                                                     <!-- Connector Line -->
-                                                    <div class="absolute top-full right-8 w-1 h-32 bg-green-primary origin-top -rotate-45">
+                                                    <div class="absolute top-full right-8 w-icon-xs h-icon-xl bg-green-primary origin-top -rotate-45">
                                                     </div>
-                                                    <div class="absolute top-[140%] -right-16 w-8 h-8 rounded-full bg-green-primary"></div>
+                                                    <div class="absolute top-full -right-16 w-icon-xs h-icon-xs rounded-full bg-green-primary"></div>
                                                 </div>
                                                 <!-- Corner Accent -->
                                                 <div
-                                                    class="absolute bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-green-primary rounded-bl-2xl">
+                                                    class="absolute bottom-0 left-0 w-icon-xl h-icon-xl border-l-thick border-b-thick border-green-primary rounded-bl-2xl">
                                                 </div>
                                                 <div
-                                                    class="absolute top-0 right-0 w-32 h-32 border-t-4 border-r-4 border-green-primary rounded-tr-2xl">
+                                                    class="absolute top-0 right-0 w-icon-xl h-icon-xl border-t-thick border-r-thick border-green-primary rounded-tr-2xl">
                                                 </div>
                                             </div>
                         
@@ -222,9 +222,9 @@
                                                 <!-- Incorrect 1: Low Contrast -->
                                                 <div class="flex flex-col gap-16">
                                                     <div
-                                                        class="aspect-square bg-grey-secondary/20 border border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
+                                                        class="w-thumb-md h-thumb-md bg-grey-secondary border-thin border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
                                                         <div
-                                                            class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-4 border-b-4 border-white rounded-bl-3xl">
+                                                            class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-thick border-b-thick border-white rounded-bl-3xl">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -232,111 +232,111 @@
                                                 <!-- Incorrect 2: Unauthorized Colors -->
                                                 <div class="flex flex-col gap-16">
                                                     <div
-                                                        class="aspect-square border border-grey-tertiary rounded-xl p-32 flex flex-col justify-between relative overflow-hidden">
+                                                        class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-32 flex flex-col justify-between relative overflow-hidden">
                                                         <div class="flex gap-16">
                                                             <div
-                                                                class="w-64 h-64 border border-green-primary rounded-2xl flex items-center justify-center text-grey-primary bg-green-primary/5">
+                                                                class="w-btn-icon-md h-btn-icon-md border-thin border-green-primary rounded-xl flex items-center justify-center text-grey-primary bg-green-hover-text">
                                                                 <i class="ri-image-line text-h2 text-green-primary"></i>
                                                             </div>
                                                             <div
-                                                                class="w-64 h-64 border border-[#3B82F6] rounded-2xl flex items-center justify-center text-grey-primary bg-[#3B82F6]/5">
-                                                                <i class="ri-image-line text-h2 text-[#3B82F6]"></i>
+                                                                class="w-btn-icon-md h-btn-icon-md border-thin border-blue-primary rounded-xl flex items-center justify-center text-grey-primary bg-blue-secondary">
+                                                                <i class="ri-image-line text-h2 text-blue-primary"></i>
                                                             </div>
                                                         </div>
                                                         <div
-                                                            class="h-96 w-full border border-[#EF4444] rounded-2xl flex items-center justify-center text-grey-primary bg-[#EF4444]/5">
-                                                            <i class="ri-image-line text-h1 text-[#EF4444]"></i>
+                                                            class="h-carousel-h w-full border-thin border-red-primary rounded-xl flex items-center justify-center text-grey-primary bg-red-secondary">
+                                                            <i class="ri-image-line text-h1 text-red-primary"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 3: Inconsistent Radii -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center p-48">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center p-48">
                                                     <div
-                                                        class="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-green-primary rounded-tl-full">
+                                                        class="absolute top-0 left-0 w-icon-xl h-icon-xl border-t-thick border-l-thick border-green-primary rounded-tl-full">
                                                     </div>
                                                     <div
-                                                        class="absolute bottom-1/3 right-0 w-48 h-48 border-b-4 border-r-4 border-green-primary rounded-br-2xl">
+                                                        class="absolute bottom-1/3 right-0 w-icon-xxl h-icon-xxl border-b-thick border-r-thick border-green-primary rounded-br-2xl">
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 4: Incorrect Placement -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary/20">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary">
                                                     <div
-                                                        class="absolute bottom-0 left-12 w-1/2 h-16 border-t-4 border-green-primary rounded-t-xl">
+                                                        class="absolute bottom-0 left-12 w-1/2 h-icon-sm border-t-thick border-green-primary rounded-t-xl">
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 5: Clutter/Overlapping -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center overflow-hidden">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center overflow-hidden">
                                                     <div
-                                                        class="w-80 h-64 bg-grey-secondary/30 rounded-xl absolute top-1/4 left-1/4 z-10 border border-white flex items-center justify-center">
+                                                        class="w-btn-icon-md h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/4 left-1/4 z-10 border-thin border-white flex items-center justify-center">
                                                         <i class="ri-image-line"></i>
                                                     </div>
                                                     <div
-                                                        class="w-96 h-72 bg-grey-secondary/30 rounded-xl absolute top-1/3 left-1/3 z-20 border border-white flex items-center justify-center">
+                                                        class="w-btn-icon-lg h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/3 left-1/3 z-20 border-thin border-white flex items-center justify-center">
                                                         <i class="ri-image-line"></i>
                                                     </div>
                                                     <div
-                                                        class="w-112 h-80 bg-grey-secondary/30 rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 border border-white flex items-center justify-center">
+                                                        class="w-btn-icon-xl h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 border-thin border-white flex items-center justify-center">
                                                         <i class="ri-image-line text-h2"></i>
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 6: Incorrect Scaling -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center">
                                                     <div
-                                                        class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-green-primary rounded-tl-sm">
+                                                        class="absolute top-0 left-0 w-icon-xs h-icon-xs border-t-thick border-l-thick border-green-primary rounded-tl-sm">
                                                     </div>
                                                     <div
-                                                        class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-green-primary rounded-br-sm">
+                                                        class="absolute bottom-0 right-0 w-icon-xs h-icon-xs border-b-thick border-r-thick border-green-primary rounded-br-sm">
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 7: Distortion -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary/20">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary">
                                                     <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
-                                                        class="absolute bottom-0 left-0 w-1/2 h-1/2">
-                                                        <path d="M0,100 Q25,25 50,50 T100,50" fill="none" stroke="#03683D" stroke-width="4" />
+                                                        class="absolute bottom-0 left-0 w-1/2 h-1/2" class="text-green-primary">
+                                                        <path d="M0,100 Q25,25 50,50 T100,50" fill="none" stroke="currentColor" stroke-width="4" />
                                                     </svg>
                                                 </div>
                         
                                                 <!-- Incorrect 8: Rotation -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center p-32 overflow-hidden">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center p-32 overflow-hidden">
                                                     <div
-                                                        class="w-64 h-48 border-2 border-green-primary rounded-lg rotate-12 absolute top-1/4 left-1/4 flex items-center justify-center">
+                                                        class="w-btn-icon-md h-icon-xxl border-standard border-green-primary rounded-lg rotate-12 absolute top-1/4 left-1/4 flex items-center justify-center">
                                                         <i class="ri-image-line"></i>
                                                     </div>
                                                     <div
-                                                        class="w-64 h-48 border-2 border-green-primary rounded-lg -rotate-12 absolute bottom-1/4 right-1/4 flex items-center justify-center">
+                                                        class="w-btn-icon-md h-icon-xxl border-standard border-green-primary rounded-lg -rotate-12 absolute bottom-1/4 right-1/4 flex items-center justify-center">
                                                         <i class="ri-image-line"></i>
                                                     </div>
                                                     <div
-                                                        class="w-80 h-32 border-2 border-green-primary rounded-lg rotate-45 absolute bottom-8 left-8 flex items-center justify-center">
+                                                        class="w-btn-icon-md h-icon-xl border-standard border-green-primary rounded-lg rotate-45 absolute bottom-8 left-8 flex items-center justify-center">
                                                         <i class="ri-image-line"></i>
                                                     </div>
                                                 </div>
                         
                                                 <!-- Incorrect 9: Overuse -->
                                                 <div
-                                                    class="aspect-square border border-grey-tertiary rounded-xl relative flex items-center justify-center">
+                                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center">
                                                     <div
-                                                        class="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-green-primary rounded-tl-xl">
+                                                        class="absolute top-0 left-0 w-icon-sm h-icon-sm border-t-thick border-l-thick border-green-primary rounded-tl-xl">
                                                     </div>
                                                     <div
-                                                        class="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-green-primary rounded-tr-xl">
+                                                        class="absolute top-0 right-0 w-icon-sm h-icon-sm border-t-thick border-r-thick border-green-primary rounded-tr-xl">
                                                     </div>
                                                     <div
-                                                        class="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-green-primary rounded-bl-xl">
+                                                        class="absolute bottom-0 left-0 w-icon-sm h-icon-sm border-b-thick border-l-thick border-green-primary rounded-bl-xl">
                                                     </div>
                                                     <div
-                                                        class="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-green-primary rounded-br-xl">
+                                                        class="absolute bottom-0 right-0 w-icon-sm h-icon-sm border-b-thick border-r-thick border-green-primary rounded-br-xl">
                                                     </div>
                                                 </div>
                         
@@ -351,3 +351,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
