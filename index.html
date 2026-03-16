@@ -17,7 +17,7 @@
     <!-- 2. Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. NexLed Design System -->
+    <!-- 3. Configure Tailwind -->
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3"></script>
     <link rel="stylesheet" href="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3">
 
@@ -25,117 +25,104 @@
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="flex min-h-screen flex-col">
+<body class="bg-grey-tertiary text-black selection:bg-green-primary/10 flex h-screen overflow-hidden">
 
-    <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24">
-        <div class="nav-bar max-w-wide mx-auto w-full">
+    <aside class="shrink-0 sticky top-0 self-center">
+        <div class="sidebar w-sidebar h-sidebar">
 
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12">
-                <span class="btn btn-icon btn-xs btn-primary" aria-label="Nexled">
-                    <i class="ri-pencil-fill" aria-hidden="true"></i>
-                </span>
-                <span class="flex flex-col">
-                    <span class="text-body-lg">Nexled</span>
-                    <span class="text-body-xs">Guidelines v1.2</span>
-                </span>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-32">
-
-                <!-- Guides & Rules Dropdown -->
-                <div class="dropdown dropdown-minimal dropdown-sm">
-                    <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-                        <span class="dropdown-value">Guides &amp; Rules</span>
-                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="brand.html" class="dropdown-item gap-8">
-                                <i class="ri-focus-3-line" aria-hidden="true"></i>Brand
-                            </a>
-                        </li>
-                        <li>
-                            <a href="logo.html" class="dropdown-item gap-8">
-                                <i class="ri-id-card-line" aria-hidden="true"></i>Logo
-                            </a>
-                        </li>
-                        <li>
-                            <a href="color_palette.html" class="dropdown-item gap-8">
-                                <i class="ri-palette-line" aria-hidden="true"></i>Color Palette
-                            </a>
-                        </li>
-                        <li>
-                            <a href="typography.html" class="dropdown-item gap-8">
-                                <i class="ri-font-size" aria-hidden="true"></i>Typography
-                            </a>
-                        </li>
-                        <li>
-                            <a href="visual_elements.html" class="dropdown-item gap-8">
-                                <i class="ri-shape-line" aria-hidden="true"></i>Visual Elements
-                            </a>
-                        </li>
-                        <li>
-                            <a href="icons.html" class="dropdown-item gap-8">
-                                <i class="ri-hand-coin-line" aria-hidden="true"></i>Icons
-                            </a>
-                        </li>
-                        <li>
-                            <a href="imagery.html" class="dropdown-item gap-8">
-                                <i class="ri-image-line" aria-hidden="true"></i>Imagery
-                            </a>
-                        </li>
-                        <li>
-                            <a href="persona.html" class="dropdown-item gap-8">
-                                <i class="ri-user-smile-line" aria-hidden="true"></i>Persona
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Resources Dropdown -->
-                <div class="dropdown dropdown-minimal dropdown-sm">
-                    <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-                        <span class="dropdown-value">Resources</span>
-                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="assets.html" class="dropdown-item gap-8">
-                                <i class="ri-download-cloud-line" aria-hidden="true"></i>Assets
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-16">
-                <button class="btn btn-icon btn-xs btn-ghost" aria-label="Search">
-                    <i class="ri-search-line" aria-hidden="true"></i>
-                </button>
-                <a href="#" class="btn btn-icon btn-xs btn-ghost" aria-label="GitHub">
-                    <i class="ri-github-fill" aria-hidden="true"></i>
+            <!-- Logo section -->
+            <div class="flex flex-col h-full gap-16 p-48">
+                <a href="index.html" class="flex items-center justify-center gap-12 group">
+                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
+                        <span class="font-regular text-body-sm text-black tracking-wider">Brand Guidelines</span>
+                    </div>
                 </a>
+
+                <!-- Vertical Navigation -->
+                <nav class="flex flex-col gap-16 flex-1 justify-center">
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="brand.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Brand</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="logo.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Logo</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="color_palette.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Color Palette</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="typography.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Typography</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="visual_elements.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Visual Elements</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="icons.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Icons</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="imagery.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Imagery</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="persona.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Persona</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="assets.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Assets</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+
+                </nav>
             </div>
 
         </div>
-    </header>
+    </aside>
 
-    <!-- LANDING CONTENT -->
-    <main class="flex-1 mt-64 px-32 pb-64 max-w-standard mx-auto w-full">
+    <div class="flex-1 min-w-0 flex flex-col h-screen overflow-y-auto">
 
-        <!-- DEVELOPMENT ALERT -->
-        <section class="mt-48 mb-24">
-            <div class="panel p-24">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="ri-tools-line" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <p class="card-title">Under Construction</p>
+        <!-- LANDING CONTENT -->
+        <main class="flex-1 px-32 pt-32 pb-64 max-w-standard mx-auto w-full">
+
+            <!-- DEVELOPMENT ALERT -->
+            <section class="mt-48 mb-24">
+                <div class="card card-primary">
+                    <div class="card-body">
+                        <h3 class="card-title">Under Construction</h3>
                         <p class="card-text">
                             The NexLed Brand Guidelines is currently under active development. We are constantly
                             refining our components, documentation, and token architecture to ensure a premium
@@ -143,176 +130,194 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- HERO -->
-        <header class="text-style text-style-hero">
-            <span class="badge badge-primary badge-md">V1.2 - FEBRUARY 2026</span>
-            <h1 class="text-style-title">NexLed Brand Guidelines</h1>
-            <p class="text-style-subtitle">
-                A high-fidelity, atomic brand guidelines for building premium electrical interfaces. Strictly enforced
-                tokens, glassmorphism aesthetics, and accessibility-first.
-            </p>
-            <div class="flex flex-wrap justify-center gap-16">
-                <a href="https://www.figma.com/design/BSSIlslSgNwV1J1dYspXpJ/Nexled_Brand_Guidelines?m=auto&t=6d5XpsBQMEoPibU5-1"
-                    target="_blank" rel="noreferrer" class="btn btn-primary btn-md">
-                    <i class="ri-figma-fill" aria-hidden="true"></i>
-                    <span>Open the PDF</span>
-                </a>
-                <a href="#" class="btn btn-secondary btn-md">
-                    <i class="ri-book-open-line" aria-hidden="true"></i>
-                    <span>Read Guidelines</span>
-                </a>
-            </div>
-        </header>
-
-        <!-- NAVIGATION CARDS -->
-        <section class="mb-64">
-            <h2 class="text-h2 mb-32">Guidelines &amp; Resources</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
-
-                <!-- Brand -->
-                <a href="brand.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-focus-3-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Brand</h3>
-                        <p class="card-text">Core values, identity principles, and brand mission.</p>
-                    </div>
-                </a>
-
-                <!-- Logo -->
-                <a href="logo.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-id-card-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Logo</h3>
-                        <p class="card-text">Usage rules, clear space, and monochromatic variants.</p>
-                    </div>
-                </a>
-
-                <!-- Color Palette -->
-                <a href="color_palette.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-palette-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Color Palette</h3>
-                        <p class="card-text">Primary brand colors and functional semantic tokens.</p>
-                    </div>
-                </a>
-
-                <!-- Typography -->
-                <a href="typography.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-font-size" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Typography</h3>
-                        <p class="card-text">Type scale, font weights, and hierarchy settings.</p>
-                    </div>
-                </a>
-
-                <!-- Visual Elements -->
-                <a href="visual_elements.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-shape-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Visual Elements</h3>
-                        <p class="card-text">Shapes, patterns, and background glassmorphism styles.</p>
-                    </div>
-                </a>
-
-                <!-- Icons -->
-                <a href="icons.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-hand-coin-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Icons</h3>
-                        <p class="card-text">Custom icon set and application rules for interfaces.</p>
-                    </div>
-                </a>
-
-                <!-- Imagery -->
-                <a href="imagery.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-image-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Imagery</h3>
-                        <p class="card-text">Photography style and visual treatment guidelines.</p>
-                    </div>
-                </a>
-
-                <!-- Persona -->
-                <a href="persona.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-user-smile-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Persona</h3>
-                        <p class="card-text">Target audience, communication tone, and brand voice.</p>
-                    </div>
-                </a>
-
-                <!-- Assets -->
-                <a href="assets.html" class="card">
-                    <div class="card-body flex flex-col gap-12">
-                        <div class="card-icon">
-                            <i class="ri-download-cloud-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="card-title">Assets</h3>
-                        <p class="card-text">Downloadable source files and templates.</p>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- BRAND BOOK SHOWCASE -->
-        <section class="mb-64">
-            <div class="panel">
-                <div class="panel-wrap-head justify-between">
-                    <div class="flex items-center gap-16">
-                        <div class="card-icon">
-                            <i class="ri-file-pdf-line" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <p class="card-title">Official Brand Book</p>
-                            <p class="card-text">PDF Version v2.0</p>
-                        </div>
-                    </div>
-                    <a href="Brand_Book_V2.pdf" download class="link link-text-icon link-md">
-                        <span class="link-label">Download PDF</span>
-                        <i class="ri-download-line" aria-hidden="true"></i>
+            <!-- HERO -->
+            <header class="page-header-hero">
+                <h1 class="text-hero-title font-medium text-black">NexLed Brand Guidelines</h1>
+                <p class="text-hero-subtitle font-light text-black max-w-readable">
+                    A high-fidelity, atomic brand guidelines for building premium electrical interfaces. Strictly
+                    enforced tokens, glassmorphism aesthetics, and accessibility-first.
+                </p>
+                <div class="flex flex-wrap justify-center gap-16">
+                    <a href="https://www.figma.com/design/BSSIlslSgNwV1J1dYspXpJ/Nexled_Brand_Guidelines?m=auto&t=6d5XpsBQMEoPibU5-1"
+                        target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">
+                        <i class="ri-figma-fill text-icon-lg"></i>
+                        Open the PDF
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-sm">
+                        <i class="ri-book-open-line text-icon-lg"></i>
+                        Read Guidelines
                     </a>
                 </div>
-                <div class="divider"></div>
-                <div class="panel-wrap-body">
-                    <iframe src="Brand_Book_V2.pdf" class="w-full h-carousel-h" allowfullscreen
-                        title="Brand Book PDF"></iframe>
+            </header>
+
+            <!-- NAVIGATION CARDS -->
+            <section class="mb-64">
+                <h2 class="text-h2 mb-32">Guidelines &amp; Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
+
+                    <!-- Brand -->
+                    <a href="brand.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-focus-3-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Brand</h3>
+                            </div>
+                            <p class="card-text">Core values, identity principles, and brand mission.</p>
+                        </div>
+                    </a>
+
+                    <!-- Logo -->
+                    <a href="logo.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-id-card-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Logo</h3>
+                            </div>
+                            <p class="card-text">Usage rules, clear space, and monochromatic variants.</p>
+                        </div>
+                    </a>
+
+                    <!-- Color Palette -->
+                    <a href="color_palette.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-palette-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Color Palette</h3>
+                            </div>
+                            <p class="card-text">Primary brand colors and functional semantic tokens.</p>
+                        </div>
+                    </a>
+
+                    <!-- Typography -->
+                    <a href="typography.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-font-size text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Typography</h3>
+                            </div>
+                            <p class="card-text">Type scale, font weights, and hierarchy settings.</p>
+                        </div>
+                    </a>
+
+                    <!-- Visual Elements -->
+                    <a href="visual_elements.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-shape-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Visual Elements</h3>
+                            </div>
+                            <p class="card-text">Shapes, patterns, and background glassmorphism styles.</p>
+                        </div>
+                    </a>
+
+                    <!-- Icons -->
+                    <a href="icons.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-hand-coin-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Icons</h3>
+                            </div>
+                            <p class="card-text">Custom icon set and application rules for interfaces.</p>
+                        </div>
+                    </a>
+
+                    <!-- Imagery -->
+                    <a href="imagery.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-image-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Imagery</h3>
+                            </div>
+                            <p class="card-text">Photography style and visual treatment guidelines.</p>
+                        </div>
+                    </a>
+
+                    <!-- Persona -->
+                    <a href="persona.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-user-smile-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Persona</h3>
+                            </div>
+                            <p class="card-text">Target audience, communication tone, and brand voice.</p>
+                        </div>
+                    </a>
+
+                    <!-- Assets -->
+                    <a href="assets.html" class="card">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="ri-download-cloud-line text-icon-lg" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="card-title">Assets</h3>
+                            </div>
+                            <p class="card-text">Downloadable source files and templates.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- BRAND BOOK SHOWCASE -->
+            <section class="mb-64">
+                <div class="panel">
+                    <div class="panel-wrap-head justify-between">
+                        <div class="flex items-center gap-16">
+                            <div class="card-icon">
+                                <i class="ri-file-pdf-line text-icon-lg" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h2 class="card-title">Official Brand Book</h2>
+                                <p class="card-text">PDF Version v2.0</p>
+                            </div>
+                        </div>
+                        <a href="Brand_Book_V2.pdf" download class="link link-text-icon link-md">
+                            <span class="link-label">Download PDF</span>
+                            <i class="ri-download-line" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="panel-wrap-body">
+                        <iframe src="Brand_Book_V2.pdf" class="w-full h-carousel-h" allowfullscreen
+                            title="Brand Book PDF"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer mt-auto">
+            <div class="footer-bottom-bar footer-bottom-floating">
+                <div class="footer-bottom-inner">
+                    <p class="footer-bottom-text">(c) 2026 Nexled Brand Guidelines</p>
+                    <a href="#" class="footer-bottom-link flex items-center gap-8">
+                        Documentation <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
-        </section>
+        </footer>
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer mt-auto">
-        <div class="footer-bottom-bar footer-bottom-floating">
-            <div class="footer-bottom-inner">
-                <p class="footer-bottom-text">(c) 2026 Nexled Brand Guidelines</p>
-                <a href="#" class="footer-bottom-link flex items-center gap-8">
-                    Documentation <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+    </div>
 
 </body>
 
