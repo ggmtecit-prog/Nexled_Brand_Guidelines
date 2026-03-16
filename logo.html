@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,501 +10,410 @@
     <!-- 1. Load Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- 2. Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. Tailwind CSS for certain components -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- 3. Configure Tailwind -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3"></script>
+    <link rel="stylesheet" href="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3">
 
-    <!-- 4. Configure Tailwind -->
-    <script src="src/config-cdn.js"></script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            .custom-scrollbar {
-                @apply overflow-y-auto;
-            }
-
-            /* Custom Scrollbar Styles using Tokens */
-            .custom-scrollbar::-webkit-scrollbar {
-                @apply w-8;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-button {
-                @apply hidden;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-track {
-                @apply bg-transparent;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb {
-                @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
-            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
-                @apply bg-green-primary;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:active {
-                @apply bg-green-secondary;
-            }
-        }
-        @layer components {
-            .spinner-container {
-                @apply flex items-center justify-center;
-            }
-
-            .spinner svg path {
-                fill: transparent;
-                stroke-width: 8;
-                stroke-linecap: round;
-                transform-origin: center;
-            }
-
-            .spinner-track {
-                @apply stroke-grey-tertiary;
-            }
-
-            .spinner-anim {
-                @apply stroke-green-secondary;
-                stroke-dasharray: 100, 226;
-                animation: rotate-path 2s linear infinite;
-            }
-
-            .spinner-white .spinner-track {
-                @apply stroke-white/20;
-            }
-
-            .spinner-white .spinner-anim {
-                @apply stroke-white;
-            }
-        }
-
-        @keyframes rotate-path {
-            0% { stroke-dashoffset: 0; }
-            100% { stroke-dashoffset: -326; }
-        }
-    </style>
+    <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
+<body class="bg-grey-tertiary text-black selection:bg-green-primary/10 flex h-screen overflow-hidden">
 
-<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+<aside class="shrink-0 sticky top-0 self-center">
+        <div class="sidebar w-sidebar h-sidebar">
 
-    <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
-        <div
-            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
-
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12 group">
-                <div
-                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
-                    <i class="ri-pencil-fill text-h3"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
-                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Guidelines
-                        v1.2</span>
-                </div>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-32 h-full">
-
-                <!-- Guides & Rules Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Guides & Rules</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <!-- Dropdown Bridge -->
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <!-- Visual Dropdown -->
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="brand.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-focus-3-line"></i> Brand
-                                </a>
-                                <a href="logo.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-id-card-line"></i> Logo
-                                </a>
-                                <a href="color_palette.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-palette-line"></i> Color Palette
-                                </a>
-                                <a href="typography.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-font-size"></i> Typography
-                                </a>
-                                <a href="visual_elements.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-shape-line"></i> Visual Elements
-                                </a>
-                                <a href="icons.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-hand-coin-line"></i> Icons
-                                </a>
-                                <a href="imagery.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-image-line"></i> Imagery
-                                </a>
-                                <a href="persona.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-user-smile-line"></i> Persona
-                                </a>
-                            </div>
-                        </div>
+            <!-- Logo section -->
+            <div class="flex flex-col h-full gap-16 p-48">
+                <a href="index.html" class="flex items-center justify-center gap-12 group">
+                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
+                        <span class="font-regular text-body-sm text-black tracking-wider">Brand Guidelines</span>
                     </div>
-                </div>
-
-                <!-- Resources Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Resources</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="assets.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-download-cloud-line"></i> Assets
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-16">
-                <button
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-search-line text-icon-md"></i>
-                </button>
-                <div class="w-standard h-24 bg-grey-tertiary hidden md:block"></div>
-                <a href="#"
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-github-fill text-icon-lg"></i>
                 </a>
+
+                <!-- Vertical Navigation -->
+                <nav class="flex flex-col gap-16 flex-1 justify-center">
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="brand.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Brand</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="logo.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Logo</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="color_palette.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Color Palette</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="typography.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Typography</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="visual_elements.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Visual Elements</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="icons.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Icons</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="imagery.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Imagery</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="persona.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Persona</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="assets.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Assets</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+
+                </nav>
             </div>
 
         </div>
-    </header>
+    </aside>
 
-    <!-- CONTENT -->
-    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-standard mx-auto w-full">
+    <div class="flex-1 min-w-0 flex flex-col h-screen overflow-y-auto">
 
-        <!-- PAGE HEADER -->
-        <header class="mb-48">
-            <h1 class="text-display font-semibold mb-12">Logo</h1>
-            <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                The Nexled logo is the primary visual identifier of the brand, presented in two core versions with
-                strict usage guidelines.
-            </p>
-        </header>
-
-        <div class="space-y-64">
-
-            <!-- LOGO VERSIONS -->
-            <section id="logo-versions">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Logo</h2>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        Below is Nexled primary logo, presented in its two core versions: the full wordmark with symbol
-                        and the standalone symbol. Both are essential elements of the brand's identity. As stated
-                        earlier, the logo could not be altered due to legal constraints.
-                    </p>
-
-                    <!-- Logo Display -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
-                        <!-- Symbol & Wordmark -->
-                        <div
-                            class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div class="w-full flex items-center justify-center mb-20 p-24">
-                                <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled Symbol & Wordmark"
-                                    class="max-w-full h-auto">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-4">Symbol & Wordmark</h3>
-                        </div>
-
-                        <!-- Symbol Only -->
-                        <div
-                            class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div class="w-full flex items-center justify-center mb-20 p-24">
-                                <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Symbol Only"
-                                    class="w-80 h-80 object-contain">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-4">Symbol Only</h3>
-                        </div>
-                    </div>
-
-                    <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
-                        The entire visual system color palette, typography, graphic elements, and layout principles was
-                        developed based on the existing logo. Since it could not be changed, the author drew inspiration
-                        from its characteristics to reinforce and complement it. Its rounded geometry, simplicity, and
-                        technical precision serve as the foundation for all applications, ensuring consistency and
-                        immediate recognition across every touchpoint.
-                    </p>
-
-                    <p class="text-body text-grey-primary leading-relaxed max-w-readable">
-                        The symbol may be used independently in specific contexts where a more compact or iconic
-                        representation is needed, while the full version should remain the brand's primary signature.
-                    </p>
-                </div>
-            </section>
-
-            <!-- SIZE & MARGINS -->
-            <section id="size-margins">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Logo - Size & Margins</h2>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        The Nexled logo is built on simple geometric forms and rounded corners, reflecting technical
-                        precision and modernity. The proportions between the symbol and the wordmark are fixed and must
-                        remain unchanged in every application. Altering the structure, stroke weights, or original
-                        spacing is not permitted.
-                    </p>
-
-                    <!-- Minimum Sizes Display -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
-                        <!-- Symbol & Wordmark Sizes -->
-                        <div class="p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div
-                                class="mb-24 p-24 border-2 border-dashed border-grey-secondary rounded-lg bg-white flex items-center justify-center min-h-[160px]">
-                                <img src="logos/NEXLED_LOGO_COLOR.png" alt="Symbol & Wordmark"
-                                    class="max-w-full h-auto">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-16">Symbol & Wordmark</h3>
-                            <div class="space-y-8">
-                                <p class="text-body-sm font-semibold text-black">Minimum Sizes</p>
-                                <p class="text-body-sm text-grey-primary">Digital: 250 × 77 px</p>
-                                <p class="text-body-sm text-grey-primary">Print: minimum width of 45 mm</p>
-                            </div>
-                        </div>
-
-                        <!-- Symbol Only Sizes -->
-                        <div class="p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div
-                                class="mb-24 p-24 border-2 border-dashed border-grey-secondary rounded-lg bg-white flex items-center justify-center min-h-[160px]">
-                                <img src="logos/NEXLED_ICON_COLOR.png" alt="Symbol Only"
-                                    class="w-64 h-64 object-contain">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-16">Symbol Only</h3>
-                            <div class="space-y-8">
-                                <p class="text-body-sm font-semibold text-black">Minimum Sizes</p>
-                                <p class="text-body-sm text-grey-primary">Digital: 64 × 64 px</p>
-                                <p class="text-body-sm text-grey-primary">Print: minimum height of 12 mm</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
-                        To ensure legibility and visual impact, the logo must always be surrounded by a clear area. No
-                        text, images, or graphic elements may enter this protected space.
-                    </p>
-
-                    <p class="text-body text-grey-primary leading-relaxed max-w-readable">
-                        These rules guarantee that the Nexled identity remains sharp, consistent, and professional
-                        across all digital and printed formats.
-                    </p>
-                </div>
-            </section>
-
-            <!-- LOGO COLOR VERSIONS -->
-            <section id="color-versions">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Logo - Color Versions</h2>
-
-                    <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
-                        Nexled has two primary logo versions: Color and Black & White.
-                    </p>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        The color version is the main signature and should be used whenever possible.
-                    </p>
-
-                    <!-- Color Version -->
-                    <div class="mb-40">
-                        <h3 class="text-h3 font-semibold mb-24">Color Version</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
-                            <div
-                                class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                                <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
-                                    <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled Color Logo"
-                                        class="max-w-full h-auto">
+        <!-- CONTENT -->
+        <main class="flex-1 px-32 pt-32 pb-64 max-w-standard mx-auto w-full">
+            <!-- PAGE HEADER -->
+                                <header class="mb-48">
+                                    <h1 class="text-display font-semibold mb-12">Logo</h1>
+                                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                                        The Nexled logo is the primary visual identifier of the brand, presented in two core versions with
+                                        strict usage guidelines.
+                                    </p>
+                                </header>
+                        
+                                <div class="space-y-64">
+                        
+                                    <!-- LOGO VERSIONS -->
+                                    <section id="logo-versions">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Logo</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                Below is Nexled primary logo, presented in its two core versions: the full wordmark with symbol
+                                                and the standalone symbol. Both are essential elements of the brand's identity. As stated
+                                                earlier, the logo could not be altered due to legal constraints.
+                                            </p>
+                        
+                                            <!-- Logo Display -->
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
+                                                <!-- Symbol & Wordmark -->
+                                                <div
+                                                    class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div class="w-full flex items-center justify-center mb-20 p-24">
+                                                        <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled Symbol & Wordmark"
+                                                            class="max-w-full h-auto">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-4">Symbol & Wordmark</h3>
+                                                </div>
+                        
+                                                <!-- Symbol Only -->
+                                                <div
+                                                    class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div class="w-full flex items-center justify-center mb-20 p-24">
+                                                        <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Symbol Only"
+                                                            class="w-80 h-80 object-contain">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-4">Symbol Only</h3>
+                                                </div>
+                                            </div>
+                        
+                                            <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
+                                                The entire visual system color palette, typography, graphic elements, and layout principles was
+                                                developed based on the existing logo. Since it could not be changed, the author drew inspiration
+                                                from its characteristics to reinforce and complement it. Its rounded geometry, simplicity, and
+                                                technical precision serve as the foundation for all applications, ensuring consistency and
+                                                immediate recognition across every touchpoint.
+                                            </p>
+                        
+                                            <p class="text-body text-grey-primary leading-relaxed max-w-readable">
+                                                The symbol may be used independently in specific contexts where a more compact or iconic
+                                                representation is needed, while the full version should remain the brand's primary signature.
+                                            </p>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- SIZE & MARGINS -->
+                                    <section id="size-margins">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Logo - Size & Margins</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                The Nexled logo is built on simple geometric forms and rounded corners, reflecting technical
+                                                precision and modernity. The proportions between the symbol and the wordmark are fixed and must
+                                                remain unchanged in every application. Altering the structure, stroke weights, or original
+                                                spacing is not permitted.
+                                            </p>
+                        
+                                            <!-- Minimum Sizes Display -->
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
+                                                <!-- Symbol & Wordmark Sizes -->
+                                                <div class="p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div
+                                                        class="mb-24 p-24 border-2 border-dashed border-grey-secondary rounded-lg bg-white flex items-center justify-center min-h-[160px]">
+                                                        <img src="logos/NEXLED_LOGO_COLOR.png" alt="Symbol & Wordmark"
+                                                            class="max-w-full h-auto">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-16">Symbol & Wordmark</h3>
+                                                    <div class="space-y-8">
+                                                        <p class="text-body-sm font-semibold text-black">Minimum Sizes</p>
+                                                        <p class="text-body-sm text-grey-primary">Digital: 250 Ã— 77 px</p>
+                                                        <p class="text-body-sm text-grey-primary">Print: minimum width of 45 mm</p>
+                                                    </div>
+                                                </div>
+                        
+                                                <!-- Symbol Only Sizes -->
+                                                <div class="p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div
+                                                        class="mb-24 p-24 border-2 border-dashed border-grey-secondary rounded-lg bg-white flex items-center justify-center min-h-[160px]">
+                                                        <img src="logos/NEXLED_ICON_COLOR.png" alt="Symbol Only"
+                                                            class="w-64 h-64 object-contain">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-16">Symbol Only</h3>
+                                                    <div class="space-y-8">
+                                                        <p class="text-body-sm font-semibold text-black">Minimum Sizes</p>
+                                                        <p class="text-body-sm text-grey-primary">Digital: 64 Ã— 64 px</p>
+                                                        <p class="text-body-sm text-grey-primary">Print: minimum height of 12 mm</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
+                                                To ensure legibility and visual impact, the logo must always be surrounded by a clear area. No
+                                                text, images, or graphic elements may enter this protected space.
+                                            </p>
+                        
+                                            <p class="text-body text-grey-primary leading-relaxed max-w-readable">
+                                                These rules guarantee that the Nexled identity remains sharp, consistent, and professional
+                                                across all digital and printed formats.
+                                            </p>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- LOGO COLOR VERSIONS -->
+                                    <section id="color-versions">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Logo - Color Versions</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-24 leading-relaxed max-w-readable">
+                                                Nexled has two primary logo versions: Color and Black & White.
+                                            </p>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                The color version is the main signature and should be used whenever possible.
+                                            </p>
+                        
+                                            <!-- Color Version -->
+                                            <div class="mb-40">
+                                                <h3 class="text-h3 font-semibold mb-24">Color Version</h3>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                                                    <div
+                                                        class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                        <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
+                                                            <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled Color Logo"
+                                                                class="max-w-full h-auto">
+                                                        </div>
+                                                        <p class="text-body-sm text-grey-primary">Symbol & Wordmark</p>
+                                                    </div>
+                        
+                                                    <div
+                                                        class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                        <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
+                                                            <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Color Icon"
+                                                                class="w-80 h-80 object-contain">
+                                                        </div>
+                                                        <p class="text-body-sm text-grey-primary">Symbol Only</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                The Black & White version is reserved for monochrome printing, manuals, or situations where
+                                                color cannot be applied.
+                                            </p>
+                        
+                                            <!-- B&W Version -->
+                                            <div class="mb-40">
+                                                <h3 class="text-h3 font-semibold mb-24">Black & White Version</h3>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                                                    <div
+                                                        class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                        <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
+                                                            <img src="logos/NEXLED_LOGO_BW.png" alt="Nexled B&W Logo" class="max-w-full h-auto">
+                                                        </div>
+                                                        <p class="text-body-sm text-grey-primary">Symbol & Wordmark</p>
+                                                    </div>
+                        
+                                                    <div
+                                                        class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                        <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
+                                                            <img src="logos/NEXLED_ICON_BW.png" alt="Nexled B&W Icon"
+                                                                class="w-80 h-80 object-contain">
+                                                        </div>
+                                                        <p class="text-body-sm text-grey-primary">Symbol Only</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <p class="text-body text-grey-primary leading-relaxed max-w-readable">
+                                                These are the approved versions of the Nexled logo.
+                                            </p>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- LOGO APPLICATION RULES -->
+                                    <section id="application-rules">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Logo - Application Rules</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                The Nexled logo must always be applied with consistency and precision. The examples below show
+                                                incorrect applications of the logo uses that compromise clarity, recognition, and the integrity
+                                                of the brand across all contexts.
+                                            </p>
+                        
+                                            <!-- Incorrect Usage Examples Grid -->
+                                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
+                                                <!-- Example 1: Mixing color with B&W -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
+                                                        <div class="flex items-center gap-8 mb-16">
+                                                            <div class="w-32 h-32 rounded-lg bg-grey-tertiary flex items-center justify-center">
+                                                                <i class="ri-contrast-2-line text-grey-primary text-h3"></i>
+                                                            </div>
+                                                            <p class="text-body font-medium text-grey-primary italic">Mixed versions</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h3"></i>
+                                                    </div>
+                                                    <p class="text-body-sm text-grey-primary mt-12 text-center">Mixing color with black & white
+                                                    </p>
+                                                </div>
+                        
+                                                <!-- Example 2: Other colors or gradients -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
+                                                        <div class="flex items-center gap-8 mb-16">
+                                                            <div
+                                                                class="w-32 h-32 rounded-lg bg-gradient-to-br from-blue-secondary to-green-secondary flex items-center justify-center">
+                                                                <i class="ri-palette-line text-white text-h3"></i>
+                                                            </div>
+                                                            <p class="text-body font-medium text-grey-primary italic">Custom colors</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h3"></i>
+                                                    </div>
+                                                    <p class="text-body-sm text-grey-primary mt-12 text-center">Other colors or gradients</p>
+                                                </div>
+                        
+                                                <!-- Example 3: Stretched or distorted -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
+                                                        <div class="flex items-center gap-8 mb-16">
+                                                            <div class="w-48 h-24 rounded-lg bg-grey-tertiary flex items-center justify-center">
+                                                                <i class="ri-expand-width-line text-grey-primary text-h3"></i>
+                                                            </div>
+                                                            <p class="text-body font-medium text-grey-primary italic">Distorted</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h3"></i>
+                                                    </div>
+                                                    <p class="text-body-sm text-grey-primary mt-12 text-center">Stretched or distorted</p>
+                                                </div>
+                        
+                                                <!-- Example 4: Using a different font -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
+                                                        <div class="flex items-center gap-8 mb-16">
+                                                            <div class="w-32 h-32 rounded-lg bg-grey-tertiary flex items-center justify-center">
+                                                                <i class="ri-font-size text-grey-primary text-h3"></i>
+                                                            </div>
+                                                            <p class="text-body font-medium text-grey-primary italic"
+                                                                style="font-family: 'Times New Roman', serif;">NexLed</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h3"></i>
+                                                    </div>
+                                                    <p class="text-body-sm text-grey-primary mt-12 text-center">Using a different font</p>
+                                                </div>
+                        
+                                                <!-- Example 5: Wordmark only -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
+                                                        <div class="flex items-center gap-8 mb-16">
+                                                            <p class="text-h2 font-semibold text-grey-primary italic">NexLed</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h3"></i>
+                                                    </div>
+                                                    <p class="text-body-sm text-grey-primary mt-12 text-center">Wordmark only</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                        
                                 </div>
-                                <p class="text-body-sm text-grey-primary">Symbol & Wordmark</p>
-                            </div>
+        </main>
 
-                            <div
-                                class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                                <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
-                                    <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Color Icon"
-                                        class="w-80 h-80 object-contain">
-                                </div>
-                                <p class="text-body-sm text-grey-primary">Symbol Only</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        The Black & White version is reserved for monochrome printing, manuals, or situations where
-                        color cannot be applied.
-                    </p>
-
-                    <!-- B&W Version -->
-                    <div class="mb-40">
-                        <h3 class="text-h3 font-semibold mb-24">Black & White Version</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
-                            <div
-                                class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                                <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
-                                    <img src="logos/NEXLED_LOGO_BW.png" alt="Nexled B&W Logo" class="max-w-full h-auto">
-                                </div>
-                                <p class="text-body-sm text-grey-primary">Symbol & Wordmark</p>
-                            </div>
-
-                            <div
-                                class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                                <div class="w-full flex items-center justify-center mb-20 p-24 bg-white rounded-lg">
-                                    <img src="logos/NEXLED_ICON_BW.png" alt="Nexled B&W Icon"
-                                        class="w-80 h-80 object-contain">
-                                </div>
-                                <p class="text-body-sm text-grey-primary">Symbol Only</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="text-body text-grey-primary leading-relaxed max-w-readable">
-                        These are the approved versions of the Nexled logo.
-                    </p>
-                </div>
-            </section>
-
-            <!-- LOGO APPLICATION RULES -->
-            <section id="application-rules">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Logo - Application Rules</h2>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        The Nexled logo must always be applied with consistency and precision. The examples below show
-                        incorrect applications of the logo uses that compromise clarity, recognition, and the integrity
-                        of the brand across all contexts.
-                    </p>
-
-                    <!-- Incorrect Usage Examples Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
-                        <!-- Example 1: Mixing color with B&W -->
-                        <div class="relative">
-                            <div
-                                class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
-                                <div class="flex items-center gap-8 mb-16">
-                                    <div class="w-32 h-32 rounded-lg bg-grey-tertiary flex items-center justify-center">
-                                        <i class="ri-contrast-2-line text-grey-primary text-h3"></i>
-                                    </div>
-                                    <p class="text-body font-medium text-grey-primary italic">Mixed versions</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h3"></i>
-                            </div>
-                            <p class="text-body-sm text-grey-primary mt-12 text-center">Mixing color with black & white
-                            </p>
-                        </div>
-
-                        <!-- Example 2: Other colors or gradients -->
-                        <div class="relative">
-                            <div
-                                class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
-                                <div class="flex items-center gap-8 mb-16">
-                                    <div
-                                        class="w-32 h-32 rounded-lg bg-gradient-to-br from-blue-secondary to-green-secondary flex items-center justify-center">
-                                        <i class="ri-palette-line text-white text-h3"></i>
-                                    </div>
-                                    <p class="text-body font-medium text-grey-primary italic">Custom colors</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h3"></i>
-                            </div>
-                            <p class="text-body-sm text-grey-primary mt-12 text-center">Other colors or gradients</p>
-                        </div>
-
-                        <!-- Example 3: Stretched or distorted -->
-                        <div class="relative">
-                            <div
-                                class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
-                                <div class="flex items-center gap-8 mb-16">
-                                    <div class="w-48 h-24 rounded-lg bg-grey-tertiary flex items-center justify-center">
-                                        <i class="ri-expand-width-line text-grey-primary text-h3"></i>
-                                    </div>
-                                    <p class="text-body font-medium text-grey-primary italic">Distorted</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h3"></i>
-                            </div>
-                            <p class="text-body-sm text-grey-primary mt-12 text-center">Stretched or distorted</p>
-                        </div>
-
-                        <!-- Example 4: Using a different font -->
-                        <div class="relative">
-                            <div
-                                class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
-                                <div class="flex items-center gap-8 mb-16">
-                                    <div class="w-32 h-32 rounded-lg bg-grey-tertiary flex items-center justify-center">
-                                        <i class="ri-font-size text-grey-primary text-h3"></i>
-                                    </div>
-                                    <p class="text-body font-medium text-grey-primary italic"
-                                        style="font-family: 'Times New Roman', serif;">NexLed</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h3"></i>
-                            </div>
-                            <p class="text-body-sm text-grey-primary mt-12 text-center">Using a different font</p>
-                        </div>
-
-                        <!-- Example 5: Wordmark only -->
-                        <div class="relative">
-                            <div
-                                class="p-24 rounded-xl bg-grey-tertiary/30 border-2 border-red-primary/20 min-h-[200px] flex flex-col items-center justify-center">
-                                <div class="flex items-center gap-8 mb-16">
-                                    <p class="text-h2 font-semibold text-grey-primary italic">NexLed</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h3"></i>
-                            </div>
-                            <p class="text-body-sm text-grey-primary mt-12 text-center">Wordmark only</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-
-
+    </div>
 
 </body>
 

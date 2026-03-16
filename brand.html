@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,642 +10,551 @@
     <!-- 1. Load Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- 2. Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. Tailwind CSS for certain components -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- 3. Configure Tailwind -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3"></script>
+    <link rel="stylesheet" href="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3">
 
-    <!-- 4. Configure Tailwind -->
-    <script src="src/config-cdn.js"></script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            .custom-scrollbar {
-                @apply overflow-y-auto;
-            }
-
-            /* Custom Scrollbar Styles using Tokens */
-            .custom-scrollbar::-webkit-scrollbar {
-                @apply w-8;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-button {
-                @apply hidden;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-track {
-                @apply bg-transparent;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb {
-                @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
-            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
-                @apply bg-green-primary;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:active {
-                @apply bg-green-secondary;
-            }
-        }
-        @layer components {
-            .spinner-container {
-                @apply flex items-center justify-center;
-            }
-
-            .spinner svg path {
-                fill: transparent;
-                stroke-width: 8;
-                stroke-linecap: round;
-                transform-origin: center;
-            }
-
-            .spinner-track {
-                @apply stroke-grey-tertiary;
-            }
-
-            .spinner-anim {
-                @apply stroke-green-secondary;
-                stroke-dasharray: 100, 226;
-                animation: rotate-path 2s linear infinite;
-            }
-
-            .spinner-white .spinner-track {
-                @apply stroke-white/20;
-            }
-
-            .spinner-white .spinner-anim {
-                @apply stroke-white;
-            }
-        }
-
-        @keyframes rotate-path {
-            0% { stroke-dashoffset: 0; }
-            100% { stroke-dashoffset: -326; }
-        }
-    </style>
+    <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
+<body class="bg-grey-tertiary text-black selection:bg-green-primary/10 flex h-screen overflow-hidden">
 
-<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+<aside class="shrink-0 sticky top-0 self-center">
+        <div class="sidebar w-sidebar h-sidebar">
 
-    <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
-        <div
-            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
-
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12 group">
-                <div
-                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
-                    <i class="ri-pencil-fill text-h3"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
-                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Guidelines
-                        v1.2</span>
-                </div>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-32 h-full">
-
-                <!-- Guides & Rules Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Guides & Rules</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <!-- Dropdown Bridge -->
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <!-- Visual Dropdown -->
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="brand.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-focus-3-line"></i> Brand
-                                </a>
-                                <a href="logo.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-id-card-line"></i> Logo
-                                </a>
-                                <a href="color_palette.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-palette-line"></i> Color Palette
-                                </a>
-                                <a href="typography.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-font-size"></i> Typography
-                                </a>
-                                <a href="visual_elements.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-shape-line"></i> Visual Elements
-                                </a>
-                                <a href="icons.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-hand-coin-line"></i> Icons
-                                </a>
-                                <a href="imagery.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-image-line"></i> Imagery
-                                </a>
-                                <a href="persona.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-user-smile-line"></i> Persona
-                                </a>
-                            </div>
-                        </div>
+            <!-- Logo section -->
+            <div class="flex flex-col h-full gap-16 p-48">
+                <a href="index.html" class="flex items-center justify-center gap-12 group">
+                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
+                        <span class="font-regular text-body-sm text-black tracking-wider">Brand Guidelines</span>
                     </div>
-                </div>
-
-                <!-- Resources Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Resources</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="assets.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-download-cloud-line"></i> Assets
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-16">
-                <button
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-search-line text-icon-md"></i>
-                </button>
-                <div class="w-standard h-24 bg-grey-tertiary hidden md:block"></div>
-                <a href="#"
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-github-fill text-icon-lg"></i>
                 </a>
+
+                <!-- Vertical Navigation -->
+                <nav class="flex flex-col gap-16 flex-1 justify-center">
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="brand.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Brand</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="logo.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Logo</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="color_palette.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Color Palette</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="typography.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Typography</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="visual_elements.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Visual Elements</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="icons.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Icons</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="imagery.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Imagery</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="persona.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Persona</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="assets.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Assets</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+
+                </nav>
             </div>
 
         </div>
-    </header>
+    </aside>
 
-    <!-- CONTENT -->
-    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-standard mx-auto w-full">
+    <div class="flex-1 min-w-0 flex flex-col h-screen overflow-y-auto">
 
-        <!-- PAGE HEADER -->
-        <header class="mb-48">
-            <h1 class="text-display font-semibold mb-12">Brand</h1>
-            <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                The fundamental identity and purpose of Nexled, defining our mission, vision, and core values.
-            </p>
-        </header>
-
-        <div class="space-y-64">
-
-            <!-- MISSION & VISION -->
-            <section id="mission-vision">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
-                    <!-- Mission -->
-                    <div class="glass-panel p-32">
-                        <div class="flex items-center gap-16 mb-24">
-                            <div
-                                class="w-40 h-40 rounded-full bg-green-primary/10 text-green-primary flex items-center justify-center">
-                                <i class="ri-flag-line text-h3"></i>
-                            </div>
-                            <h2 class="text-h2 font-semibold">Mission</h2>
-                        </div>
-                        <ul class="space-y-16">
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Develop high-performance LED lighting solutions.
-                                </p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Adapt each product to the specific needs of every
-                                    client.</p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Promote durability, efficiency, and environmental
-                                    responsibility.</p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Combine technology and sustainability in every
-                                    solution.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Vision -->
-                    <div class="glass-panel p-32">
-                        <div class="flex items-center gap-16 mb-24">
-                            <div
-                                class="w-40 h-40 rounded-full bg-blue-primary/10 text-blue-primary flex items-center justify-center">
-                                <i class="ri-eye-line text-h3"></i>
-                            </div>
-                            <h2 class="text-h2 font-semibold">Vision</h2>
-                        </div>
-                        <ul class="space-y-16">
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Become the Portuguese reference in technical and
-                                    sustainable lighting.</p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Be recognized for excellence, innovation, and
-                                    customization.</p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Expand into the B2C market while maintaining
-                                    professional-grade quality.</p>
-                            </li>
-                            <li class="flex items-start gap-12">
-                                <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
-                                <p class="text-body text-grey-primary">Strengthen our presence in Europe and future
-                                    international markets.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BRAND COMMUNICATION -->
-            <section id="brand-communication">
-                <div class="glass-panel p-40">
-                    <div class="flex items-center gap-16 mb-32">
-                        <div class="w-40 h-40 rounded-full bg-black text-white flex items-center justify-center">
-                            <i class="ri-chat-voice-line text-h3"></i>
-                        </div>
-                        <h2 class="text-h2 font-semibold">Brand Communication</h2>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-48 mb-48">
-                        <div class="space-y-24">
-                            <p class="text-body text-grey-primary leading-relaxed">
-                                Nexled communication must express precision, clarity, and technical rigor. We speak in a
-                                simple, modern, and focused way explaining what matters without unnecessary complexity.
-                            </p>
-                            <p class="text-body text-grey-primary leading-relaxed">
-                                Our voice blends technical expertise with accessibility: we demonstrate authority
-                                without arrogance. Every message should reinforce who we are a reliable brand, committed
-                                to quality, and attentive to the real needs of our customers.
-                            </p>
-                            <p class="text-body text-grey-primary leading-relaxed">
-                                The way we communicate must strengthen the perception of professionalism and consistency
-                                across every channel, whether in a social post, a catalog, or a technical presentation.
-                            </p>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
-                            <!-- How to Write -->
-                            <div class="space-y-16">
-                                <h3
-                                    class="text-h4 font-bold text-black border-l-4 border-green-primary pl-12 uppercase tracking-tight">
-                                    How to Write</h3>
-                                <ul class="space-y-12">
-                                    <li class="flex items-center gap-8 text-body-sm text-grey-primary">
-                                        <i class="ri-arrow-right-s-line text-green-primary"></i> Short, concise
-                                        sentences
-                                    </li>
-                                    <li class="flex items-center gap-8 text-body-sm text-grey-primary">
-                                        <i class="ri-arrow-right-s-line text-green-primary"></i> Avoid unnecessary
-                                        jargon
-                                    </li>
-                                    <li class="flex items-center gap-8 text-body-sm text-grey-primary">
-                                        <i class="ri-arrow-right-s-line text-green-primary"></i> Correct technical terms
-                                        (lm, W, CRI…)
-                                    </li>
-                                    <li class="flex items-center gap-8 text-body-sm text-grey-primary">
-                                        <i class="ri-arrow-right-s-line text-green-primary"></i> Avoid vague adjectives
-                                    </li>
-                                    <li class="flex items-center gap-8 text-body-sm text-grey-primary">
-                                        <i class="ri-arrow-right-s-line text-green-primary"></i> No commercial
-                                        overstatements
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Tone Characteristics -->
-                            <div class="space-y-16">
-                                <h3
-                                    class="text-h4 font-bold text-black border-l-4 border-green-primary pl-12 uppercase tracking-tight">
-                                    Tone Characteristics</h3>
-                                <div class="flex flex-wrap gap-8">
-                                    <span
-                                        class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Technical,
-                                        yet clear</span>
-                                    <span
-                                        class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Direct
-                                        and objective</span>
-                                    <span
-                                        class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Confident,
-                                        without exaggeration</span>
-                                    <span
-                                        class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Modern
-                                        and human</span>
+        <!-- CONTENT -->
+        <main class="flex-1 px-32 pt-32 pb-64 max-w-standard mx-auto w-full">
+            <!-- PAGE HEADER -->
+                                <header class="mb-48">
+                                    <h1 class="text-display font-semibold mb-12">Brand</h1>
+                                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                                        The fundamental identity and purpose of Nexled, defining our mission, vision, and core values.
+                                    </p>
+                                </header>
+                        
+                                <div class="space-y-64">
+                        
+                                    <!-- MISSION & VISION -->
+                                    <section id="mission-vision">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                                            <!-- Mission -->
+                                            <div class="glass-panel p-32">
+                                                <div class="flex items-center gap-16 mb-24">
+                                                    <div
+                                                        class="w-40 h-40 rounded-full bg-green-primary/10 text-green-primary flex items-center justify-center">
+                                                        <i class="ri-flag-line text-h3"></i>
+                                                    </div>
+                                                    <h2 class="text-h2 font-semibold">Mission</h2>
+                                                </div>
+                                                <ul class="space-y-16">
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Develop high-performance LED lighting solutions.
+                                                        </p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Adapt each product to the specific needs of every
+                                                            client.</p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Promote durability, efficiency, and environmental
+                                                            responsibility.</p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-green-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Combine technology and sustainability in every
+                                                            solution.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                        
+                                            <!-- Vision -->
+                                            <div class="glass-panel p-32">
+                                                <div class="flex items-center gap-16 mb-24">
+                                                    <div
+                                                        class="w-40 h-40 rounded-full bg-blue-primary/10 text-blue-primary flex items-center justify-center">
+                                                        <i class="ri-eye-line text-h3"></i>
+                                                    </div>
+                                                    <h2 class="text-h2 font-semibold">Vision</h2>
+                                                </div>
+                                                <ul class="space-y-16">
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Become the Portuguese reference in technical and
+                                                            sustainable lighting.</p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Be recognized for excellence, innovation, and
+                                                            customization.</p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Expand into the B2C market while maintaining
+                                                            professional-grade quality.</p>
+                                                    </li>
+                                                    <li class="flex items-start gap-12">
+                                                        <i class="ri-checkbox-circle-line text-blue-primary mt-4"></i>
+                                                        <p class="text-body text-grey-primary">Strengthen our presence in Europe and future
+                                                            international markets.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- BRAND COMMUNICATION -->
+                                    <section id="brand-communication">
+                                        <div class="glass-panel p-40">
+                                            <div class="flex items-center gap-16 mb-32">
+                                                <div class="w-40 h-40 rounded-full bg-black text-white flex items-center justify-center">
+                                                    <i class="ri-chat-voice-line text-h3"></i>
+                                                </div>
+                                                <h2 class="text-h2 font-semibold">Brand Communication</h2>
+                                            </div>
+                        
+                                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-48 mb-48">
+                                                <div class="space-y-24">
+                                                    <p class="text-body text-grey-primary leading-relaxed">
+                                                        Nexled communication must express precision, clarity, and technical rigor. We speak in a
+                                                        simple, modern, and focused way explaining what matters without unnecessary complexity.
+                                                    </p>
+                                                    <p class="text-body text-grey-primary leading-relaxed">
+                                                        Our voice blends technical expertise with accessibility: we demonstrate authority
+                                                        without arrogance. Every message should reinforce who we are a reliable brand, committed
+                                                        to quality, and attentive to the real needs of our customers.
+                                                    </p>
+                                                    <p class="text-body text-grey-primary leading-relaxed">
+                                                        The way we communicate must strengthen the perception of professionalism and consistency
+                                                        across every channel, whether in a social post, a catalog, or a technical presentation.
+                                                    </p>
+                                                </div>
+                        
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                                                    <!-- How to Write -->
+                                                    <div class="space-y-16">
+                                                        <h3
+                                                            class="text-h4 font-bold text-black border-l-4 border-green-primary pl-12 uppercase tracking-tight">
+                                                            How to Write</h3>
+                                                        <ul class="space-y-12">
+                                                            <li class="flex items-center gap-8 text-body-sm text-grey-primary">
+                                                                <i class="ri-arrow-right-s-line text-green-primary"></i> Short, concise
+                                                                sentences
+                                                            </li>
+                                                            <li class="flex items-center gap-8 text-body-sm text-grey-primary">
+                                                                <i class="ri-arrow-right-s-line text-green-primary"></i> Avoid unnecessary
+                                                                jargon
+                                                            </li>
+                                                            <li class="flex items-center gap-8 text-body-sm text-grey-primary">
+                                                                <i class="ri-arrow-right-s-line text-green-primary"></i> Correct technical terms
+                                                                (lm, W, CRIâ€¦)
+                                                            </li>
+                                                            <li class="flex items-center gap-8 text-body-sm text-grey-primary">
+                                                                <i class="ri-arrow-right-s-line text-green-primary"></i> Avoid vague adjectives
+                                                            </li>
+                                                            <li class="flex items-center gap-8 text-body-sm text-grey-primary">
+                                                                <i class="ri-arrow-right-s-line text-green-primary"></i> No commercial
+                                                                overstatements
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                        
+                                                    <!-- Tone Characteristics -->
+                                                    <div class="space-y-16">
+                                                        <h3
+                                                            class="text-h4 font-bold text-black border-l-4 border-green-primary pl-12 uppercase tracking-tight">
+                                                            Tone Characteristics</h3>
+                                                        <div class="flex flex-wrap gap-8">
+                                                            <span
+                                                                class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Technical,
+                                                                yet clear</span>
+                                                            <span
+                                                                class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Direct
+                                                                and objective</span>
+                                                            <span
+                                                                class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Confident,
+                                                                without exaggeration</span>
+                                                            <span
+                                                                class="px-12 py-6 rounded-lg bg-grey-tertiary/30 border border-grey-tertiary text-body-xs font-semibold">Modern
+                                                                and human</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <!-- Keywords Matrix -->
+                                            <div class="border-t border-grey-tertiary pt-48">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                                                    <!-- To Use -->
+                                                    <div class="p-32 rounded-2xl bg-green-primary/5 border border-green-primary/20">
+                                                        <h4
+                                                            class="text-body-sm font-bold text-green-primary uppercase tracking-widest mb-24 flex items-center gap-8">
+                                                            <i class="ri-checkbox-circle-fill"></i> Keywords To Use
+                                                        </h4>
+                                                        <div class="flex flex-wrap gap-12">
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
+                                                                Quality</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
+                                                                Efficiency</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
+                                                                Precision</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
+                                                                Engineering</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
+                                                                Durability</div>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <!-- To Avoid -->
+                                                    <div class="p-32 rounded-2xl bg-grey-tertiary/10 border border-grey-tertiary/20">
+                                                        <h4
+                                                            class="text-body-sm font-bold text-grey-primary uppercase tracking-widest mb-24 flex items-center gap-8">
+                                                            <i class="ri-close-circle-fill"></i> Keywords To Avoid
+                                                        </h4>
+                                                        <div class="flex flex-wrap gap-12">
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
+                                                                Cheap</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
+                                                                Generic</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
+                                                                Perfect</div>
+                                                            <div
+                                                                class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
+                                                                Revolutionary</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- VALUES & PERSONALITY -->
+                                    <section id="values-personality">
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-32">
+                                            <!-- Brand Personality -->
+                                            <div class="glass-panel p-32">
+                                                <h3 class="text-h3 font-semibold mb-24 flex items-center gap-12">
+                                                    <i class="ri-user-star-line text-green-primary"></i> Brand Personality
+                                                </h3>
+                                                <div class="flex flex-wrap gap-12">
+                                                    <span
+                                                        class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Technical</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Precise</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Modern</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Trustworthy</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Client-Focused</span>
+                                                </div>
+                                            </div>
+                        
+                                            <!-- Values -->
+                                            <div class="glass-panel p-32">
+                                                <h3 class="text-h3 font-semibold mb-24 flex items-center gap-12">
+                                                    <i class="ri-medal-line text-green-primary"></i> Values
+                                                </h3>
+                                                <div class="flex flex-wrap gap-12">
+                                                    <span
+                                                        class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Quality</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Innovation</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Efficiency</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Customization</span>
+                                                    <span
+                                                        class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Sustainability</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- SLOGAN -->
+                                    <section id="slogan">
+                                        <div class="glass-panel overflow-hidden border-green-primary/20">
+                                            <div class="bg-green-primary/5 p-40 text-center border-b border-green-primary/10">
+                                                <span
+                                                    class="text-body-xs font-mono text-green-primary uppercase tracking-[0.2em] mb-16 block">Official
+                                                    Slogan</span>
+                                                <h2 class="text-display font-semibold text-black mb-0 italic">"Light for Every Need"</h2>
+                                            </div>
+                                            <div class="p-40">
+                                                <div class="max-w-readable mx-auto">
+                                                    <p class="text-body text-grey-primary mb-24 leading-relaxed">
+                                                        Before the rebranding, Nexled did not have a proper or unique slogan. For this reason, a
+                                                        new slogan was proposed that better reflects the company as a whole.
+                                                    </p>
+                                                    <p class="text-body text-grey-primary leading-relaxed">
+                                                        This slogan expresses Nexled values using the brandâ€™s tone of voice in a concise and
+                                                        direct way. It captures the essence of the brand and supports its global vision,
+                                                        reinforcing the idea that every product is designed with purpose, precision, and
+                                                        long-term reliability.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- BRAND ARCHITECTURE -->
+                                    <section id="brand-architecture">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Brand Architecture</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                Nexled is a Tec IT sub-brand within a Hybrid Endorsed architecture. Tec IT provides corporate
+                                                credibility, while Nexled holds its own technical identity, inheriting shared values and tone.
+                                                The endorsement "by Tec IT" or "A brand of Tec IT" is used only when necessary to reinforce
+                                                trust and maintain cohesion across the group.
+                                            </p>
+                        
+                                            <!-- Logo Showcase -->
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
+                                                <!-- Tec IT -->
+                                                <div
+                                                    class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div class="w-80 h-80 rounded-2xl flex items-center justify-center mb-20 p-16">
+                                                        <img src="logos/logo_tecit_symbol.png" alt="Tec IT Logo"
+                                                            class="w-full h-full object-contain">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-4">Tec IT</h3>
+                                                    <p class="text-body-sm text-grey-primary">Logo</p>
+                                                </div>
+                        
+                                                <!-- Nexled -->
+                                                <div
+                                                    class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
+                                                    <div class="w-80 h-80 rounded-2xl flex items-center justify-center mb-20 p-16">
+                                                        <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Logo"
+                                                            class="w-full h-full object-contain">
+                                                    </div>
+                                                    <h3 class="text-h3 font-semibold mb-4">Nexled</h3>
+                                                    <p class="text-body-sm text-grey-primary">Logo</p>
+                                                </div>
+                                            </div>
+                        
+                                            <!-- Main Rule -->
+                                            <div class="mb-40">
+                                                <h3 class="text-h3 font-semibold mb-20">Main Rule</h3>
+                                                <div class="bg-green-primary text-white p-32 rounded-xl">
+                                                    <p class="text-body-lg font-medium leading-relaxed">
+                                                        The brands have distinct roles, they must not be used together. Nexled appears alone in
+                                                        all product and marketing materials, with the exceptions of legal or corporate
+                                                        exceptions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                        
+                                            <p class="text-body text-grey-primary leading-relaxed max-w-readable">
+                                                This separation ensures clarity, avoids brand dilution, and reinforces Nexled position as a
+                                                specialized lighting brand with its own identity, values, and visual system. The architecture
+                                                defines when each brand should be used, helping maintain consistency and coherence across all
+                                                touchpoints.
+                                            </p>
+                                        </div>
+                                    </section>
+                        
+                                    <!-- APPLICATION RULES -->
+                                    <section id="application-rules">
+                                        <div class="glass-panel p-40">
+                                            <h2 class="text-h2 font-semibold mb-32">Brand Architecture - Application Rules</h2>
+                        
+                                            <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
+                                                Here are examples showing how both brands should coexist within a document, illustrating the
+                                                correct and incorrect applications of the two identities.
+                                            </p>
+                        
+                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+                                                <!-- Wrong Example 1 -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
+                                                        <!-- Header -->
+                                                        <div class="flex items-center gap-8 mb-auto justify-center">
+                                                            <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
+                                                                <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
+                                                                    class="w-full h-full object-contain">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Footer -->
+                                                        <div
+                                                            class="mt-auto pt-24 border-t border-grey-tertiary flex items-center gap-8 justify-center">
+                                                            <div class="w-32 h-32 rounded flex items-center justify-center p-4">
+                                                                <img src="logos/logo_tecit_black-background.png" alt="Tec IT"
+                                                                    class="w-full h-full object-contain">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Error Badge -->
+                                                    <div
+                                                        class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h2"></i>
+                                                    </div>
+                                                </div>
+                        
+                                                <!-- Wrong Example 2 -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
+                                                        <!-- Header -->
+                                                        <div class="flex items-center gap-8 mb-auto justify-center">
+                                                            <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
+                                                                <img src="logos/logo_tecit_black-background.png" alt="Tec IT"
+                                                                    class="w-full h-full object-contain">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Footer -->
+                                                        <div
+                                                            class="mt-auto pt-24 border-t border-grey-tertiary flex items-center gap-8 justify-center">
+                                                            <div class="w-32 h-32 rounded flex items-center justify-center p-4">
+                                                                <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
+                                                                    class="w-full h-full object-contain">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Error Badge -->
+                                                    <div
+                                                        class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-close-line text-white text-h2"></i>
+                                                    </div>
+                                                </div>
+                        
+                                                <!-- Correct Example -->
+                                                <div class="relative">
+                                                    <div
+                                                        class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
+                                                        <!-- Header -->
+                                                        <div class="flex items-center gap-8 mb-auto justify-center">
+                                                            <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
+                                                                <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
+                                                                    class="w-full h-full object-contain">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Footer with Text Endorsement -->
+                                                        <div class="mt-auto pt-24 border-t border-grey-tertiary">
+                                                            <p class="text-body-xs text-grey-primary italic">A part of the Tec It Group</p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Success Badge -->
+                                                    <div
+                                                        class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-green-primary flex items-center justify-center shadow-lg">
+                                                        <i class="ri-check-line text-white text-h2"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <!-- Spacing for badges -->
+                                            <div class="h-24"></div>
+                                        </div>
+                                    </section>
+                        
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+        </main>
 
-                    <!-- Keywords Matrix -->
-                    <div class="border-t border-grey-tertiary pt-48">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
-                            <!-- To Use -->
-                            <div class="p-32 rounded-2xl bg-green-primary/5 border border-green-primary/20">
-                                <h4
-                                    class="text-body-sm font-bold text-green-primary uppercase tracking-widest mb-24 flex items-center gap-8">
-                                    <i class="ri-checkbox-circle-fill"></i> Keywords To Use
-                                </h4>
-                                <div class="flex flex-wrap gap-12">
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
-                                        Quality</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
-                                        Efficiency</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
-                                        Precision</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
-                                        Engineering</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white shadow-sm border border-green-primary/10 text-body font-semibold text-black">
-                                        Durability</div>
-                                </div>
-                            </div>
-
-                            <!-- To Avoid -->
-                            <div class="p-32 rounded-2xl bg-grey-tertiary/10 border border-grey-tertiary/20">
-                                <h4
-                                    class="text-body-sm font-bold text-grey-primary uppercase tracking-widest mb-24 flex items-center gap-8">
-                                    <i class="ri-close-circle-fill"></i> Keywords To Avoid
-                                </h4>
-                                <div class="flex flex-wrap gap-12">
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
-                                        Cheap</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
-                                        Generic</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
-                                        Perfect</div>
-                                    <div
-                                        class="px-16 py-8 rounded-lg bg-white/50 border border-grey-tertiary/30 text-body font-semibold text-grey-secondary line-through">
-                                        Revolutionary</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- VALUES & PERSONALITY -->
-            <section id="values-personality">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-32">
-                    <!-- Brand Personality -->
-                    <div class="glass-panel p-32">
-                        <h3 class="text-h3 font-semibold mb-24 flex items-center gap-12">
-                            <i class="ri-user-star-line text-green-primary"></i> Brand Personality
-                        </h3>
-                        <div class="flex flex-wrap gap-12">
-                            <span
-                                class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Technical</span>
-                            <span
-                                class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Precise</span>
-                            <span
-                                class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Modern</span>
-                            <span
-                                class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Trustworthy</span>
-                            <span
-                                class="px-16 py-8 rounded-full bg-black text-white text-body-sm font-medium">Client-Focused</span>
-                        </div>
-                    </div>
-
-                    <!-- Values -->
-                    <div class="glass-panel p-32">
-                        <h3 class="text-h3 font-semibold mb-24 flex items-center gap-12">
-                            <i class="ri-medal-line text-green-primary"></i> Values
-                        </h3>
-                        <div class="flex flex-wrap gap-12">
-                            <span
-                                class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Quality</span>
-                            <span
-                                class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Innovation</span>
-                            <span
-                                class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Efficiency</span>
-                            <span
-                                class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Customization</span>
-                            <span
-                                class="px-16 py-8 rounded-full border border-green-primary text-green-primary text-body-sm font-medium">Sustainability</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SLOGAN -->
-            <section id="slogan">
-                <div class="glass-panel overflow-hidden border-green-primary/20">
-                    <div class="bg-green-primary/5 p-40 text-center border-b border-green-primary/10">
-                        <span
-                            class="text-body-xs font-mono text-green-primary uppercase tracking-[0.2em] mb-16 block">Official
-                            Slogan</span>
-                        <h2 class="text-display font-semibold text-black mb-0 italic">"Light for Every Need"</h2>
-                    </div>
-                    <div class="p-40">
-                        <div class="max-w-readable mx-auto">
-                            <p class="text-body text-grey-primary mb-24 leading-relaxed">
-                                Before the rebranding, Nexled did not have a proper or unique slogan. For this reason, a
-                                new slogan was proposed that better reflects the company as a whole.
-                            </p>
-                            <p class="text-body text-grey-primary leading-relaxed">
-                                This slogan expresses Nexled values using the brand’s tone of voice in a concise and
-                                direct way. It captures the essence of the brand and supports its global vision,
-                                reinforcing the idea that every product is designed with purpose, precision, and
-                                long-term reliability.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BRAND ARCHITECTURE -->
-            <section id="brand-architecture">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Brand Architecture</h2>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        Nexled is a Tec IT sub-brand within a Hybrid Endorsed architecture. Tec IT provides corporate
-                        credibility, while Nexled holds its own technical identity, inheriting shared values and tone.
-                        The endorsement "by Tec IT" or "A brand of Tec IT" is used only when necessary to reinforce
-                        trust and maintain cohesion across the group.
-                    </p>
-
-                    <!-- Logo Showcase -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-32 mb-40">
-                        <!-- Tec IT -->
-                        <div
-                            class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div class="w-80 h-80 rounded-2xl flex items-center justify-center mb-20 p-16">
-                                <img src="logos/logo_tecit_symbol.png" alt="Tec IT Logo"
-                                    class="w-full h-full object-contain">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-4">Tec IT</h3>
-                            <p class="text-body-sm text-grey-primary">Logo</p>
-                        </div>
-
-                        <!-- Nexled -->
-                        <div
-                            class="flex flex-col items-center p-32 rounded-xl bg-grey-tertiary/30 border border-grey-tertiary">
-                            <div class="w-80 h-80 rounded-2xl flex items-center justify-center mb-20 p-16">
-                                <img src="logos/NEXLED_ICON_COLOR.png" alt="Nexled Logo"
-                                    class="w-full h-full object-contain">
-                            </div>
-                            <h3 class="text-h3 font-semibold mb-4">Nexled</h3>
-                            <p class="text-body-sm text-grey-primary">Logo</p>
-                        </div>
-                    </div>
-
-                    <!-- Main Rule -->
-                    <div class="mb-40">
-                        <h3 class="text-h3 font-semibold mb-20">Main Rule</h3>
-                        <div class="bg-green-primary text-white p-32 rounded-xl">
-                            <p class="text-body-lg font-medium leading-relaxed">
-                                The brands have distinct roles, they must not be used together. Nexled appears alone in
-                                all product and marketing materials, with the exceptions of legal or corporate
-                                exceptions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="text-body text-grey-primary leading-relaxed max-w-readable">
-                        This separation ensures clarity, avoids brand dilution, and reinforces Nexled position as a
-                        specialized lighting brand with its own identity, values, and visual system. The architecture
-                        defines when each brand should be used, helping maintain consistency and coherence across all
-                        touchpoints.
-                    </p>
-                </div>
-            </section>
-
-            <!-- APPLICATION RULES -->
-            <section id="application-rules">
-                <div class="glass-panel p-40">
-                    <h2 class="text-h2 font-semibold mb-32">Brand Architecture - Application Rules</h2>
-
-                    <p class="text-body text-grey-primary mb-40 leading-relaxed max-w-readable">
-                        Here are examples showing how both brands should coexist within a document, illustrating the
-                        correct and incorrect applications of the two identities.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-24">
-                        <!-- Wrong Example 1 -->
-                        <div class="relative">
-                            <div
-                                class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
-                                <!-- Header -->
-                                <div class="flex items-center gap-8 mb-auto justify-center">
-                                    <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
-                                        <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
-                                            class="w-full h-full object-contain">
-                                    </div>
-                                </div>
-                                <!-- Footer -->
-                                <div
-                                    class="mt-auto pt-24 border-t border-grey-tertiary flex items-center gap-8 justify-center">
-                                    <div class="w-32 h-32 rounded flex items-center justify-center p-4">
-                                        <img src="logos/logo_tecit_black-background.png" alt="Tec IT"
-                                            class="w-full h-full object-contain">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Error Badge -->
-                            <div
-                                class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h2"></i>
-                            </div>
-                        </div>
-
-                        <!-- Wrong Example 2 -->
-                        <div class="relative">
-                            <div
-                                class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
-                                <!-- Header -->
-                                <div class="flex items-center gap-8 mb-auto justify-center">
-                                    <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
-                                        <img src="logos/logo_tecit_black-background.png" alt="Tec IT"
-                                            class="w-full h-full object-contain">
-                                    </div>
-                                </div>
-                                <!-- Footer -->
-                                <div
-                                    class="mt-auto pt-24 border-t border-grey-tertiary flex items-center gap-8 justify-center">
-                                    <div class="w-32 h-32 rounded flex items-center justify-center p-4">
-                                        <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
-                                            class="w-full h-full object-contain">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Error Badge -->
-                            <div
-                                class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-red-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-close-line text-white text-h2"></i>
-                            </div>
-                        </div>
-
-                        <!-- Correct Example -->
-                        <div class="relative">
-                            <div
-                                class="border-2 border-grey-tertiary rounded-xl p-24 bg-white min-h-[320px] flex flex-col">
-                                <!-- Header -->
-                                <div class="flex items-center gap-8 mb-auto justify-center">
-                                    <div class="w-48 h-48 rounded-lg flex items-center justify-center p-8">
-                                        <img src="logos/NEXLED_LOGO_COLOR.png" alt="Nexled"
-                                            class="w-full h-full object-contain">
-                                    </div>
-                                </div>
-                                <!-- Footer with Text Endorsement -->
-                                <div class="mt-auto pt-24 border-t border-grey-tertiary">
-                                    <p class="text-body-xs text-grey-primary italic">A part of the Tec It Group</p>
-                                </div>
-                            </div>
-                            <!-- Success Badge -->
-                            <div
-                                class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-green-primary flex items-center justify-center shadow-lg">
-                                <i class="ri-check-line text-white text-h2"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Spacing for badges -->
-                    <div class="h-24"></div>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-
-
+    </div>
 
 </body>
 

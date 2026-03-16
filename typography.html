@@ -1,461 +1,383 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang=\"en\">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <link rel=\"icon\" type=\"image/svg+xml\" href=\"favicon.svg\">
     <title>Blank Template - Nexled Brand Guidelines</title>
 
     <!-- 1. Load Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+    <link href=\"https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap\"
+        rel=\"stylesheet\">
+    <link href=\"https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css\" rel=\"stylesheet\">
 
     <!-- 2. Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src=\"https://cdn.tailwindcss.com\"></script>
 
-    <!-- 3. Tailwind CSS for certain components -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- 3. Configure Tailwind -->
+    <script src=\"https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3\"></script>
+    <link rel=\"stylesheet\" href=\"https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3\">
 
-    <!-- 4. Configure Tailwind -->
-    <script src="src/config-cdn.js"></script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            .custom-scrollbar {
-                @apply overflow-y-auto;
-            }
-
-            /* Custom Scrollbar Styles using Tokens */
-            .custom-scrollbar::-webkit-scrollbar {
-                @apply w-8;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-button {
-                @apply hidden;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-track {
-                @apply bg-transparent;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb {
-                @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
-            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
-                @apply bg-green-primary;
-            }
-
-            .custom-scrollbar::-webkit-scrollbar-thumb:active {
-                @apply bg-green-secondary;
-            }
-        }
-        @layer components {
-            .spinner-container {
-                @apply flex items-center justify-center;
-            }
-
-            .spinner svg path {
-                fill: transparent;
-                stroke-width: 8;
-                stroke-linecap: round;
-                transform-origin: center;
-            }
-
-            .spinner-track {
-                @apply stroke-grey-tertiary;
-            }
-
-            .spinner-anim {
-                @apply stroke-green-secondary;
-                stroke-dasharray: 100, 226;
-                animation: rotate-path 2s linear infinite;
-            }
-
-            .spinner-white .spinner-track {
-                @apply stroke-white/20;
-            }
-
-            .spinner-white .spinner-anim {
-                @apply stroke-white;
-            }
-        }
-
-        @keyframes rotate-path {
-            0% { stroke-dashoffset: 0; }
-            100% { stroke-dashoffset: -326; }
-        }
-    </style>
+    <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3\"></script>
 </head>
 
-<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+<body class=\"bg-grey-tertiary text-black selection:bg-green-primary/10 flex h-screen overflow-hidden\">
 
-    <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
-        <div
-            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
+    <aside class="shrink-0 sticky top-0 self-center">
+        <div class="sidebar w-sidebar h-sidebar">
 
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12 group">
-                <div
-                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
-                    <i class="ri-pencil-fill text-h3"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
-                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Guidelines
-                        v1.2</span>
-                </div>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-32 h-full">
-
-                <!-- Guides & Rules Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Guides & Rules</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <!-- Dropdown Bridge -->
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <!-- Visual Dropdown -->
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="brand.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-focus-3-line"></i> Brand
-                                </a>
-                                <a href="logo.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-id-card-line"></i> Logo
-                                </a>
-                                <a href="color_palette.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-palette-line"></i> Color Palette
-                                </a>
-                                <a href="typography.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-font-size"></i> Typography
-                                </a>
-                                <a href="visual_elements.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-shape-line"></i> Visual Elements
-                                </a>
-                                <a href="icons.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-hand-coin-line"></i> Icons
-                                </a>
-                                <a href="imagery.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-image-line"></i> Imagery
-                                </a>
-                                <a href="persona.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-user-smile-line"></i> Persona
-                                </a>
-                            </div>
-                        </div>
+            <!-- Logo section -->
+            <div class="flex flex-col h-full gap-16 p-48">
+                <a href="index.html" class="flex items-center justify-center gap-12 group">
+                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
+                        <span class="font-regular text-body-sm text-black tracking-wider">Brand Guidelines</span>
                     </div>
-                </div>
-
-                <!-- Resources Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Resources</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
-                    </button>
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="assets.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-download-cloud-line"></i> Assets
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-16">
-                <button
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-search-line text-icon-md"></i>
-                </button>
-                <div class="w-standard h-24 bg-grey-tertiary hidden md:block"></div>
-                <a href="#"
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-github-fill text-icon-lg"></i>
                 </a>
+
+                <!-- Vertical Navigation -->
+                <nav class="flex flex-col gap-16 flex-1 justify-center">
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="brand.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Brand</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="logo.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Logo</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="color_palette.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Color Palette</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="typography.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Typography</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="visual_elements.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Visual Elements</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="icons.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Icons</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="imagery.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Imagery</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="persona.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Persona</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="dropdown dropdown-minimal dropdown-sm">
+                        <a href="assets.html" class="dropdown-trigger">
+                            <span class="dropdown-value">Assets</span>
+                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+
+                </nav>
             </div>
 
         </div>
-    </header>
+    </aside>
 
-    <!-- CONTENT -->
-    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-standard mx-auto w-full">
+    <div class=\"flex-1 min-w-0 flex flex-col h-screen overflow-y-auto\">
 
-        <!-- PAGE HEADER -->
-        <header class="mb-48">
-            <h1 class="text-display font-semibold mb-12">Typography</h1>
-            <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                Urbanist is the primary typeface of Nexled. This geometric sans-serif was chosen for its clarity,
-                balance, and contemporary character. Its clean structure reflects the brand’s values.
-            </p>
-        </header>
+        <!-- CONTENT -->
+        <main class=\"flex-1 px-32 pt-32 pb-64 max-w-standard mx-auto w-full\">
+            <!-- PAGE HEADER -->
+            <header class="mb-48">
+                <h1 class="text-display font-semibold mb-12">Typography</h1>
+                <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                    Urbanist is the primary typeface of Nexled. This geometric sans-serif was chosen for its clarity,
+                    balance, and contemporary character. Its clean structure reflects the brandâ€™s values.
+                </p>
+            </header>
 
-        <div class="space-y-64">
+            <div class="space-y-64">
 
-            <!-- Typeface Visualization -->
-            <section>
-                <div class="flex flex-col gap-24 mb-48">
-                    <!-- Light -->
-                    <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
-                        <p class="text-display font-light text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                        <span class="text-label font-mono text-grey-primary">Urbanist Light (300)</span>
+                <!-- Typeface Visualization -->
+                <section>
+                    <div class="flex flex-col gap-24 mb-48">
+                        <!-- Light -->
+                        <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
+                            <p class="text-display font-light text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
+                            <span class="text-label font-mono text-grey-primary">Urbanist Light (300)</span>
+                        </div>
+
+                        <!-- Regular -->
+                        <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
+                            <p class="text-display font-regular text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
+                            <span class="text-label font-mono text-grey-primary">Urbanist Regular (400)</span>
+                        </div>
+
+                        <!-- Medium -->
+                        <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
+                            <p class="text-display font-medium text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
+                            <span class="text-label font-mono text-grey-primary">Urbanist Medium (500)</span>
+                        </div>
+
+                        <!-- Semibold -->
+                        <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
+                            <p class="text-display font-semibold text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
+                            <span class="text-label font-mono text-grey-primary">Urbanist Semibold (600)</span>
+                        </div>
                     </div>
+                </section>
 
-                    <!-- Regular -->
-                    <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
-                        <p class="text-display font-regular text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                        <span class="text-label font-mono text-grey-primary">Urbanist Regular (400)</span>
-                    </div>
-
-                    <!-- Medium -->
-                    <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
-                        <p class="text-display font-medium text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                        <span class="text-label font-mono text-grey-primary">Urbanist Medium (500)</span>
-                    </div>
-
-                    <!-- Semibold -->
-                    <div class="p-32 border border-grey-tertiary rounded-xl bg-white shadow-sm">
-                        <p class="text-display font-semibold text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                        <span class="text-label font-mono text-grey-primary">Urbanist Semibold (600)</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Additional Description -->
-            <section class="space-y-32">
-                <div>
-                    <h2 class="text-h2 font-semibold mb-16">System & Function</h2>
-                    <p class="text-body-lg text-grey-primary max-w-readable font-light mb-24">
-                        Although distinct from Swiss 721 BT Black Rounded, the typeface used in the logo, Urbanist
-                        complements it visually. It maintains a technical feel while offering greater versatility and
-                        readability across the many environments where the brand lives: web interfaces, technical
-                        dashboards, catalogs, and institutional communication.
-                    </p>
-                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                        Together, these two typefaces create a cohesive, scalable, and professional typographic system
-                        that supports Nexled’s ambitions combining clarity, geometric precision, and modern versatility
-                        to ensure consistent performance across every touchpoint.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Typography - Info -->
-            <section>
-                <div class="flex items-center gap-12 mb-48">
-                    <h2 class="text-h2 font-semibold">Typography - Info</h2>
-                </div>
-
-                <div class="flex flex-col gap-64">
-                    <!-- Principles -->
-                    <div class="space-y-32">
-                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                            Nexled typography must remain simple, technical, and consistent. To maintain clarity and
-                            precision across all applications, the typographic system follows a set of core principles:
+                <!-- Additional Description -->
+                <section class="space-y-32">
+                    <div>
+                        <h2 class="text-h2 font-semibold mb-16">System & Function</h2>
+                        <p class="text-body-lg text-grey-primary max-w-readable font-light mb-24">
+                            Although distinct from Swiss 721 BT Black Rounded, the typeface used in the logo, Urbanist
+                            complements it visually. It maintains a technical feel while offering greater versatility
+                            and
+                            readability across the many environments where the brand lives: web interfaces, technical
+                            dashboards, catalogs, and institutional communication.
                         </p>
-                        <ul class="list-disc pl-24 text-body text-grey-primary space-y-12 max-w-readable">
-                            <li>Always use the Urbanist type family to ensure a unified visual voice.</li>
-                            <li>Establish hierarchy through weight, size, and spacing, never through decorative effects.
-                            </li>
-                            <li>Use black or white text depending on background contrast, always within the official
-                                palette.</li>
-                            <li>Ensure formatting is quick to apply and consistent across web, print, and presentations.
-                            </li>
-                            <li>Select text color based on contrast and accessibility, aligned with the brand’s color
-                                system.</li>
-                        </ul>
+                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                            Together, these two typefaces create a cohesive, scalable, and professional typographic
+                            system
+                            that supports Nexledâ€™s ambitions combining clarity, geometric precision, and modern
+                            versatility
+                            to ensure consistent performance across every touchpoint.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Typography - Info -->
+                <section>
+                    <div class="flex items-center gap-12 mb-48">
+                        <h2 class="text-h2 font-semibold">Typography - Info</h2>
                     </div>
 
-                    <!-- Hierarchy Scale -->
-                    <div class="border border-grey-tertiary rounded-xl bg-white shadow-sm overflow-hidden">
-                        <div class="grid grid-cols-1 divide-y divide-grey-tertiary">
-                            <!-- H1 -->
-                            <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                <div>
-                                    <p class="text-display font-semibold text-black mb-4">H1 - SemiBold</p>
-                                    <p class="text-body-sm text-grey-primary">Main Headlines</p>
-                                </div>
-                                <div class="flex gap-32">
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Print</span>
-                                        <span class="text-body font-medium text-black">24-34 pt</span>
+                    <div class="flex flex-col gap-64">
+                        <!-- Principles -->
+                        <div class="space-y-32">
+                            <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                                Nexled typography must remain simple, technical, and consistent. To maintain clarity and
+                                precision across all applications, the typographic system follows a set of core
+                                principles:
+                            </p>
+                            <ul class="list-disc pl-24 text-body text-grey-primary space-y-12 max-w-readable">
+                                <li>Always use the Urbanist type family to ensure a unified visual voice.</li>
+                                <li>Establish hierarchy through weight, size, and spacing, never through decorative
+                                    effects.
+                                </li>
+                                <li>Use black or white text depending on background contrast, always within the official
+                                    palette.</li>
+                                <li>Ensure formatting is quick to apply and consistent across web, print, and
+                                    presentations.
+                                </li>
+                                <li>Select text color based on contrast and accessibility, aligned with the brandâ€™s
+                                    color
+                                    system.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Hierarchy Scale -->
+                        <div class="border border-grey-tertiary rounded-xl bg-white shadow-sm overflow-hidden">
+                            <div class="grid grid-cols-1 divide-y divide-grey-tertiary">
+                                <!-- H1 -->
+                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
+                                    <div>
+                                        <p class="text-display font-semibold text-black mb-4">H1 - SemiBold</p>
+                                        <p class="text-body-sm text-grey-primary">Main Headlines</p>
                                     </div>
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Web</span>
-                                        <span class="text-body font-medium text-black">40-56 px</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- H2 -->
-                            <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                <div>
-                                    <p class="text-h1 font-semibold text-black mb-4">H2 - SemiBold</p>
-                                    <p class="text-body-sm text-grey-primary">Section Titles</p>
-                                </div>
-                                <div class="flex gap-32">
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Print</span>
-                                        <span class="text-body font-medium text-black">18-24 pt</span>
-                                    </div>
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Web</span>
-                                        <span class="text-body font-medium text-black">28-40 px</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- H3 -->
-                            <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                <div>
-                                    <p class="text-h2 font-medium text-black mb-4">H3 - Medium</p>
-                                    <p class="text-body-sm text-grey-primary">Subsections</p>
-                                </div>
-                                <div class="flex gap-32">
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Print</span>
-                                        <span class="text-body font-medium text-black">16-20 pt</span>
-                                    </div>
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Web</span>
-                                        <span class="text-body font-medium text-black">22-28 px</span>
+                                    <div class="flex gap-32">
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Print</span>
+                                            <span class="text-body font-medium text-black">24-34 pt</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Web</span>
+                                            <span class="text-body font-medium text-black">40-56 px</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Paragraph -->
-                            <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                <div>
-                                    <p class="text-body font-regular text-black mb-4">Paragraph - Regular</p>
-                                    <p class="text-body-sm text-grey-primary">Body Text</p>
-                                </div>
-                                <div class="flex gap-32">
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Print</span>
-                                        <span class="text-body font-medium text-black">13-15 pt</span>
+                                <!-- H2 -->
+                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
+                                    <div>
+                                        <p class="text-h1 font-semibold text-black mb-4">H2 - SemiBold</p>
+                                        <p class="text-body-sm text-grey-primary">Section Titles</p>
                                     </div>
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Web</span>
-                                        <span class="text-body font-medium text-black">16-18 px</span>
+                                    <div class="flex gap-32">
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Print</span>
+                                            <span class="text-body font-medium text-black">18-24 pt</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Web</span>
+                                            <span class="text-body font-medium text-black">28-40 px</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Notes -->
-                            <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                <div>
-                                    <p class="text-body-sm font-light text-black mb-4">Notes - Light</p>
-                                    <p class="text-body-xs text-grey-primary">Captions & Metadata</p>
-                                </div>
-                                <div class="flex gap-32">
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Print</span>
-                                        <span class="text-body font-medium text-black">11-15 pt</span>
+                                <!-- H3 -->
+                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
+                                    <div>
+                                        <p class="text-h2 font-medium text-black mb-4">H3 - Medium</p>
+                                        <p class="text-body-sm text-grey-primary">Subsections</p>
                                     </div>
-                                    <div class="text-right">
-                                        <span class="block text-label font-mono text-grey-primary">Web</span>
-                                        <span class="text-body font-medium text-black">12-14 px</span>
+                                    <div class="flex gap-32">
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Print</span>
+                                            <span class="text-body font-medium text-black">16-20 pt</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Web</span>
+                                            <span class="text-body font-medium text-black">22-28 px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Paragraph -->
+                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
+                                    <div>
+                                        <p class="text-body font-regular text-black mb-4">Paragraph - Regular</p>
+                                        <p class="text-body-sm text-grey-primary">Body Text</p>
+                                    </div>
+                                    <div class="flex gap-32">
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Print</span>
+                                            <span class="text-body font-medium text-black">13-15 pt</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Web</span>
+                                            <span class="text-body font-medium text-black">16-18 px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Notes -->
+                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
+                                    <div>
+                                        <p class="text-body-sm font-light text-black mb-4">Notes - Light</p>
+                                        <p class="text-body-xs text-grey-primary">Captions & Metadata</p>
+                                    </div>
+                                    <div class="flex gap-32">
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Print</span>
+                                            <span class="text-body font-medium text-black">11-15 pt</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="block text-label font-mono text-grey-primary">Web</span>
+                                            <span class="text-body font-medium text-black">12-14 px</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Typography - Application Rules -->
-            <section>
-                <div class="flex items-center gap-12 mb-48">
-                    <h2 class="text-h2 font-semibold">Typography - Application Rules</h2>
-                </div>
-
-                <div class="space-y-48">
-                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                        Typography must be applied with consistency and precision. The examples below illustrate
-                        incorrect uses that compromise clarity, hierarchy, and the technical character of the Nexled
-                        brand
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
-
-                        <!-- Incorrect: Mixing Weights -->
-                        <div class="flex flex-col gap-16">
-                            <div
-                                class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                <p class="text-h3 text-black">Light for <span class="font-bold">every</span> need</p>
-                            </div>
-                            <span class="text-body-sm text-grey-primary text-center">Mixing unrelated font
-                                weights</span>
-                        </div>
-
-                        <!-- Incorrect: Ignoring Hierarchy -->
-                        <div class="flex flex-col gap-16">
-                            <div
-                                class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                <p class="text-body-xs text-black">Light for every need</p>
-                            </div>
-                            <span class="text-body-sm text-grey-primary text-center">Ignoring the defined size
-                                hierarchy</span>
-                        </div>
-
-                        <!-- Incorrect: Wrong Colors -->
-                        <div class="flex flex-col gap-16">
-                            <div
-                                class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                <p class="text-h3" style="color: #D97706;">Light for every need</p>
-                            </div>
-                            <span class="text-body-sm text-grey-primary text-center">Applying colors outside the
-                                palette</span>
-                        </div>
-
-                        <!-- Incorrect: Bad Formatting -->
-                        <div class="flex flex-col gap-16">
-                            <div
-                                class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                <p class="text-h3 font-bold text-black tracking-widest line-through">Light for every</p>
-                            </div>
-                            <span class="text-body-sm text-grey-primary text-center">Using formatting styles that break
-                                the system</span>
-                        </div>
-
-                        <!-- Incorrect: Non-brand Typeface -->
-                        <div class="flex flex-col gap-16">
-                            <div
-                                class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                <p class="text-h3 text-black" style="font-family: 'Times New Roman', serif;">Light for
-                                    every need</p>
-                            </div>
-                            <span class="text-body-sm text-grey-primary text-center">Using non-brand typefaces</span>
-                        </div>
-
+                <!-- Typography - Application Rules -->
+                <section>
+                    <div class="flex items-center gap-12 mb-48">
+                        <h2 class="text-h2 font-semibold">Typography - Application Rules</h2>
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
 
+                    <div class="space-y-48">
+                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                            Typography must be applied with consistency and precision. The examples below illustrate
+                            incorrect uses that compromise clarity, hierarchy, and the technical character of the Nexled
+                            brand
+                        </p>
 
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
 
+                            <!-- Incorrect: Mixing Weights -->
+                            <div class="flex flex-col gap-16">
+                                <div
+                                    class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
+                                    <p class="text-h3 text-black">Light for <span class="font-bold">every</span> need
+                                    </p>
+                                </div>
+                                <span class="text-body-sm text-grey-primary text-center">Mixing unrelated font
+                                    weights</span>
+                            </div>
+
+                            <!-- Incorrect: Ignoring Hierarchy -->
+                            <div class="flex flex-col gap-16">
+                                <div
+                                    class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
+                                    <p class="text-body-xs text-black">Light for every need</p>
+                                </div>
+                                <span class="text-body-sm text-grey-primary text-center">Ignoring the defined size
+                                    hierarchy</span>
+                            </div>
+
+                            <!-- Incorrect: Wrong Colors -->
+                            <div class="flex flex-col gap-16">
+                                <div
+                                    class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
+                                    <p class="text-h3" style="color: #D97706;">Light for every need</p>
+                                </div>
+                                <span class="text-body-sm text-grey-primary text-center">Applying colors outside the
+                                    palette</span>
+                            </div>
+
+                            <!-- Incorrect: Bad Formatting -->
+                            <div class="flex flex-col gap-16">
+                                <div
+                                    class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
+                                    <p class="text-h3 font-bold text-black tracking-widest line-through">Light for every
+                                    </p>
+                                </div>
+                                <span class="text-body-sm text-grey-primary text-center">Using formatting styles that
+                                    break
+                                    the system</span>
+                            </div>
+
+                            <!-- Incorrect: Non-brand Typeface -->
+                            <div class="flex flex-col gap-16">
+                                <div
+                                    class="h-160 border border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
+                                    <p class="text-h3 text-black" style="font-family: 'Times New Roman', serif;">Light
+                                        for
+                                        every need</p>
+                                </div>
+                                <span class="text-body-sm text-grey-primary text-center">Using non-brand
+                                    typefaces</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    </div>
 
 </body>
 
