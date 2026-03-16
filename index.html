@@ -10,122 +10,114 @@
     <!-- 1. Load Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- 2. Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. Configure Tailwind -->
-    <script src="src/config-cdn.js"></script>
+    <!-- 3. NexLed Design System -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3"></script>
+    <link rel="stylesheet" href="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3">
 
+    <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+<body class="flex min-h-screen flex-col">
 
     <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
-        <div
-            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24">
+        <div class="nav-bar max-w-wide mx-auto w-full">
 
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12 group">
-                <div
-                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
-                    <i class="ri-pencil-fill text-h3"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
-                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Guidelines
-                        v1.2</span>
-                </div>
+            <a href="index.html" class="flex items-center gap-12">
+                <span class="btn btn-icon btn-xs btn-primary" aria-label="Nexled">
+                    <i class="ri-pencil-fill" aria-hidden="true"></i>
+                </span>
+                <span class="flex flex-col">
+                    <span class="text-body-lg">Nexled</span>
+                    <span class="text-body-xs">Guidelines v1.2</span>
+                </span>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-32 h-full">
+            <nav class="hidden md:flex items-center gap-32">
 
                 <!-- Guides & Rules Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Guides & Rules</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
+                <div class="dropdown dropdown-minimal dropdown-sm">
+                    <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-value">Guides &amp; Rules</span>
+                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
                     </button>
-                    <!-- Dropdown Bridge -->
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <!-- Visual Dropdown -->
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="brand.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-focus-3-line"></i> Brand
-                                </a>
-                                <a href="logo.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-id-card-line"></i> Logo
-                                </a>
-                                <a href="color_palette.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-palette-line"></i> Color Palette
-                                </a>
-                                <a href="typography.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-font-size"></i> Typography
-                                </a>
-                                <a href="visual_elements.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-shape-line"></i> Visual Elements
-                                </a>
-                                <a href="icons.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-hand-coin-line"></i> Icons
-                                </a>
-                                <a href="imagery.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-image-line"></i> Imagery
-                                </a>
-                                <a href="persona.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-user-smile-line"></i> Persona
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="brand.html" class="dropdown-item gap-8">
+                                <i class="ri-focus-3-line" aria-hidden="true"></i>Brand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="logo.html" class="dropdown-item gap-8">
+                                <i class="ri-id-card-line" aria-hidden="true"></i>Logo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="color_palette.html" class="dropdown-item gap-8">
+                                <i class="ri-palette-line" aria-hidden="true"></i>Color Palette
+                            </a>
+                        </li>
+                        <li>
+                            <a href="typography.html" class="dropdown-item gap-8">
+                                <i class="ri-font-size" aria-hidden="true"></i>Typography
+                            </a>
+                        </li>
+                        <li>
+                            <a href="visual_elements.html" class="dropdown-item gap-8">
+                                <i class="ri-shape-line" aria-hidden="true"></i>Visual Elements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="icons.html" class="dropdown-item gap-8">
+                                <i class="ri-hand-coin-line" aria-hidden="true"></i>Icons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="imagery.html" class="dropdown-item gap-8">
+                                <i class="ri-image-line" aria-hidden="true"></i>Imagery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="persona.html" class="dropdown-item gap-8">
+                                <i class="ri-user-smile-line" aria-hidden="true"></i>Persona
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Resources Dropdown -->
-                <div class="relative group h-full flex items-center">
-                    <button
-                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
-                        <span>Resources</span>
-                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
+                <div class="dropdown dropdown-minimal dropdown-sm">
+                    <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-value">Resources</span>
+                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
                     </button>
-                    <div
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
-                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
-                            <div class="p-8 flex flex-col gap-4">
-                                <a href="assets.html"
-                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
-                                    <i class="ri-download-cloud-line"></i> Assets
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="assets.html" class="dropdown-item gap-8">
+                                <i class="ri-download-cloud-line" aria-hidden="true"></i>Assets
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
             <!-- Right Actions -->
             <div class="flex items-center gap-16">
-                <button
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-search-line text-icon-md"></i>
+                <button class="btn btn-icon btn-xs btn-ghost" aria-label="Search">
+                    <i class="ri-search-line" aria-hidden="true"></i>
                 </button>
-                <div class="w-standard h-24 bg-grey-tertiary hidden md:block"></div>
-                <a href="#"
-                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
-                    <i class="ri-github-fill text-icon-lg"></i>
+                <a href="#" class="btn btn-icon btn-xs btn-ghost" aria-label="GitHub">
+                    <i class="ri-github-fill" aria-hidden="true"></i>
                 </a>
             </div>
 
@@ -133,151 +125,150 @@
     </header>
 
     <!-- LANDING CONTENT -->
-    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-standard mx-auto w-full">
+    <main class="flex-1 mt-64 px-32 pb-64 max-w-standard mx-auto w-full">
 
         <!-- DEVELOPMENT ALERT -->
         <section class="mt-48 mb-24">
-            <div class="glass-panel p-20 flex items-start gap-16 border-blue-primary/20 bg-blue-primary/5">
-                <div
-                    class="w-40 h-40 rounded-full bg-blue-primary/10 text-blue-primary flex items-center justify-center shrink-0">
-                    <i class="ri-tools-line text-h3"></i>
-                </div>
-                <div class="flex-1 pt-4">
-                    <h4 class="text-body-sm font-bold text-black uppercase tracking-wider mb-4">Under Construction</h4>
-                    <p class="text-body-sm text-grey-primary leading-relaxed">
-                        The NexLed Brand Guidelines is currently under active development. We are constantly refining
-                        our
-                        components, documentation, and token architecture to ensure a premium experience. Things may
-                        change as we improve!
-                    </p>
+            <div class="panel p-24">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="ri-tools-line" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="card-title">Under Construction</p>
+                        <p class="card-text">
+                            The NexLed Brand Guidelines is currently under active development. We are constantly
+                            refining our components, documentation, and token architecture to ensure a premium
+                            experience. Things may change as we improve!
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- HERO -->
-        <header class="py-64 mb-48 text-center max-w-readable mx-auto">
-            <div
-                class="inline-flex items-center gap-12 px-16 py-8 rounded-full bg-green-primary/10 text-green-primary text-body-xs font-semibold mb-24 border border-green-primary/20">
-                <span>V1.2</span>
-                <span class="w-4 h-4 rounded-full bg-green-primary"></span>
-                <span>FEBRUARY 2026</span>
-            </div>
-            <h1 class="text-display font-semibold mb-24">NexLed Brand Guidelines</h1>
-            <p class="text-body-lg text-grey-primary font-light leading-relaxed mb-40">
-                A high-fidelity, atomic brand guidelines for building premium electrical interfaces.
-                Strictly enforced tokens, glassmorphism aesthetics, and accessibility-first.
+        <header class="text-style text-style-hero">
+            <span class="badge badge-primary badge-md">V1.2 - FEBRUARY 2026</span>
+            <h1 class="text-style-title">NexLed Brand Guidelines</h1>
+            <p class="text-style-subtitle">
+                A high-fidelity, atomic brand guidelines for building premium electrical interfaces. Strictly enforced
+                tokens, glassmorphism aesthetics, and accessibility-first.
             </p>
             <div class="flex flex-wrap justify-center gap-16">
                 <a href="https://www.figma.com/design/BSSIlslSgNwV1J1dYspXpJ/Nexled_Brand_Guidelines?m=auto&t=6d5XpsBQMEoPibU5-1"
-                    target="_blank"
-                    class="group flex items-center gap-8 px-24 py-12 bg-black text-white rounded-btn shadow-btn-default hover:shadow-btn-hover transition-all duration-default ease-premium">
-                    <i class="ri-figma-fill text-icon-md"></i>
-                    <span class="font-medium">Open the PDF</span>
+                    target="_blank" rel="noreferrer" class="btn btn-primary btn-md">
+                    <i class="ri-figma-fill" aria-hidden="true"></i>
+                    <span>Open the PDF</span>
                 </a>
-                <a href="#"
-                    class="group flex items-center gap-8 px-24 py-12 bg-white border border-grey-secondary text-grey-primary rounded-btn hover:border-black hover:text-black transition-all duration-default ease-premium">
-                    <i class="ri-book-open-line text-icon-md"></i>
-                    <span class="font-medium">Read Guidelines</span>
+                <a href="#" class="btn btn-secondary btn-md">
+                    <i class="ri-book-open-line" aria-hidden="true"></i>
+                    <span>Read Guidelines</span>
                 </a>
             </div>
         </header>
 
         <!-- NAVIGATION CARDS -->
         <section class="mb-64">
-            <h2 class="text-h2 font-semibold mb-32 text-center">Guidelines & Resources</h2>
+            <h2 class="text-h2 mb-32">Guidelines &amp; Resources</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24">
 
                 <!-- Brand -->
-                <a href="brand.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-focus-3-line text-h3"></i>
+                <a href="brand.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-focus-3-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Brand</h3>
+                        <p class="card-text">Core values, identity principles, and brand mission.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Brand</h3>
-                    <p class="text-body-sm text-grey-primary">Core values, identity principles, and brand mission.</p>
                 </a>
 
                 <!-- Logo -->
-                <a href="logo.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-id-card-line text-h3"></i>
+                <a href="logo.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-id-card-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Logo</h3>
+                        <p class="card-text">Usage rules, clear space, and monochromatic variants.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Logo</h3>
-                    <p class="text-body-sm text-grey-primary">Usage rules, clear space, and monochromatic variants.</p>
                 </a>
 
                 <!-- Color Palette -->
-                <a href="color_palette.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-palette-line text-h3"></i>
+                <a href="color_palette.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-palette-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Color Palette</h3>
+                        <p class="card-text">Primary brand colors and functional semantic tokens.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Color
-                        Palette</h3>
-                    <p class="text-body-sm text-grey-primary">Primary brand colors and functional semantic tokens.</p>
                 </a>
 
                 <!-- Typography -->
-                <a href="typography.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-font-size text-h3"></i>
+                <a href="typography.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-font-size" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Typography</h3>
+                        <p class="card-text">Type scale, font weights, and hierarchy settings.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Typography
-                    </h3>
-                    <p class="text-body-sm text-grey-primary">Type scale, font weights, and hierarchy settings.</p>
                 </a>
 
                 <!-- Visual Elements -->
-                <a href="visual_elements.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-shape-line text-h3"></i>
+                <a href="visual_elements.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-shape-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Visual Elements</h3>
+                        <p class="card-text">Shapes, patterns, and background glassmorphism styles.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Visual
-                        Elements</h3>
-                    <p class="text-body-sm text-grey-primary">Shapes, patterns, and background glassmorphism styles.</p>
                 </a>
 
                 <!-- Icons -->
-                <a href="icons.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-hand-coin-line text-h3"></i>
+                <a href="icons.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-hand-coin-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Icons</h3>
+                        <p class="card-text">Custom icon set and application rules for interfaces.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Icons</h3>
-                    <p class="text-body-sm text-grey-primary">Custom icon set and application rules for interfaces.</p>
                 </a>
 
                 <!-- Imagery -->
-                <a href="imagery.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-image-line text-h3"></i>
+                <a href="imagery.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-image-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Imagery</h3>
+                        <p class="card-text">Photography style and visual treatment guidelines.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Imagery</h3>
-                    <p class="text-body-sm text-grey-primary">Photography style and visual treatment guidelines.</p>
                 </a>
 
                 <!-- Persona -->
-                <a href="persona.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-user-smile-line text-h3"></i>
+                <a href="persona.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-user-smile-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Persona</h3>
+                        <p class="card-text">Target audience, communication tone, and brand voice.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Persona</h3>
-                    <p class="text-body-sm text-grey-primary">Target audience, communication tone, and brand voice.</p>
                 </a>
 
                 <!-- Assets -->
-                <a href="assets.html" class="glass-card p-24 group block">
-                    <div
-                        class="w-48 h-48 rounded-full bg-green-primary/10 flex items-center justify-center text-green-primary mb-20 group-hover:scale-hover transition-transform duration-default">
-                        <i class="ri-download-cloud-line text-h3"></i>
+                <a href="assets.html" class="card">
+                    <div class="card-body flex flex-col gap-12">
+                        <div class="card-icon">
+                            <i class="ri-download-cloud-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title">Assets</h3>
+                        <p class="card-text">Downloadable source files and templates.</p>
                     </div>
-                    <h3 class="text-h3 font-semibold mb-8 group-hover:text-green-primary transition-colors">Assets</h3>
-                    <p class="text-body-sm text-grey-primary">Downloadable source files and templates.</p>
                 </a>
 
             </div>
@@ -285,40 +276,41 @@
 
         <!-- BRAND BOOK SHOWCASE -->
         <section class="mb-64">
-            <div class="glass-panel overflow-hidden border border-grey-tertiary">
-                <div class="p-32 border-b border-grey-tertiary bg-white/50 flex items-center justify-between">
+            <div class="panel">
+                <div class="panel-wrap-head justify-between">
                     <div class="flex items-center gap-16">
-                        <div
-                            class="w-40 h-40 rounded-full bg-red-primary/10 text-red-primary flex items-center justify-center">
-                            <i class="ri-file-pdf-line text-h3"></i>
+                        <div class="card-icon">
+                            <i class="ri-file-pdf-line" aria-hidden="true"></i>
                         </div>
                         <div>
-                            <h2 class="text-body-lg font-semibold text-black">Official Brand Book</h2>
-                            <p class="text-body-xs text-grey-primary uppercase tracking-wider">PDF Version v2.0</p>
+                            <p class="card-title">Official Brand Book</p>
+                            <p class="card-text">PDF Version v2.0</p>
                         </div>
                     </div>
-                    <a href="Brand_Book_V2.pdf" download
-                        class="text-body-sm font-medium text-green-primary hover:underline flex items-center gap-4">
-                        Download PDF <i class="ri-download-line"></i>
+                    <a href="Brand_Book_V2.pdf" download class="link link-text-icon link-md">
+                        <span class="link-label">Download PDF</span>
+                        <i class="ri-download-line" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="aspect-video w-full bg-grey-tertiary/20">
-                    <iframe src="Brand_Book_V2.pdf" width="100%" height="800px" style="border: none;" allowfullscreen>
-                    </iframe>
+                <div class="divider"></div>
+                <div class="panel-wrap-body">
+                    <iframe src="Brand_Book_V2.pdf" class="w-full h-carousel-h" allowfullscreen
+                        title="Brand Book PDF"></iframe>
                 </div>
             </div>
         </section>
 
-
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-auto border-t border-grey-tertiary px-32 py-32">
-        <div class="max-w-standard mx-auto flex justify-between items-center text-body-xs text-grey-primary">
-            <p>© 2026 Nexled Brand Guidelines</p>
-            <a href="#" class="hover:text-black transition-colors flex items-center gap-8">
-                Documentation <i class="ri-arrow-right-up-line"></i>
-            </a>
+    <footer class="footer mt-auto">
+        <div class="footer-bottom-bar footer-bottom-floating">
+            <div class="footer-bottom-inner">
+                <p class="footer-bottom-text">(c) 2026 Nexled Brand Guidelines</p>
+                <a href="#" class="footer-bottom-link flex items-center gap-8">
+                    Documentation <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
