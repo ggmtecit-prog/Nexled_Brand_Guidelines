@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Blank Template - Nexled Brand Guidelines</title>
+    <title>Imagery - NexLed Brand Guidelines</title>
 
     <!-- 1. Load Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,108 +24,114 @@
     <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
-<body class="bg-grey-tertiary text-black selection:bg-green-hover-text flex h-screen overflow-hidden">
+<body class="bg-grey-tertiary text-black selection:bg-green-primary/10 min-h-screen lg:flex">
 
-<aside class="shrink-0 sticky top-0 self-center">
-        <div class="sidebar w-sidebar h-sidebar">
-
-            <!-- Logo section -->
-            <div class="flex flex-col h-full gap-16 p-48">
-                <a href="index.html" class="flex items-center justify-center gap-12 group">
-                    <img src="favicon.svg" alt="NexLed" class="w-btn-icon-md h-btn-icon-md">
+    <header class="lg:hidden sticky top-0 z-sticky">
+        <div class="panel rounded-none border-x-0 border-t-0">
+            <div class="container-standard flex items-center justify-between gap-16 py-16">
+                <a href="index.html" class="flex items-center gap-12">
+                    <img src="favicon.svg" alt="NexLed" class="w-40 h-40">
                     <div class="flex flex-col">
-                        <span class="font-semibold text-h3 leading-none text-black">Nexled</span>
-                        <span class="font-regular text-body-sm text-black">Brand Guidelines</span>
+                        <span class="font-semibold text-body-lg leading-none tracking-tight text-black">NexLed</span>
+                        <span class="text-overline text-grey-primary">Brand Guidelines</span>
                     </div>
                 </a>
-
-                <!-- Vertical Navigation -->
-                <nav class="flex flex-col gap-16 flex-1 justify-center">
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="brand.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Brand</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="logo.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Logo</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="color_palette.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Color Palette</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="typography.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Typography</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="visual_elements.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Visual Elements</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="icons.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Icons</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="imagery.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Imagery</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="persona.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Persona</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="dropdown dropdown-minimal dropdown-sm">
-                        <a href="assets.html" class="dropdown-trigger">
-                            <span class="dropdown-value">Assets</span>
-                            <i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-
-                </nav>
+                <div class="flex items-center gap-8">
+                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-target="brandSearchOverlay"
+                        aria-label="Search brand guidelines"><i class="ri-search-line icon icon-md" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-secondary btn-icon btn-xs" data-drawer-target="docs-nav-drawer"
+                        aria-label="Open navigation"><i class="ri-menu-3-line icon icon-md" aria-hidden="true"></i></button>
+                </div>
             </div>
+        </div>
+    </header>
 
+    <div id="docs-nav-drawer" class="drawer-sheet drawer-sheet-sm lg:hidden" aria-hidden="true">
+        <div class="drawer-sheet-panel">
+            <div class="drawer-sheet-header">
+                <div class="flex items-center gap-12">
+                    <img src="favicon.svg" alt="NexLed" class="w-40 h-40">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-body-lg leading-none tracking-tight text-black">NexLed</span>
+                        <span class="text-overline text-grey-primary">Brand Guidelines</span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-icon btn-xs drawer-sheet-close" data-drawer-close
+                    data-drawer-initial-focus aria-label="Close navigation"><i class="ri-close-line icon icon-md"
+                        aria-hidden="true"></i></button>
+            </div>
+            <div class="drawer-sheet-body">
+                <div class="flex flex-col gap-24 h-full">
+                    <nav class="flex flex-col gap-12">
+<div class="dropdown dropdown-minimal dropdown-md"><a href="index.html" class="dropdown-trigger"><span class="dropdown-value">Overview</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="brand.html" class="dropdown-trigger"><span class="dropdown-value">Brand</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="logo.html" class="dropdown-trigger"><span class="dropdown-value">Logo</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="color_palette.html" class="dropdown-trigger"><span class="dropdown-value">Color Palette</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="typography.html" class="dropdown-trigger"><span class="dropdown-value">Typography</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="visual_elements.html" class="dropdown-trigger"><span class="dropdown-value">Visual Elements</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="icons.html" class="dropdown-trigger"><span class="dropdown-value">Icons</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="imagery.html" class="dropdown-trigger" aria-current="page"><span class="dropdown-value">Imagery</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="persona.html" class="dropdown-trigger"><span class="dropdown-value">Persona</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-md"><a href="assets.html" class="dropdown-trigger"><span class="dropdown-value">Assets</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+                    </nav>
+                    <div class="flex flex-col gap-12 mt-auto">
+                        <button type="button" class="btn btn-secondary btn-sm" data-search-overlay-target="brandSearchOverlay">
+                            <i class="ri-search-line text-icon-lg" aria-hidden="true"></i>
+                            Search guidance
+                        </button>
+                        <a href="Brand_Book_V2.pdf" class="btn btn-ghost btn-sm">
+                            <i class="ri-book-open-line text-icon-lg" aria-hidden="true"></i>
+                            Open brand book
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="hidden lg:block shrink-0 sticky top-0 h-screen px-24 py-24">
+        <div class="sidebar w-sidebar h-full">
+            <div class="flex flex-col h-full gap-24 p-48">
+                <a href="index.html" class="flex items-center justify-center gap-12 group">
+                    <img src="favicon.svg" alt="NexLed" class="w-64 h-64">
+                    <div class="flex flex-col">
+                        <span class="text-card-title leading-none tracking-tight text-black">NexLed</span>
+                        <span class="text-label text-black tracking-wider">Brand Guidelines</span>
+                    </div>
+                </a>
+                <nav class="flex flex-col gap-24 flex-1">
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="index.html" class="dropdown-trigger"><span class="dropdown-value">Overview</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="brand.html" class="dropdown-trigger"><span class="dropdown-value">Brand</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="logo.html" class="dropdown-trigger"><span class="dropdown-value">Logo</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="color_palette.html" class="dropdown-trigger"><span class="dropdown-value">Color Palette</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="typography.html" class="dropdown-trigger"><span class="dropdown-value">Typography</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="visual_elements.html" class="dropdown-trigger"><span class="dropdown-value">Visual Elements</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="icons.html" class="dropdown-trigger"><span class="dropdown-value">Icons</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="imagery.html" class="dropdown-trigger" aria-current="page"><span class="dropdown-value">Imagery</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="persona.html" class="dropdown-trigger"><span class="dropdown-value">Persona</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+<div class="dropdown dropdown-minimal dropdown-sm"><a href="assets.html" class="dropdown-trigger"><span class="dropdown-value">Assets</span><i class="ri-arrow-right-s-line dropdown-arrow" aria-hidden="true"></i></a></div>
+                </nav>
+                <div class="flex flex-col gap-12">
+                    <button type="button" class="btn btn-secondary btn-sm" data-search-overlay-target="brandSearchOverlay">
+                        <i class="ri-search-line text-icon-lg" aria-hidden="true"></i>
+                        Search guidance
+                    </button>
+                    <a href="Brand_Book_V2.pdf" class="btn btn-ghost btn-sm">
+                        <i class="ri-book-open-line text-icon-lg" aria-hidden="true"></i>
+                        Open brand book
+                    </a>
+                </div>
+            </div>
         </div>
     </aside>
 
-    <div class="flex-1 min-w-0 flex flex-col h-screen overflow-y-auto">
-
-        <!-- CONTENT -->
-        <main class="flex-1 px-32 pt-32 pb-64 max-w-standard mx-auto w-full">
+    <div class="min-w-0 flex-1 flex flex-col">
+<main class="docs-main container-wide flex-1">
             <!-- PAGE HEADER -->
-                                <header class="mb-48">
-                                    <h1 class="text-display font-semibold mb-12">Imagery</h1>
-                                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                                        One of the key priorities of the rebranding was establishing clear imagery rules for photography,
-                                        renders,
-                                        and all visual assets. The imagery system must communicate technical precision, manufacturing quality,
-                                        and modern simplicity always keeping the product as the central focus.
-                                    </p>
-                                </header>
+                                <header class="page-header-hero" data-reveal="hero">
+                <h1 class="text-hero-title text-black">Imagery</h1>
+                <p class="text-hero-subtitle text-black max-w-readable">One of the key priorities of the rebranding was establishing clear imagery rules for photography, renders, and all visual assets. The imagery system must communicate technical precision, manufacturing quality, and modern simplicity always keeping the product as the central focus.</p>
+            </header>
                         
                                 <div class="space-y-64">
                                     <!-- Visual Style & Technical Approach -->
@@ -137,7 +143,7 @@
                                             Adopt a technical and realistic visual style: sharp images that highlight materials and details,
                                             clean and soft lighting without harsh shadows, and neutral minimalist backgrounds or simple
                                             environments. Avoid human models. Favor frontal, lateral, and macro angles that reveal
-                                            construction, texture, and functionality. Colors should remain neutral and true to the productâ€™s
+                                            construction, texture, and functionality. Colors should remain neutral and true to the product's
                                             actual color temperature, maintaining a clean, modern, and technically driven mood.
                                         </p>
                                     </section>
@@ -197,6 +203,39 @@
         </main>
 
     </div>
+
+<div class="search-overlay" id="brandSearchOverlay" data-search-overlay-modal="true" aria-hidden="true">
+        <div class="search-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="brandSearchOverlayTitle"
+            tabindex="-1">
+            <div class="search-overlay-header">
+                <div>
+                    <h2 id="brandSearchOverlayTitle" class="modal-title">Find pages and sections</h2>
+                </div>
+                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close
+                    aria-label="Close search overlay">
+                    <i class="ri-close-line text-icon-md" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="input-icon-wrapper input-md w-full">
+                <span class="input-icon-area" aria-hidden="true">
+                    <i class="ri-search-line"></i>
+                </span>
+                <input type="text" id="brandSearchOverlayInput" class="input-icon-field" data-search-overlay-input
+                    placeholder="Search pages or current sections" aria-label="Search brand guidelines"
+                    autocomplete="off" spellcheck="false">
+            </div>
+            <div id="brandSearchOverlayResults" class="search-overlay-results" hidden>
+                <div id="brandSearchOverlayList" class="search-overlay-group" role="list" aria-label="Search results"
+                    aria-live="polite"></div>
+            </div>
+            <div id="brandSearchOverlayEmpty" class="search-overlay-empty" hidden>
+                <i class="ri-search-line text-icon-md" aria-hidden="true"></i>
+                <p class="text-body-sm">No matching pages or sections found.</p>
+            </div>
+        </div>
+    </div>
+    <script src="site-search.js"></script>
 
 </body>
 
