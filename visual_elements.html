@@ -116,234 +116,45 @@
 
     <div class="min-w-0 flex-1 flex flex-col">
 <main class="docs-main container-wide flex-1">
-            <!-- PAGE HEADER -->
             <header class="page-header-hero" data-reveal="hero">
                 <h1 class="text-hero-title text-black">Visual Elements</h1>
-                <p class="text-hero-subtitle text-black max-w-readable">Before the redesign, Nexled had no defined graphic elements. The new system introduces a visual language that is simple to apply across all platforms, easy to maintain, and directly connected to the logo and the broader identity while remaining clearly differentiated from competitors.</p>
+                <p class="text-hero-subtitle text-black max-w-readable">NexLed visual elements should reinforce the logo system, support layout rhythm, and never compete with product or information.</p>
             </header>
 
             <div class="space-y-64">
-
-                <!-- Concept Description -->
-                <section class="space-y-24" data-reveal="section">
-                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                        The concept originates from the core shape of the logo: a rounded square that expresses
-                        technical
-                        precision and simplicity. This form becomes a structural component within the visual system,
-                        creating identity, rhythm, and cohesion across applications without competing with the product
-                        or
-                        the information.
-                    </p>
-                    <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                        One of the key expressions of this idea is a continuous line with softened corners, directly
-                        inspired by the brand symbol. It can be placed along one or two edges of the layout typically in
-                        lower corners or opposite diagonals to balance space and establish a recognizable visual
-                        signature.
-                        Solid square blocks derived from the same shape may also be used, as shown in the examples below
-                    </p>
-                </section>
-
-                <!-- Visual Examples -->
-                <section data-reveal="section">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
-
-                        <!-- Example 1: Continuous Line -->
-                        <div
-                            class="w-thumb-md h-thumb-md bg-grey-tertiary border-thin border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
-                            <!-- Content Placeholder -->
-                            <div class="text-grey-tertiary">
-                                <i class="ri-image-2-line text-display"></i>
-                            </div>
-                            <!-- Continuous Line Visual -->
-                            <div
-                                class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-thick border-b-thick border-green-primary rounded-bl-3xl pointer-events-none">
-                            </div>
+                <section id="concept" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-24">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">Concept</span>
+                            <h2 class="text-card-title text-black">Shape Logic & Role</h2>
                         </div>
-
-                        <!-- Example 2: Solid Blocks -->
-                        <div
-                            class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-32 flex flex-col justify-between">
-                            <div class="flex gap-16">
-                                <div
-                                    class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
-                                    <i class="ri-image-line text-h2"></i>
-                                </div>
-                                <div
-                                    class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
-                                    <i class="ri-image-line text-h2"></i>
-                                </div>
-                            </div>
-                            <div
-                                class="h-carousel-h w-full bg-grey-tertiary rounded-xl flex items-center justify-center text-grey-primary">
-                                <i class="ri-image-line text-h1"></i>
-                            </div>
-                        </div>
-
-                        <!-- Example 3: Callout/Connector -->
-                        <div
-                            class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-48 relative flex items-center justify-center">
-                            <div class="relative z-10">
-                                <div class="bg-green-primary text-white px-24 py-16 rounded-xl shadow-btn-default">
-                                    <span class="block w-btn-icon-md h-icon-sm bg-white rounded-full"></span>
-                                </div>
-                                <!-- Connector Line -->
-                                <div
-                                    class="absolute top-full right-8 w-icon-xs h-icon-xl bg-green-primary origin-top -rotate-45">
-                                </div>
-                                <div
-                                    class="absolute top-full -right-16 w-icon-xs h-icon-xs rounded-full bg-green-primary">
-                                </div>
-                            </div>
-                            <!-- Corner Accent -->
-                            <div
-                                class="absolute bottom-0 left-0 w-icon-xl h-icon-xl border-l-thick border-b-thick border-green-primary rounded-bl-2xl">
-                            </div>
-                            <div
-                                class="absolute top-0 right-0 w-icon-xl h-icon-xl border-t-thick border-r-thick border-green-primary rounded-tr-2xl">
-                            </div>
-                        </div>
-
+                        <p class="text-body text-grey-primary max-w-readable">The visual system takes its cues from the rounded-square geometry already present in the logo. This shape can help structure layouts, create rhythm, and frame content without becoming decorative noise.</p>
+                        <p class="text-body text-grey-primary max-w-readable">Use softened lines, corner accents, and simple blocks in a controlled way. They should support hierarchy and recognition, not overwhelm the page.</p>
                     </div>
                 </section>
 
-                <!-- Visual Elements - Application Rules -->
-                <section data-reveal="section">
-                    <div class="flex items-center gap-12 mb-48">
-                        <h2 class="text-h2 font-semibold">Visual Elements - Application Rules</h2>
+                <section id="approved-examples" data-reveal="section">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+                        <div class="card"><div class="card-body"><div class="panel p-40 flex items-center justify-center bg-grey-tertiary relative overflow-hidden"><div class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-thick border-b-thick border-green-primary rounded-bl-3xl"></div></div><h3 class="card-title">Continuous Line</h3><p class="card-text">Use line accents to frame a composition or add structural rhythm without taking over the content.</p></div></div>
+                        <div class="card"><div class="card-body"><div class="panel p-32 flex flex-col justify-between gap-16"><div class="flex gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-btn"></div><div class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-btn"></div></div><div class="h-carousel-h bg-grey-tertiary rounded-btn"></div></div><h3 class="card-title">Solid Blocks</h3><p class="card-text">Use simple blocks derived from the same geometry to support composition and spacing.</p></div></div>
+                        <div class="card"><div class="card-body"><div class="panel p-40 relative flex items-center justify-center"><div class="absolute bottom-0 left-0 w-icon-xl h-icon-xl border-l-thick border-b-thick border-green-primary rounded-bl-2xl"></div><div class="absolute top-0 right-0 w-icon-xl h-icon-xl border-t-thick border-r-thick border-green-primary rounded-tr-2xl"></div><div class="bg-green-primary text-white px-24 py-16 rounded-btn shadow-btn-default"><span class="block w-btn-icon-md h-icon-sm bg-white rounded-full"></span></div></div><h3 class="card-title">Callout Framing</h3><p class="card-text">Use structural accents to guide attention, not to create visual clutter.</p></div></div>
                     </div>
+                </section>
 
-                    <div class="space-y-48">
-                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                            Visual elements must be applied with consistency and intention. The examples below highlight
-                            incorrect uses that weaken clarity, disrupt hierarchy, and compromise the technical
-                            character
-                            that defines the Nexled brand
-                        </p>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
-
-                            <!-- Incorrect 1: Low Contrast -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="w-thumb-md h-thumb-md bg-grey-secondary border-thin border-grey-tertiary rounded-xl relative overflow-hidden flex items-center justify-center p-48">
-                                    <div
-                                        class="absolute bottom-0 left-0 w-1/2 h-1/2 border-l-thick border-b-thick border-white rounded-bl-3xl">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 2: Unauthorized Colors -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl p-32 flex flex-col justify-between relative overflow-hidden">
-                                    <div class="flex gap-16">
-                                        <div
-                                            class="w-btn-icon-md h-btn-icon-md border-thin border-green-primary rounded-xl flex items-center justify-center text-grey-primary bg-green-hover-text">
-                                            <i class="ri-image-line text-h2 text-green-primary"></i>
-                                        </div>
-                                        <div
-                                            class="w-btn-icon-md h-btn-icon-md border-thin border-blue-primary rounded-xl flex items-center justify-center text-grey-primary bg-blue-secondary">
-                                            <i class="ri-image-line text-h2 text-blue-primary"></i>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="h-carousel-h w-full border-thin border-red-primary rounded-xl flex items-center justify-center text-grey-primary bg-red-secondary">
-                                        <i class="ri-image-line text-h1 text-red-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 3: Inconsistent Radii -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center p-48">
-                                <div
-                                    class="absolute top-0 left-0 w-icon-xl h-icon-xl border-t-thick border-l-thick border-green-primary rounded-tl-full">
-                                </div>
-                                <div
-                                    class="absolute bottom-1/3 right-0 w-icon-xxl h-icon-xxl border-b-thick border-r-thick border-green-primary rounded-br-2xl">
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 4: Incorrect Placement -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary">
-                                <div
-                                    class="absolute bottom-0 left-12 w-1/2 h-icon-sm border-t-thick border-green-primary rounded-t-xl">
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 5: Clutter/Overlapping -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center overflow-hidden">
-                                <div
-                                    class="w-btn-icon-md h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/4 left-1/4 z-10 border-thin border-white flex items-center justify-center">
-                                    <i class="ri-image-line"></i>
-                                </div>
-                                <div
-                                    class="w-btn-icon-lg h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/3 left-1/3 z-20 border-thin border-white flex items-center justify-center">
-                                    <i class="ri-image-line"></i>
-                                </div>
-                                <div
-                                    class="w-btn-icon-xl h-btn-icon-md bg-grey-secondary rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 border-thin border-white flex items-center justify-center">
-                                    <i class="ri-image-line text-h2"></i>
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 6: Incorrect Scaling -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center">
-                                <div
-                                    class="absolute top-0 left-0 w-icon-xs h-icon-xs border-t-thick border-l-thick border-green-primary rounded-tl-sm">
-                                </div>
-                                <div
-                                    class="absolute bottom-0 right-0 w-icon-xs h-icon-xs border-b-thick border-r-thick border-green-primary rounded-br-sm">
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 7: Distortion -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center bg-grey-tertiary">
-                                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
-                                    class="absolute bottom-0 left-0 w-1/2 h-1/2" class="text-green-primary">
-                                    <path d="M0,100 Q25,25 50,50 T100,50" fill="none" stroke="currentColor"
-                                        stroke-width="4" />
-                                </svg>
-                            </div>
-
-                            <!-- Incorrect 8: Rotation -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center p-32 overflow-hidden">
-                                <div
-                                    class="w-btn-icon-md h-icon-xxl border-standard border-green-primary rounded-lg rotate-12 absolute top-1/4 left-1/4 flex items-center justify-center">
-                                    <i class="ri-image-line"></i>
-                                </div>
-                                <div
-                                    class="w-btn-icon-md h-icon-xxl border-standard border-green-primary rounded-lg -rotate-12 absolute bottom-1/4 right-1/4 flex items-center justify-center">
-                                    <i class="ri-image-line"></i>
-                                </div>
-                                <div
-                                    class="w-btn-icon-md h-icon-xl border-standard border-green-primary rounded-lg rotate-45 absolute bottom-8 left-8 flex items-center justify-center">
-                                    <i class="ri-image-line"></i>
-                                </div>
-                            </div>
-
-                            <!-- Incorrect 9: Overuse -->
-                            <div
-                                class="w-thumb-md h-thumb-md border-thin border-grey-tertiary rounded-xl relative flex items-center justify-center">
-                                <div
-                                    class="absolute top-0 left-0 w-icon-sm h-icon-sm border-t-thick border-l-thick border-green-primary rounded-tl-xl">
-                                </div>
-                                <div
-                                    class="absolute top-0 right-0 w-icon-sm h-icon-sm border-t-thick border-r-thick border-green-primary rounded-tr-xl">
-                                </div>
-                                <div
-                                    class="absolute bottom-0 left-0 w-icon-sm h-icon-sm border-b-thick border-l-thick border-green-primary rounded-bl-xl">
-                                </div>
-                                <div
-                                    class="absolute bottom-0 right-0 w-icon-sm h-icon-sm border-b-thick border-r-thick border-green-primary rounded-br-xl">
-                                </div>
-                            </div>
-
+                <section id="application-rules" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-32">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">Application Rules</span>
+                            <h2 class="text-card-title text-black">Incorrect Uses to Avoid</h2>
+                        </div>
+                        <p class="text-body text-grey-primary max-w-readable">Visual elements fail when they reduce clarity, fight the grid, or introduce a second visual language that is unrelated to the logo system.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 w-full">
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Low-contrast accents that disappear against the surface should not be used.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Unauthorized colors break the cohesion of the NexLed visual system.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Inconsistent radii or corner logic make the language feel arbitrary.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Wrong placement turns supporting graphics into distractions.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Cluttered overlaps reduce legibility and weaken hierarchy.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Overuse makes the system feel decorative instead of intentional.</p></div></div>
                         </div>
                     </div>
                 </section>

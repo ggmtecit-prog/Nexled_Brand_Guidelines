@@ -116,265 +116,65 @@
 
     <div class="min-w-0 flex-1 flex flex-col">
 <main class="docs-main container-wide flex-1">
-            <!-- PAGE HEADER -->
             <header class="page-header-hero" data-reveal="hero">
                 <h1 class="text-hero-title text-black">Typography</h1>
-                <p class="text-hero-subtitle text-black max-w-readable">Urbanist is the primary typeface of Nexled. This geometric sans-serif was chosen for its clarity, balance, and contemporary character. Its clean structure reflects the brand's values.</p>
+                <p class="text-hero-subtitle text-black max-w-readable">Urbanist is the working type system for NexLed and should keep every page clear, structured, and technically confident.</p>
             </header>
 
             <div class="space-y-64">
+                <section id="typeface-overview" data-reveal="section">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                        <div class="card"><div class="card-body"><div class="panel p-32 bg-white"><p class="text-display font-light text-black">Lorem Ipsum Dolor Sit Amet</p></div><p class="card-text">Urbanist Light (300) for light supporting emphasis only.</p></div></div>
+                        <div class="card"><div class="card-body"><div class="panel p-32 bg-white"><p class="text-display font-regular text-black">Lorem Ipsum Dolor Sit Amet</p></div><p class="card-text">Urbanist Regular (400) for clear, neutral body text.</p></div></div>
+                        <div class="card"><div class="card-body"><div class="panel p-32 bg-white"><p class="text-display font-medium text-black">Lorem Ipsum Dolor Sit Amet</p></div><p class="card-text">Urbanist Medium (500) for supporting emphasis and substructure.</p></div></div>
+                        <div class="card"><div class="card-body"><div class="panel p-32 bg-white"><p class="text-display font-semibold text-black">Lorem Ipsum Dolor Sit Amet</p></div><p class="card-text">Urbanist SemiBold (600) for strong hierarchy and section emphasis.</p></div></div>
+                    </div>
+                </section>
 
-                <!-- Typeface Visualization -->
-                <section data-reveal="section">
-                    <div class="flex flex-col gap-24 mb-48">
-                        <!-- Light -->
-                        <div class="p-32 border-thin border-grey-tertiary rounded-xl bg-white shadow-btn-default">
-                            <p class="text-display font-light text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                            <span class="text-label font-regular text-grey-primary">Urbanist Light (300)</span>
+                <section id="system-function" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-24">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">System & Function</span>
+                            <h2 class="text-card-title text-black">Why the Typeface Works</h2>
                         </div>
+                        <p class="text-body text-grey-primary max-w-readable">Urbanist complements the logo by keeping the system geometric, clean, and easy to scale across interfaces, documents, and technical communication.</p>
+                        <p class="text-body text-grey-primary max-w-readable">Hierarchy should come from weight, size, spacing, and contrast, never from decorative formatting or inconsistent type choices.</p>
+                    </div>
+                </section>
 
-                        <!-- Regular -->
-                        <div class="p-32 border-thin border-grey-tertiary rounded-xl bg-white shadow-btn-default">
-                            <p class="text-display font-regular text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                            <span class="text-label font-regular text-grey-primary">Urbanist Regular (400)</span>
+                <section id="type-scale" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-32">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">Hierarchy</span>
+                            <h2 class="text-card-title text-black">Type Scale & Usage</h2>
                         </div>
-
-                        <!-- Medium -->
-                        <div class="p-32 border-thin border-grey-tertiary rounded-xl bg-white shadow-btn-default">
-                            <p class="text-display font-medium text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                            <span class="text-label font-regular text-grey-primary">Urbanist Medium (500)</span>
-                        </div>
-
-                        <!-- Semibold -->
-                        <div class="p-32 border-thin border-grey-tertiary rounded-xl bg-white shadow-btn-default">
-                            <p class="text-display font-semibold text-black mb-8">Lorem Ipsum Dolor Sit Amet</p>
-                            <span class="text-label font-regular text-grey-primary">Urbanist Semibold (600)</span>
+                        <ul class="space-y-12 max-w-readable">
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Use Urbanist across web, print, and presentation surfaces to preserve a single typographic voice.</p></li>
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Create hierarchy through size, spacing, and weight, not through ornamental effects.</p></li>
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Choose text color based on contrast and the approved brand palette.</p></li>
+                        </ul>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 w-full">
+                            <div class="card"><div class="card-body"><span class="badge badge-primary badge-sm">H1</span><h3 class="card-title">Main headlines</h3><p class="card-text">Print: 24-34 pt. Web: 40-56 px.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-primary badge-sm">H2</span><h3 class="card-title">Section titles</h3><p class="card-text">Print: 18-24 pt. Web: 28-40 px.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-primary badge-sm">H3</span><h3 class="card-title">Subsections</h3><p class="card-text">Print: 16-20 pt. Web: 22-28 px.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-neutral badge-sm">Body</span><h3 class="card-title">Paragraph text</h3><p class="card-text">Print: 13-15 pt. Web: 16-18 px.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-neutral badge-sm">Notes</span><h3 class="card-title">Captions & metadata</h3><p class="card-text">Print: 11-15 pt. Web: 12-14 px.</p></div></div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Additional Description -->
-                <section class="space-y-32" data-reveal="section">
-                    <div>
-                        <h2 class="text-h2 font-semibold mb-16">System & Function</h2>
-                        <p class="text-body-lg text-grey-primary max-w-readable font-light mb-24">
-                            Although distinct from Swiss 721 BT Black Rounded, the typeface used in the logo, Urbanist
-                            complements it visually. It maintains a technical feel while offering greater versatility
-                            and
-                            readability across the many environments where the brand lives: web interfaces, technical
-                            dashboards, catalogs, and institutional communication.
-                        </p>
-                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                            Together, these two typefaces create a cohesive, scalable, and professional typographic
-                            system
-                            that supports Nexled's ambitions combining clarity, geometric precision, and modern
-                            versatility
-                            to ensure consistent performance across every touchpoint.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Typography - Info -->
-                <section data-reveal="section">
-                    <div class="flex items-center gap-12 mb-48">
-                        <h2 class="text-h2 font-semibold">Typography - Info</h2>
-                    </div>
-
-                    <div class="flex flex-col gap-64">
-                        <!-- Principles -->
-                        <div class="space-y-32">
-                            <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                                Nexled typography must remain simple, technical, and consistent. To maintain clarity and
-                                precision across all applications, the typographic system follows a set of core
-                                principles:
-                            </p>
-                                                        <ul class="space-y-12 max-w-readable">
-                                <li class="flex items-start gap-12">
-                                    <i class="ri-checkbox-circle-line text-green-primary mt-4" aria-hidden="true"></i>
-                                    <p class="text-body text-grey-primary">Always use the Urbanist type family to ensure a unified visual voice.</p>
-                                </li>
-                                <li class="flex items-start gap-12">
-                                    <i class="ri-checkbox-circle-line text-green-primary mt-4" aria-hidden="true"></i>
-                                    <p class="text-body text-grey-primary">Establish hierarchy through weight, size, and spacing, never through decorative effects.</p>
-                                </li>
-                                <li class="flex items-start gap-12">
-                                    <i class="ri-checkbox-circle-line text-green-primary mt-4" aria-hidden="true"></i>
-                                    <p class="text-body text-grey-primary">Use black or white text depending on background contrast, always within the official palette.</p>
-                                </li>
-                                <li class="flex items-start gap-12">
-                                    <i class="ri-checkbox-circle-line text-green-primary mt-4" aria-hidden="true"></i>
-                                    <p class="text-body text-grey-primary">Ensure formatting is quick to apply and consistent across web, print, and presentations.</p>
-                                </li>
-                                <li class="flex items-start gap-12">
-                                    <i class="ri-checkbox-circle-line text-green-primary mt-4" aria-hidden="true"></i>
-                                    <p class="text-body text-grey-primary">Select text color based on contrast and accessibility, aligned with the brand's color system.</p>
-                                </li>
-                            </ul>
+                <section id="application-rules" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-32">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">Application Rules</span>
+                            <h2 class="text-card-title text-black">Typography Mistakes to Avoid</h2>
                         </div>
-
-                        <!-- Hierarchy Scale -->
-                        <div class="border-thin border-grey-tertiary rounded-xl bg-white shadow-btn-default overflow-hidden">
-                            <div class="grid grid-cols-1 divide-y divide-grey-tertiary">
-                                <!-- H1 -->
-                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                    <div>
-                                        <p class="text-display font-semibold text-black mb-4">H1 - SemiBold</p>
-                                        <p class="text-body-sm text-grey-primary">Main Headlines</p>
-                                    </div>
-                                    <div class="flex gap-32">
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Print</span>
-                                            <span class="text-body font-medium text-black">24-34 pt</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Web</span>
-                                            <span class="text-body font-medium text-black">40-56 px</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- H2 -->
-                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                    <div>
-                                        <p class="text-h1 font-semibold text-black mb-4">H2 - SemiBold</p>
-                                        <p class="text-body-sm text-grey-primary">Section Titles</p>
-                                    </div>
-                                    <div class="flex gap-32">
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Print</span>
-                                            <span class="text-body font-medium text-black">18-24 pt</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Web</span>
-                                            <span class="text-body font-medium text-black">28-40 px</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- H3 -->
-                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                    <div>
-                                        <p class="text-h2 font-medium text-black mb-4">H3 - Medium</p>
-                                        <p class="text-body-sm text-grey-primary">Subsections</p>
-                                    </div>
-                                    <div class="flex gap-32">
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Print</span>
-                                            <span class="text-body font-medium text-black">16-20 pt</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Web</span>
-                                            <span class="text-body font-medium text-black">22-28 px</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Paragraph -->
-                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                    <div>
-                                        <p class="text-body font-regular text-black mb-4">Paragraph - Regular</p>
-                                        <p class="text-body-sm text-grey-primary">Body Text</p>
-                                    </div>
-                                    <div class="flex gap-32">
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Print</span>
-                                            <span class="text-body font-medium text-black">13-15 pt</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Web</span>
-                                            <span class="text-body font-medium text-black">16-18 px</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Notes -->
-                                <div class="p-32 flex flex-col md:flex-row md:items-center justify-between gap-16">
-                                    <div>
-                                        <p class="text-body-sm font-light text-black mb-4">Notes - Light</p>
-                                        <p class="text-body-xs text-grey-primary">Captions & Metadata</p>
-                                    </div>
-                                    <div class="flex gap-32">
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Print</span>
-                                            <span class="text-body font-medium text-black">11-15 pt</span>
-                                        </div>
-                                        <div class="text-right">
-                                            <span class="block text-label font-regular text-grey-primary">Web</span>
-                                            <span class="text-body font-medium text-black">12-14 px</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Typography - Application Rules -->
-                <section data-reveal="section">
-                    <div class="flex items-center gap-12 mb-48">
-                        <h2 class="text-h2 font-semibold">Typography - Application Rules</h2>
-                    </div>
-
-                    <div class="space-y-48">
-                        <p class="text-body-lg text-grey-primary max-w-readable font-light">
-                            Typography must be applied with consistency and precision. The examples below illustrate
-                            incorrect uses that compromise clarity, hierarchy, and the technical character of the Nexled
-                            brand
-                        </p>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
-
-                            <!-- Incorrect: Mixing Weights -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="h-thumb-md border-thin border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                    <p class="text-h3 text-black">Light for <span class="font-bold">every</span> need
-                                    </p>
-                                </div>
-                                <span class="text-body-sm text-grey-primary text-center">Mixing unrelated font
-                                    weights</span>
-                            </div>
-
-                            <!-- Incorrect: Ignoring Hierarchy -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="h-thumb-md border-thin border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                    <p class="text-body-xs text-black">Light for every need</p>
-                                </div>
-                                <span class="text-body-sm text-grey-primary text-center">Ignoring the defined size
-                                    hierarchy</span>
-                            </div>
-
-                            <!-- Incorrect: Wrong Colors -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="h-thumb-md border-thin border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                    <p class="text-h3 text-green-secondary">Light for every need</p>
-                                </div>
-                                <span class="text-body-sm text-grey-primary text-center">Applying colors outside the
-                                    palette</span>
-                            </div>
-
-                            <!-- Incorrect: Bad Formatting -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="h-thumb-md border-thin border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                    <p class="text-h3 font-bold text-black line-through">Light for every
-                                    </p>
-                                </div>
-                                <span class="text-body-sm text-grey-primary text-center">Using formatting styles that
-                                    break
-                                    the system</span>
-                            </div>
-
-                            <!-- Incorrect: Non-brand Typeface -->
-                            <div class="flex flex-col gap-16">
-                                <div
-                                    class="h-thumb-md border-thin border-grey-tertiary rounded-xl bg-white flex items-center justify-center p-24">
-                                    <p class="text-h3 text-black">Light
-                                        for
-                                        every need</p>
-                                </div>
-                                <span class="text-body-sm text-grey-primary text-center">Using non-brand
-                                    typefaces</span>
-                            </div>
-
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 w-full">
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Mixing unrelated weights inside the same message breaks clarity and rhythm.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Ignoring the scale makes section hierarchy harder to scan and understand.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Using text colors outside the approved palette weakens consistency and readability.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Decorative formatting such as excessive styling or crossed text should not define hierarchy.</p></div></div>
+                            <div class="card"><div class="card-body"><span class="badge badge-danger badge-sm">Incorrect</span><p class="card-text">Using non-brand typefaces fragments the identity and reduces system cohesion.</p></div></div>
                         </div>
                     </div>
                 </section>
