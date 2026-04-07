@@ -1262,6 +1262,8 @@
                 }
 
                 parts.tooltipText.textContent = text;
+                parts.wrapper.classList.remove('flex-col');
+                parts.wrapper.classList.add('tooltip-static', 'flex-col-reverse');
                 parts.tooltip.setAttribute('aria-hidden', 'false');
             }
 
@@ -1270,6 +1272,8 @@
                 if (!parts) {
                     return;
                 }
+                parts.wrapper.classList.remove('tooltip-static', 'flex-col-reverse');
+                parts.wrapper.classList.add('flex-col');
                 parts.tooltip.setAttribute('aria-hidden', 'true');
             }
 
