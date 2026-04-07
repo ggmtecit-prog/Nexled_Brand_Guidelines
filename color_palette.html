@@ -117,287 +117,94 @@
 <main class="docs-main container-wide flex-1">
             <header class="page-header-hero" data-reveal="hero">
                 <h1 class="text-hero-title text-black">Color Palette</h1>
-                <p class="text-hero-subtitle text-black max-w-readable">Green leads the NexLed identity, support colors add controlled contrast, and neutrals keep dense technical content clean and readable.</p>
+                <p class="text-hero-subtitle text-black max-w-readable">The NexLed palette should keep every application recognizably technical, modern, and consistent across digital and print use.</p>
             </header>
 
             <div class="space-y-64">
-                <section id="palette-principles" data-reveal="section">
-                    <div class="panel panel-wrap-body panel-wrap-body-gap-24">
-                        <div class="space-y-16 max-w-readable">
-                            <h2 class="text-card-title text-black">Build recognition first, variation second</h2>
-                            <p class="text-body text-grey-primary">The palette is functional, not decorative. Green establishes the brand immediately, blue and red support specific moments of contrast, and the neutral range protects clarity across technical layouts, catalog content, and interface surfaces.</p>
-                            <p class="text-body text-grey-primary">When a page starts feeling too colorful, reduce instead of adding more. NexLed should read as controlled, professional, and brand-led rather than visually noisy.</p>
-                            <div class="flex flex-wrap gap-12">
-                                <span class="badge badge-primary badge-md">Green leads</span>
-                                <span class="badge badge-neutral badge-md">Neutrals structure</span>
-                                <span class="badge badge-neutral badge-md">Support colors stay secondary</span>
-                                <span class="badge badge-danger badge-md">No extra hues</span>
-                            </div>
-                            <dl class="list list-spec list-md">
-                                <div class="list-item">
-                                    <dt class="list-key">Brand lead</dt>
-                                    <dd class="list-value">green-primary and green-secondary</dd>
-                                </div>
-                                <div class="list-item">
-                                    <dt class="list-key">Support accents</dt>
-                                    <dd class="list-value">blue-primary, blue-secondary, red-primary, and red-secondary</dd>
-                                </div>
-                                <div class="list-item">
-                                    <dt class="list-key">Surface neutrals</dt>
-                                    <dd class="list-value">grey-primary, grey-secondary, grey-tertiary, black, and white</dd>
-                                </div>
-                                <div class="list-item">
-                                    <dt class="list-key">Reserved state accent</dt>
-                                    <dd class="list-value">link-visited for system-defined interaction states only</dd>
-                                </div>
-                            </dl>
+                <section id="palette-overview" data-reveal="section">
+                    <div class="panel panel-wrap-body panel-wrap-body-gap-32">
+                        <div class="space-y-8">
+                            <span class="text-overline text-grey-primary">Palette Overview</span>
+                            <h2 class="text-card-title text-black">How the System Uses Color</h2>
                         </div>
+                        <div class="grid grid-cols-4 gap-12 max-w-sm">
+                            <div class="w-btn-icon-md h-btn-icon-md bg-green-primary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-blue-primary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-red-primary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-black rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-green-secondary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-blue-secondary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-red-secondary rounded-btn shadow-btn-default"></div>
+                            <div class="w-btn-icon-md h-btn-icon-md bg-white border-thin border-grey-secondary rounded-btn shadow-btn-default"></div>
+                        </div>
+                        <ul class="space-y-12 max-w-readable">
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Green is the core brand color and should lead across identity, emphasis, and primary brand recognition.</p></li>
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Blue and red are support colors. Use them intentionally, never as replacements for the green-led system.</p></li>
+                            <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Neutrals carry typography, surfaces, and layout structure so product and content remain clear.</p></li>
+                        </ul>
                     </div>
                 </section>
 
-                <section id="brand-green-system" data-reveal="section">
-                    <div class="panel panel-wrap-body panel-wrap-body-gap-32 border-green-primary">
-                        <div class="flex items-center gap-16">
-                            <span class="icon-box icon-box-lg icon-box-empty-state">
-                                <i class="ri-leaf-line icon icon-lg" aria-hidden="true"></i>
-                            </span>
-                            <div class="space-y-8">
-                                <span class="text-overline text-grey-primary">Core Brand Family</span>
-                                <h2 class="text-card-title text-black">Green System</h2>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-                            <div class="space-y-16 max-w-readable">
-                                <p class="text-body text-grey-primary">The green family comes directly from the NexLed mark and should carry the brand wherever recognition matters first. It is the default family for identity, primary emphasis, key headings, and leading actions.</p>
-                                <ul class="space-y-12">
-                                    <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Use green-primary where the brand needs maximum presence and immediate recognition.</p></li>
-                                    <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Use green-secondary to extend the family in softer emphasis areas without changing the brand lead.</p></li>
-                                    <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body text-grey-primary">Use the lighter green tones for soft surfaces, contextual highlights, or supportive backgrounds, not as replacements for the primary mark color.</p></li>
-                                </ul>
-                                <div class="flex flex-wrap gap-12">
-                                    <span class="badge badge-primary badge-md">Identity</span>
-                                    <span class="badge badge-primary badge-md">Primary emphasis</span>
-                                    <span class="badge badge-neutral badge-md">Soft highlights</span>
+                <section id="palette-groups" data-reveal="section">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-header">
+                                    <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-leaf-line icon icon-lg" aria-hidden="true"></i></span>
+                                    <h2 class="card-title">Green System</h2>
                                 </div>
-                            </div>
-                            <div class="space-y-16">
-                                <div class="flex items-start gap-16">
-                                    <div class="w-btn-icon-md h-btn-icon-md bg-green-primary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                    <dl class="list list-spec list-md flex-1">
-                                        <div class="list-item">
-                                            <dt class="list-key">green-primary</dt>
-                                            <dd class="list-value">HEX #03683D / RGB 3, 104, 61 / CMYK 97, 0, 41, 59</dd>
-                                        </div>
-                                    </dl>
-                                </div>
-                                <div class="flex items-start gap-16">
-                                    <div class="w-btn-icon-md h-btn-icon-md bg-green-secondary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                    <dl class="list list-spec list-md flex-1">
-                                        <div class="list-item">
-                                            <dt class="list-key">green-secondary</dt>
-                                            <dd class="list-value">HEX #058C53 / RGB 5, 140, 83 / CMYK 96, 0, 41, 45</dd>
-                                        </div>
-                                    </dl>
-                                </div>
-                                <div class="flex items-start gap-16">
-                                    <div class="w-btn-icon-md h-btn-icon-md bg-green-hover-icons rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                    <dl class="list list-spec list-md flex-1">
-                                        <div class="list-item">
-                                            <dt class="list-key">green-hover-icons</dt>
-                                            <dd class="list-value">HEX #BEE0D2 / RGB 190, 224, 210 / CMYK 15, 0, 6, 12</dd>
-                                        </div>
-                                    </dl>
-                                </div>
-                                <div class="flex items-start gap-16">
-                                    <div class="w-btn-icon-md h-btn-icon-md bg-green-hover-text rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                    <dl class="list list-spec list-md flex-1">
-                                        <div class="list-item">
-                                            <dt class="list-key">green-hover-text</dt>
-                                            <dd class="list-value">HEX #E3F1EB / RGB 227, 241, 235 / CMYK 6, 0, 2, 5</dd>
-                                        </div>
-                                    </dl>
+                                <div class="space-y-16">
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-green-primary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Primary</p><p class="text-body-sm text-grey-primary">HEX #03683D | RGB 3, 104, 61 | CMYK 97, 0, 41, 59</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-green-secondary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Secondary</p><p class="text-body-sm text-grey-primary">HEX #058C53 | RGB 5, 140, 83 | CMYK 96, 0, 41, 45</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-green-hover-icons rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Tertiary</p><p class="text-body-sm text-grey-primary">HEX #BEE0D2 | RGB 190, 224, 210 | CMYK 15, 0, 6, 12</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-green-hover-text rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Quaternary</p><p class="text-body-sm text-grey-primary">HEX #E3F1EB | RGB 227, 241, 235 | CMYK 6, 0, 2, 5</p></div></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
 
-                <section id="support-and-neutral-families" data-reveal="section">
-                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-24">
-                        <article class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <div class="card-header">
                                     <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-contrast-drop-2-line icon icon-lg" aria-hidden="true"></i></span>
-                                    <h2 class="card-title">Support Colors</h2>
-                                </div>
-                                <p class="card-text">Blue and red help separate information, product ranges, or contextual emphasis, but they should never overtake the green-led identity.</p>
-                                <div class="flex flex-wrap gap-12">
-                                    <span class="badge badge-neutral badge-md">Secondary emphasis</span>
-                                    <span class="badge badge-neutral badge-md">Controlled contrast</span>
+                                    <h2 class="card-title">Supporting Colors</h2>
                                 </div>
                                 <div class="space-y-16">
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-blue-primary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">blue-primary</dt>
-                                                <dd class="list-value">HEX #386789 / RGB 56, 103, 137 / CMYK 59, 25, 0, 46</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-blue-secondary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">blue-secondary</dt>
-                                                <dd class="list-value">HEX #5B8BAA / RGB 91, 139, 170 / CMYK 46, 18, 0, 33</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-red-primary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">red-primary</dt>
-                                                <dd class="list-value">HEX #B1242F / RGB 177, 36, 47 / CMYK 0, 80, 73, 31</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-red-secondary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">red-secondary</dt>
-                                                <dd class="list-value">HEX #C94A55 / RGB 201, 74, 85 / CMYK 0, 63, 58, 21</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-blue-primary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Blue Primary</p><p class="text-body-sm text-grey-primary">HEX #386789 | RGB 56, 103, 137 | CMYK 59, 25, 0, 46</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-blue-secondary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Blue Secondary</p><p class="text-body-sm text-grey-primary">HEX #5B8BAA | RGB 91, 139, 170 | CMYK 46, 18, 0, 33</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-red-primary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Red Primary</p><p class="text-body-sm text-grey-primary">HEX #B1242F | RGB 177, 36, 47 | CMYK 0, 80, 73, 31</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-red-secondary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Red Secondary</p><p class="text-body-sm text-grey-primary">HEX #C94A55 | RGB 201, 74, 85 | CMYK 0, 63, 58, 21</p></div></div>
                                 </div>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <div class="card-header">
                                     <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-layout-grid-line icon icon-lg" aria-hidden="true"></i></span>
                                     <h2 class="card-title">Neutral Foundation</h2>
                                 </div>
-                                <p class="card-text">Neutrals do most of the structural work. Use them for typography, dividers, panels, and breathable page surfaces so the brand colors stay meaningful.</p>
-                                <div class="flex flex-wrap gap-12">
-                                    <span class="badge badge-neutral badge-md">Text and surfaces</span>
-                                    <span class="badge badge-neutral badge-md">Layout structure</span>
+                                <div class="space-y-16">
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-grey-primary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Grey Primary</p><p class="text-body-sm text-grey-primary">HEX #878787 | RGB 135, 135, 135 | CMYK 0, 0, 0, 47</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-grey-secondary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Grey Secondary</p><p class="text-body-sm text-grey-primary">HEX #D9D9D9 | RGB 217, 217, 217 | CMYK 0, 0, 0, 15</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Grey Tertiary</p><p class="text-body-sm text-grey-primary">HEX #EDEDED | RGB 237, 237, 237 | CMYK 0, 0, 0, 7</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-black rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Black</p><p class="text-body-sm text-grey-primary">HEX #121212 | RGB 18, 18, 18 | CMYK 0, 0, 0, 93</p></div></div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-white border-thin border-grey-secondary rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">White</p><p class="text-body-sm text-grey-primary">HEX #FCFCFC | RGB 252, 252, 252 | CMYK 0, 0, 0, 1</p></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-header">
+                                    <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-cursor-line icon icon-lg" aria-hidden="true"></i></span>
+                                    <h2 class="card-title">Interaction Accent</h2>
                                 </div>
                                 <div class="space-y-16">
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-grey-primary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">grey-primary</dt>
-                                                <dd class="list-value">HEX #878787 / RGB 135, 135, 135 / CMYK 0, 0, 0, 47</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-grey-secondary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">grey-secondary</dt>
-                                                <dd class="list-value">HEX #D9D9D9 / RGB 217, 217, 217 / CMYK 0, 0, 0, 15</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-grey-tertiary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">grey-tertiary</dt>
-                                                <dd class="list-value">HEX #EDEDED / RGB 237, 237, 237 / CMYK 0, 0, 0, 7</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-black rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">black</dt>
-                                                <dd class="list-value">HEX #121212 / RGB 18, 18, 18 / CMYK 0, 0, 0, 93</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-white border-thin border-grey-secondary rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">white</dt>
-                                                <dd class="list-value">HEX #FCFCFC / RGB 252, 252, 252 / CMYK 0, 0, 0, 1</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
+                                    <div class="flex items-start gap-16"><div class="w-btn-icon-md h-btn-icon-md bg-link-visited rounded-btn shadow-btn-default shrink-0"></div><div><p class="text-body text-black">Hover / visited accent</p><p class="text-body-sm text-grey-primary">HEX #4C1D95 | RGB 76, 29, 149 | CMYK 49, 81, 0, 42</p></div></div>
                                 </div>
+                                <p class="card-text">Use this only where the system already defines an interaction or link state. It should never replace the core green identity.</p>
                             </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="application-rules" data-reveal="section">
-                    <div class="panel panel-wrap-body panel-wrap-body-gap-32">
-                        <div class="space-y-8">
-                            <span class="text-overline text-grey-primary">Application Rules</span>
-                            <h2 class="text-card-title text-black">Apply the palette with discipline</h2>
                         </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-24">
-                            <article class="card">
-                                <div class="card-body">
-                                    <span class="badge badge-success badge-sm">Preferred</span>
-                                    <h3 class="text-body-lg text-black">Lead with green</h3>
-                                    <ul class="space-y-12">
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Use green for the mark, key headings, primary actions, and the strongest emphasis moments.</p></li>
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Let lighter greens support highlights and soft brand backgrounds.</p></li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="card">
-                                <div class="card-body">
-                                    <span class="badge badge-neutral badge-sm">Controlled Use</span>
-                                    <h3 class="text-body-lg text-black">Support with blue and red</h3>
-                                    <ul class="space-y-12">
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Use blue or red only when they clarify a category, comparison, or secondary emphasis.</p></li>
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Keep them subordinate to the green system in any brand-facing composition.</p></li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="card">
-                                <div class="card-body">
-                                    <span class="badge badge-warning badge-sm">Reserved</span>
-                                    <h3 class="text-body-lg text-black">Keep interaction accents isolated</h3>
-                                    <div class="flex items-start gap-16">
-                                        <div class="w-btn-icon-md h-btn-icon-md bg-link-visited rounded-btn shadow-btn-default shrink-0" aria-hidden="true"></div>
-                                        <dl class="list list-spec list-md flex-1">
-                                            <div class="list-item">
-                                                <dt class="list-key">link-visited</dt>
-                                                <dd class="list-value">HEX #4C1D95 / RGB 76, 29, 149 / CMYK 49, 81, 0, 42</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                    <p class="card-text">This accent belongs to system-defined visited or interaction states only. It is not part of the brand palette for layouts, surfaces, or identity blocks.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <article class="card">
-                            <div class="card-body">
-                                <span class="badge badge-danger badge-sm">Avoid</span>
-                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
-                                    <ul class="space-y-12">
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Do not build a page where blue or red becomes the dominant brand color.</p></li>
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Do not introduce additional hues outside the published system.</p></li>
-                                    </ul>
-                                    <ul class="space-y-12">
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Do not use the reserved interaction accent in logos, headings, or large surfaces.</p></li>
-                                        <li class="flex items-start gap-12"><span class="text-body text-green-primary" aria-hidden="true">&bull;</span><p class="text-body-sm text-grey-primary">Do not rely on light neutrals where contrast or legibility would be reduced.</p></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
                     </div>
                 </section>
             </div>
