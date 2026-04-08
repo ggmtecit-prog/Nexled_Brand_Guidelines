@@ -851,7 +851,7 @@
                                                     <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#4C1D95" aria-label="Copy HEX value for Hover / visited accent">
                                                         <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
                                                     </button>
-                                                    <span class="absolute left-1/2 bottom-full z-10 -translate-x-1/2 mb-8 whitespace-nowrap rounded-xs bg-black px-8 py-4 text-body-xs text-white shadow-btn-default opacity-0 pointer-events-none transition-opacity duration-200 group-hover/tip:opacity-100">Copy HEX</span>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
                                                 </div>
                                             </div>
                                         </td>
@@ -865,7 +865,7 @@
                                                     <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(76, 29, 149)" aria-label="Copy RGB value for Hover / visited accent">
                                                         <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
                                                     </button>
-                                                    <span class="absolute left-1/2 bottom-full z-10 -translate-x-1/2 mb-8 whitespace-nowrap rounded-xs bg-black px-8 py-4 text-body-xs text-white shadow-btn-default opacity-0 pointer-events-none transition-opacity duration-200 group-hover/tip:opacity-100">Copy RGB</span>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
                                                 </div>
                                             </div>
                                         </td>
@@ -879,7 +879,7 @@
                                                     <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(264, 67%, 35%)" aria-label="Copy HSL value for Hover / visited accent">
                                                         <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
                                                     </button>
-                                                    <span class="absolute left-1/2 bottom-full z-10 -translate-x-1/2 mb-8 whitespace-nowrap rounded-xs bg-black px-8 py-4 text-body-xs text-white shadow-btn-default opacity-0 pointer-events-none transition-opacity duration-200 group-hover/tip:opacity-100">Copy HSL</span>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
                                                 </div>
                                             </div>
                                         </td>
@@ -893,7 +893,7 @@
                                                     <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="49, 81, 0, 42" aria-label="Copy CMYK value for Hover / visited accent">
                                                         <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
                                                     </button>
-                                                    <span class="absolute left-1/2 bottom-full z-10 -translate-x-1/2 mb-8 whitespace-nowrap rounded-xs bg-black px-8 py-4 text-body-xs text-white shadow-btn-default opacity-0 pointer-events-none transition-opacity duration-200 group-hover/tip:opacity-100">Copy CMYK</span>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
                                                 </div>
                                             </div>
                                         </td>
@@ -960,9 +960,35 @@
         copyButtons.forEach(function (button) {
             button.addEventListener('click', function () {
                 const copyValue = button.dataset.copyValue || '';
-                writeTextToClipboard(copyValue).catch(function (error) {
-                    console.error('Color copy failed.', error);
-                });
+                const tooltipWrapper = button.parentElement;
+                const tooltip = tooltipWrapper && tooltipWrapper.classList.contains('tooltip-wrapper')
+                    ? tooltipWrapper.querySelector('[data-copy-tooltip]')
+                    : null;
+                const tooltipText = tooltip ? tooltip.querySelector('span') : null;
+                const defaultTooltipText = tooltip ? (tooltip.dataset.copyTooltipDefault || '') : '';
+
+                writeTextToClipboard(copyValue)
+                    .then(function () {
+                        if (!tooltip || !tooltipText) {
+                            return;
+                        }
+
+                        if (button._copyTooltipTimer) {
+                            window.clearTimeout(button._copyTooltipTimer);
+                        }
+
+                        tooltipText.textContent = 'Copied';
+                        tooltip.classList.add('opacity-100');
+
+                        button._copyTooltipTimer = window.setTimeout(function () {
+                            tooltipText.textContent = defaultTooltipText;
+                            tooltip.classList.remove('opacity-100');
+                            button._copyTooltipTimer = null;
+                        }, 1200);
+                    })
+                    .catch(function (error) {
+                        console.error('Color copy failed.', error);
+                    });
             });
         });
     });
