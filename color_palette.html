@@ -1141,46 +1141,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="data-table data-table-md data-table-floating-head w-full" data-table>
-                        <div class="data-table-head-floating">
-                            <div class="data-table-heading" role="columnheader" aria-sort="none" data-table-column="0">
-                                <div class="data-table-heading-content">
-                                    <span class="data-table-heading-label">Color Format</span>
-                                    <button type="button" class="data-table-sort btn btn-ghost btn-icon btn-xs" data-table-sort="format" aria-label="Sort by Color Format">
-                                        <i class="ri-arrow-up-down-line text-icon-md" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="data-table-heading" role="columnheader" aria-sort="none" data-table-column="1">
-                                <div class="data-table-heading-content">
-                                    <span class="data-table-heading-label">Color Code</span>
-                                    <button type="button" class="data-table-sort btn btn-ghost btn-icon btn-xs" data-table-sort="code" aria-label="Sort by Color Code">
-                                        <i class="ri-arrow-up-down-line text-icon-md" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="data-table-heading" role="columnheader" data-table-column="2">
-                                <span class="data-table-heading-label">Actions</span>
-                            </div>
-                        </div>
-                        <div class="data-table-wrap custom-scrollbar">
+                    <div class="data-table data-table-md w-full">
+                        <div class="data-table-wrap custom-scrollbar overflow-y-hidden">
                             <table class="data-table-table" aria-label="Interaction Accent color values">
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                </colgroup>
-                                <thead class="sr-only">
+                                <thead class="data-table-head">
                                     <tr>
-                                        <th scope="col">Color Format</th>
-                                        <th scope="col">Color Code</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="data-table-row">
                                         <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
-                                        <td class="data-table-cell" data-sort-value="#4C1D95"><p class="text-body font-mono">#4C1D95</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#4C1D95</p></td>
                                         <td class="data-table-cell">
                                             <div class="data-table-actions">
                                                 <div class="tooltip-wrapper flex flex-col items-center gap-8 shrink-0" data-copy-tooltip-wrapper data-copy-pinned="false">
@@ -1196,7 +1182,7 @@
                                     </tr>
                                     <tr class="data-table-row">
                                         <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
-                                        <td class="data-table-cell" data-sort-value="rgb(76, 29, 149)"><p class="text-body font-mono">rgb(76, 29, 149)</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(76, 29, 149)</p></td>
                                         <td class="data-table-cell">
                                             <div class="data-table-actions">
                                                 <div class="tooltip-wrapper flex flex-col items-center gap-8 shrink-0" data-copy-tooltip-wrapper data-copy-pinned="false">
@@ -1212,7 +1198,7 @@
                                     </tr>
                                     <tr class="data-table-row">
                                         <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
-                                        <td class="data-table-cell" data-sort-value="hsl(264, 67%, 35%)"><p class="text-body font-mono">hsl(264, 67%, 35%)</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(264, 67%, 35%)</p></td>
                                         <td class="data-table-cell">
                                             <div class="data-table-actions">
                                                 <div class="tooltip-wrapper flex flex-col items-center gap-8 shrink-0" data-copy-tooltip-wrapper data-copy-pinned="false">
@@ -1228,7 +1214,7 @@
                                     </tr>
                                     <tr class="data-table-row">
                                         <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
-                                        <td class="data-table-cell" data-sort-value="49, 81, 0, 42"><p class="text-body font-mono">49, 81, 0, 42</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">49, 81, 0, 42</p></td>
                                         <td class="data-table-cell">
                                             <div class="data-table-actions">
                                                 <div class="tooltip-wrapper flex flex-col items-center gap-8 shrink-0" data-copy-tooltip-wrapper data-copy-pinned="false">
@@ -1435,6 +1421,7 @@
 </body>
 
 </html>
+
 
 
 
