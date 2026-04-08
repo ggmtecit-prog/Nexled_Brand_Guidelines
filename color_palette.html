@@ -23,6 +23,35 @@
 
     <!-- 4. Interactive Components (include if using accordion, dropdown, modal, stepper) -->
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
+    <style>
+        .palette-reference-table {
+            --data-table-head-columns: minmax(0, 2.8fr) minmax(0, 1.4fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1.8fr);
+        }
+
+        .palette-reference-table .data-table-table {
+            table-layout: fixed;
+        }
+
+        .palette-reference-col-color {
+            width: 28%;
+        }
+
+        .palette-reference-col-hex {
+            width: 14%;
+        }
+
+        .palette-reference-col-rgb {
+            width: 20%;
+        }
+
+        .palette-reference-col-hsl {
+            width: 20%;
+        }
+
+        .palette-reference-col-cmyk {
+            width: 18%;
+        }
+    </style>
 </head>
 <body class="bg-grey-tertiary text-black selection:bg-green-primary/10 min-h-screen lg:flex">
 
@@ -130,7 +159,7 @@
             <h2 class="text-card-title text-black">Complete Palette Reference</h2>
             <p class="text-body text-grey-primary">All approved palette values collected in one table for quick comparison.</p>
         </div>
-        <div class="data-table data-table-md data-table-floating-head w-full">
+        <div class="data-table data-table-md data-table-floating-head palette-reference-table w-full">
             <div class="data-table-head-floating">
                 <div class="data-table-heading" role="columnheader">
                     <div class="data-table-heading-content">
@@ -159,7 +188,14 @@
                 </div>
             </div>
             <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
-                <table class="data-table-table" aria-label="Complete color palette reference">
+                                <table class="data-table-table" aria-label="Complete color palette reference">
+                    <colgroup>
+                        <col class="palette-reference-col-color">
+                        <col class="palette-reference-col-hex">
+                        <col class="palette-reference-col-rgb">
+                        <col class="palette-reference-col-hsl">
+                        <col class="palette-reference-col-cmyk">
+                    </colgroup>
                     <thead class="sr-only">
                         <tr>
                             <th scope="col">Color</th>
@@ -173,7 +209,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-green-primary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-green-primary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Primary</p>
                                         <p class="text-label">Green System</p>
@@ -236,7 +272,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-green-secondary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-green-secondary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Secondary</p>
                                         <p class="text-label">Green System</p>
@@ -299,7 +335,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-green-hover-icons"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-green-hover-icons"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Tertiary</p>
                                         <p class="text-label">Green System</p>
@@ -362,7 +398,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-green-hover-text"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-green-hover-text"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Quaternary</p>
                                         <p class="text-label">Green System</p>
@@ -425,7 +461,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-blue-primary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-blue-primary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Blue Primary</p>
                                         <p class="text-label">Supporting Colors</p>
@@ -488,7 +524,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-blue-secondary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-blue-secondary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Blue Secondary</p>
                                         <p class="text-label">Supporting Colors</p>
@@ -551,7 +587,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-red-primary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-red-primary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Red Primary</p>
                                         <p class="text-label">Supporting Colors</p>
@@ -614,7 +650,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-red-secondary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-red-secondary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Red Secondary</p>
                                         <p class="text-label">Supporting Colors</p>
@@ -677,7 +713,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-grey-primary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-grey-primary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Grey Primary</p>
                                         <p class="text-label">Neutral Foundation</p>
@@ -740,7 +776,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-grey-secondary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-grey-secondary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Grey Secondary</p>
                                         <p class="text-label">Neutral Foundation</p>
@@ -803,7 +839,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-grey-tertiary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-grey-tertiary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Grey Tertiary</p>
                                         <p class="text-label">Neutral Foundation</p>
@@ -866,7 +902,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-black"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-black"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Black</p>
                                         <p class="text-label">Neutral Foundation</p>
@@ -929,7 +965,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-white border-thin border-grey-secondary"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-white border-thin border-grey-secondary"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">White</p>
                                         <p class="text-label">Neutral Foundation</p>
@@ -992,7 +1028,7 @@
                         <tr class="data-table-row">
                             <td class="data-table-cell">
                                 <div class="flex items-center gap-12">
-                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-btn shadow-btn-default shrink-0 bg-link-visited"></div>
+                                    <div class="w-btn-icon-xs h-btn-icon-xs rounded-xl shadow-btn-default shrink-0 bg-link-visited"></div>
                                     <div class="space-y-4">
                                         <p class="text-body">Hover / visited accent</p>
                                         <p class="text-label">Interaction Accent</p>
