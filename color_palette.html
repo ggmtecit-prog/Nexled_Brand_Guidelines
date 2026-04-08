@@ -127,686 +127,1219 @@
                                 <section id="palette-groups" data-reveal="section">
     <div class="grid grid-cols-1 xl:grid-cols-2 items-start gap-24">
         <div class="card w-full">
-    <div class="card-body">
-        <div class="card-header">
-            <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-leaf-line icon icon-lg" aria-hidden="true"></i></span>
-            <h2 class="card-title">Green System</h2>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-leaf-line icon icon-lg" aria-hidden="true"></i></span>
+                    <h2 class="card-title">Green System</h2>
+                </div>
+                <div class="space-y-20">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-green-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Primary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Primary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#03683D</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#03683D" aria-label="Copy HEX value for Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(3, 104, 61)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(3, 104, 61)" aria-label="Copy RGB value for Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(154, 94%, 21%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(154, 94%, 21%)" aria-label="Copy HSL value for Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">97, 0, 41, 59</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="97, 0, 41, 59" aria-label="Copy CMYK value for Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-green-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Secondary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Secondary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#058C53</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#058C53" aria-label="Copy HEX value for Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(5, 140, 83)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(5, 140, 83)" aria-label="Copy RGB value for Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(155, 93%, 28%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(155, 93%, 28%)" aria-label="Copy HSL value for Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">96, 0, 41, 45</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="96, 0, 41, 45" aria-label="Copy CMYK value for Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-green-hover-icons w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Tertiary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Tertiary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#BEE0D2</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#BEE0D2" aria-label="Copy HEX value for Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(190, 224, 210)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(190, 224, 210)" aria-label="Copy RGB value for Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(155, 35%, 81%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(155, 35%, 81%)" aria-label="Copy HSL value for Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">15, 0, 6, 12</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="15, 0, 6, 12" aria-label="Copy CMYK value for Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-green-hover-text w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Quaternary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Quaternary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#E3F1EB</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#E3F1EB" aria-label="Copy HEX value for Quaternary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(227, 241, 235)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(227, 241, 235)" aria-label="Copy RGB value for Quaternary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(154, 33%, 92%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(154, 33%, 92%)" aria-label="Copy HSL value for Quaternary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">6, 0, 2, 5</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="6, 0, 2, 5" aria-label="Copy CMYK value for Quaternary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="space-y-20">
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-green-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Primary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Primary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#03683D</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(3, 104, 61)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(154, 94%, 21%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">97, 0, 41, 59</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#03683D" aria-label="Copy HEX value for Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(3, 104, 61)" aria-label="Copy RGB value for Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(154, 94%, 21%)" aria-label="Copy HSL value for Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="97, 0, 41, 59" aria-label="Copy CMYK value for Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-green-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Secondary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Secondary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#058C53</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(5, 140, 83)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(155, 93%, 28%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">96, 0, 41, 45</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#058C53" aria-label="Copy HEX value for Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(5, 140, 83)" aria-label="Copy RGB value for Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(155, 93%, 28%)" aria-label="Copy HSL value for Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="96, 0, 41, 45" aria-label="Copy CMYK value for Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-green-hover-icons w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Tertiary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Tertiary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#BEE0D2</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(190, 224, 210)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(155, 35%, 81%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">15, 0, 6, 12</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#BEE0D2" aria-label="Copy HEX value for Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(190, 224, 210)" aria-label="Copy RGB value for Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(155, 35%, 81%)" aria-label="Copy HSL value for Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="15, 0, 6, 12" aria-label="Copy CMYK value for Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-green-hover-text w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Quaternary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Quaternary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#E3F1EB</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(227, 241, 235)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(154, 33%, 92%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">6, 0, 2, 5</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#E3F1EB" aria-label="Copy HEX value for Quaternary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(227, 241, 235)" aria-label="Copy RGB value for Quaternary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(154, 33%, 92%)" aria-label="Copy HSL value for Quaternary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="6, 0, 2, 5" aria-label="Copy CMYK value for Quaternary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-        </div>
-    </div>
-</div>
         <div class="card w-full">
-    <div class="card-body">
-        <div class="card-header">
-            <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-contrast-drop-2-line icon icon-lg" aria-hidden="true"></i></span>
-            <h2 class="card-title">Supporting Colors</h2>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-contrast-drop-2-line icon icon-lg" aria-hidden="true"></i></span>
+                    <h2 class="card-title">Supporting Colors</h2>
+                </div>
+                <div class="space-y-20">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-blue-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Blue Primary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Blue Primary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#386789</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#386789" aria-label="Copy HEX value for Blue Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(56, 103, 137)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(56, 103, 137)" aria-label="Copy RGB value for Blue Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(205, 42%, 38%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(205, 42%, 38%)" aria-label="Copy HSL value for Blue Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">59, 25, 0, 46</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="59, 25, 0, 46" aria-label="Copy CMYK value for Blue Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-blue-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Blue Secondary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Blue Secondary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#5B8BAA</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#5B8BAA" aria-label="Copy HEX value for Blue Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(91, 139, 170)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(91, 139, 170)" aria-label="Copy RGB value for Blue Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(204, 32%, 51%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(204, 32%, 51%)" aria-label="Copy HSL value for Blue Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">46, 18, 0, 33</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="46, 18, 0, 33" aria-label="Copy CMYK value for Blue Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-red-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Red Primary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Red Primary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#B1242F</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#B1242F" aria-label="Copy HEX value for Red Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(177, 36, 47)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(177, 36, 47)" aria-label="Copy RGB value for Red Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(355, 66%, 42%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(355, 66%, 42%)" aria-label="Copy HSL value for Red Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 80, 73, 31</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 80, 73, 31" aria-label="Copy CMYK value for Red Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-red-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Red Secondary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Red Secondary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#C94A55</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#C94A55" aria-label="Copy HEX value for Red Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(201, 74, 85)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(201, 74, 85)" aria-label="Copy RGB value for Red Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(355, 54%, 54%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(355, 54%, 54%)" aria-label="Copy HSL value for Red Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 63, 58, 21</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 63, 58, 21" aria-label="Copy CMYK value for Red Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="space-y-20">
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-blue-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Blue Primary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Blue Primary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#386789</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(56, 103, 137)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(205, 42%, 38%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">59, 25, 0, 46</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#386789" aria-label="Copy HEX value for Blue Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(56, 103, 137)" aria-label="Copy RGB value for Blue Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(205, 42%, 38%)" aria-label="Copy HSL value for Blue Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="59, 25, 0, 46" aria-label="Copy CMYK value for Blue Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-blue-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Blue Secondary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Blue Secondary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#5B8BAA</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(91, 139, 170)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(204, 32%, 51%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">46, 18, 0, 33</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#5B8BAA" aria-label="Copy HEX value for Blue Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(91, 139, 170)" aria-label="Copy RGB value for Blue Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(204, 32%, 51%)" aria-label="Copy HSL value for Blue Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="46, 18, 0, 33" aria-label="Copy CMYK value for Blue Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-red-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Red Primary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Red Primary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#B1242F</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(177, 36, 47)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(355, 66%, 42%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 80, 73, 31</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#B1242F" aria-label="Copy HEX value for Red Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(177, 36, 47)" aria-label="Copy RGB value for Red Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(355, 66%, 42%)" aria-label="Copy HSL value for Red Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 80, 73, 31" aria-label="Copy CMYK value for Red Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-red-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Red Secondary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Red Secondary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#C94A55</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(201, 74, 85)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(355, 54%, 54%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 63, 58, 21</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#C94A55" aria-label="Copy HEX value for Red Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(201, 74, 85)" aria-label="Copy RGB value for Red Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(355, 54%, 54%)" aria-label="Copy HSL value for Red Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 63, 58, 21" aria-label="Copy CMYK value for Red Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-        </div>
-    </div>
-</div>
         <div class="card w-full">
-    <div class="card-body">
-        <div class="card-header">
-            <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-layout-grid-line icon icon-lg" aria-hidden="true"></i></span>
-            <h2 class="card-title">Neutral Foundation</h2>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-layout-grid-line icon icon-lg" aria-hidden="true"></i></span>
+                    <h2 class="card-title">Neutral Foundation</h2>
+                </div>
+                <div class="space-y-20">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-grey-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Grey Primary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Grey Primary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#878787</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#878787" aria-label="Copy HEX value for Grey Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(135, 135, 135)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(135, 135, 135)" aria-label="Copy RGB value for Grey Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(0, 0%, 53%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 53%)" aria-label="Copy HSL value for Grey Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 0, 0, 47</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 47" aria-label="Copy CMYK value for Grey Primary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-grey-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Grey Secondary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Grey Secondary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#D9D9D9</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#D9D9D9" aria-label="Copy HEX value for Grey Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(217, 217, 217)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(217, 217, 217)" aria-label="Copy RGB value for Grey Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(0, 0%, 85%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 85%)" aria-label="Copy HSL value for Grey Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 0, 0, 15</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 15" aria-label="Copy CMYK value for Grey Secondary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-grey-tertiary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Grey Tertiary</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Grey Tertiary color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#EDEDED</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#EDEDED" aria-label="Copy HEX value for Grey Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(237, 237, 237)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(237, 237, 237)" aria-label="Copy RGB value for Grey Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(0, 0%, 93%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 93%)" aria-label="Copy HSL value for Grey Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 0, 0, 7</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 7" aria-label="Copy CMYK value for Grey Tertiary">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-black w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">Black</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="Black color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#121212</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#121212" aria-label="Copy HEX value for Black">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(18, 18, 18)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(18, 18, 18)" aria-label="Copy RGB value for Black">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(0, 0%, 7%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 7%)" aria-label="Copy HSL value for Black">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 0, 0, 93</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 93" aria-label="Copy CMYK value for Black">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-16">
+                        <div class="flex flex-col items-center gap-8 shrink-0">
+                            <div class="bg-white border-thin border-grey-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
+                            <p class="text-label text-black text-center">White</p>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="data-table data-table-md w-full">
+                                <div class="data-table-wrap custom-scrollbar overflow-hidden overflow-x-auto rounded-xl">
+                                    <table class="data-table-table" aria-label="White color values">
+                                        <thead class="data-table-head">
+                                    <tr>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Format</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Color Code</span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="data-table-heading">
+                                            <div class="data-table-heading-content">
+                                                <span class="data-table-heading-label">Actions</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                        </thead>
+                                        <tbody>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HEX</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">#FCFCFC</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#FCFCFC" aria-label="Copy HEX value for White">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HEX"><span>Copy HEX</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">RGB</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">rgb(252, 252, 252)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(252, 252, 252)" aria-label="Copy RGB value for White">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy RGB"><span>Copy RGB</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">HSL</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">hsl(0, 0%, 99%)</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 99%)" aria-label="Copy HSL value for White">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy HSL"><span>Copy HSL</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table-row">
+                                        <td class="data-table-cell"><p class="text-body font-mono">CMYK</p></td>
+                                        <td class="data-table-cell"><p class="text-body font-mono">0, 0, 0, 1</p></td>
+                                        <td class="data-table-cell">
+                                            <div class="data-table-actions">
+                                                <div class="tooltip-wrapper group/tip">
+                                                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 1" aria-label="Copy CMYK value for White">
+                                                        <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="tooltip tooltip-black tooltip-xs whitespace-nowrap group-hover/tip:opacity-100" data-copy-tooltip data-copy-tooltip-default="Copy CMYK"><span>Copy CMYK</span></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="space-y-20">
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-grey-primary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Grey Primary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Grey Primary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#878787</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(135, 135, 135)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(0, 0%, 53%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 0, 0, 47</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#878787" aria-label="Copy HEX value for Grey Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(135, 135, 135)" aria-label="Copy RGB value for Grey Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 53%)" aria-label="Copy HSL value for Grey Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 47" aria-label="Copy CMYK value for Grey Primary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-grey-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Grey Secondary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Grey Secondary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#D9D9D9</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(217, 217, 217)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(0, 0%, 85%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 0, 0, 15</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#D9D9D9" aria-label="Copy HEX value for Grey Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(217, 217, 217)" aria-label="Copy RGB value for Grey Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 85%)" aria-label="Copy HSL value for Grey Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 15" aria-label="Copy CMYK value for Grey Secondary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-grey-tertiary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Grey Tertiary</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Grey Tertiary color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#EDEDED</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(237, 237, 237)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(0, 0%, 93%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 0, 0, 7</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#EDEDED" aria-label="Copy HEX value for Grey Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(237, 237, 237)" aria-label="Copy RGB value for Grey Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 93%)" aria-label="Copy HSL value for Grey Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 7" aria-label="Copy CMYK value for Grey Tertiary">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-black w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">Black</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="Black color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#121212</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(18, 18, 18)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(0, 0%, 7%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 0, 0, 93</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#121212" aria-label="Copy HEX value for Black">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(18, 18, 18)" aria-label="Copy RGB value for Black">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 7%)" aria-label="Copy HSL value for Black">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 93" aria-label="Copy CMYK value for Black">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-            <div class="flex items-start gap-16">
-    <div class="flex flex-col items-center gap-8 shrink-0">
-        <div class="bg-white border-thin border-grey-secondary w-btn-icon-md h-btn-icon-md rounded-btn shadow-btn-default shrink-0"></div>
-        <p class="text-label text-black text-center">White</p>
-    </div>
-    <div class="flex-1 min-w-0">
-    <div class="flex flex-col md:flex-row items-start gap-12 w-full">
-    <dl class="list list-spec list-md flex-1 min-w-0" aria-label="White color values">
-            <div class="list-item">
-                <dt class="list-key font-mono">HEX</dt>
-                <dd class="list-value font-mono">#FCFCFC</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">RGB</dt>
-                <dd class="list-value font-mono">rgb(252, 252, 252)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">HSL</dt>
-                <dd class="list-value font-mono">hsl(0, 0%, 99%)</dd>
-            </div>
-            <div class="list-item">
-                <dt class="list-key font-mono">CMYK</dt>
-                <dd class="list-value font-mono">0, 0, 0, 1</dd>
-            </div>
-    </dl>
-    <div class="list list-spec list-md w-auto shrink-0">
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="#FCFCFC" aria-label="Copy HEX value for White">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="rgb(252, 252, 252)" aria-label="Copy RGB value for White">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="hsl(0, 0%, 99%)" aria-label="Copy HSL value for White">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="list-item justify-center">
-                <button type="button" class="btn btn-ghost btn-icon btn-xs" data-copy-color-button data-copy-value="0, 0, 0, 1" aria-label="Copy CMYK value for White">
-                <i class="ri-file-copy-line text-icon-md" aria-hidden="true"></i>
-                </button>
-            </div>
-    </div>
-</div>
-</div>
-</div>
-        </div>
-    </div>
-</div>
-        <div class="card w-full">
+<div class="card w-full">
     <div class="card-body">
         <div class="card-header">
             <span class="icon-box icon-box-lg icon-box-empty-state"><i class="ri-cursor-line icon icon-lg" aria-hidden="true"></i></span>
